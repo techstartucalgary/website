@@ -6,7 +6,7 @@ export const GalleryPage = styled.div`
   box-sizing: border-box;
   font-family: "Inter", Tahoma, sans-serif;
   line-height: 1.5;
-  height: 100%;
+  min-height: 100vh;
   padding: 0;
   background: var(--dark-background);
   white-space: normal;
