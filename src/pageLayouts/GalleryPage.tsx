@@ -4,8 +4,11 @@ import * as S from "./GalleryPage.styles";
 import dynamic from "next/dynamic";
 
 const Blobbie = dynamic(() => import("../components/Blobbie"), { ssr: false });
+interface PhotoProps {
+  picUrls: string[];
+}
 
-const GalleryPage = () => {
+const GalleryPage = ({ picUrls }: PhotoProps) => {
   return (
     <S.GalleryPage id="galleryPageTop">
       <Blobbie
@@ -30,7 +33,7 @@ const GalleryPage = () => {
         </motion.h1>
       </S.GalleryPageHeader>
 
-      <PhotoGallery />
+      <PhotoGallery picUrls={picUrls} />
     </S.GalleryPage>
   );
 };

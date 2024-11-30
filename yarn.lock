@@ -5142,7 +5142,7 @@ __metadata:
     "@typescript-eslint/parser": "npm:^7.4.0"
     aos: "npm:^2.3.4"
     autoprefixer: "npm:^10.4.20"
-    axios: "npm:^1.7.7"
+    axios: "npm:^1.7.8"
     classnames: "npm:^2.5.1"
     eslint: "npm:8.57.0"
     eslint-config-next: "npm:14.2.14"
