@@ -38,7 +38,11 @@ const ProjectsPage = () => {
         <div className="md:shrink-0 md:grow-0 md:basis-1/2 md:self-end">
           <div className="mt-[5%] flex justify-center md:mt-0 md:block">
             <div className="md:ml-[25%] md:size-[35vw]">
+<<<<<<< HEAD
               <Lottie {...teamProjectLottieOptions} />
+=======
+              <Lottie options={teamProjectLottieOptions} />
+>>>>>>> 4d7fcfa (Starting to Migrate Projects Page. Some Styling is off.)
             </div>
           </div>
         </div>
