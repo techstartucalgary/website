@@ -7,7 +7,6 @@ export async function getData() {
   return photoLinks;
 }
 
-
 function extractPhotos(content) {
   const regex = /(https:\/\/lh3\.googleusercontent\.com\/pw\/[^"']+)["']/g;
   const links = new Set();
