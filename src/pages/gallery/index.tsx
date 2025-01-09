@@ -1,7 +1,11 @@
 import GalleryPage from "@/pageLayouts/GalleryPage";
 import { getData } from "../api/gallery";
+import { GetServerSideProps } from "next";
 
-export async function getServerSideProps({ req, res}) {
+export const getServerSideProps: GetServerSideProps = async ({
+  req: _req,
+  res,
+}) => {
   try {
     const data = await getData();
     res.setHeader(
@@ -13,7 +17,7 @@ export async function getServerSideProps({ req, res}) {
     console.error("Error fetching photos:", error);
     return { props: { picUrls: [] } }; // Provide an empty array as fallback
   }
-}
+};
 interface PhotoProps {
   picUrls: string[];
 }
