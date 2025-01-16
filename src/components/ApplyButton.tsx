@@ -1,7 +1,6 @@
-import * as S from "./ApplyButton.styles";
-
 import { useInView } from "react-intersection-observer";
 import { motion, useAnimation } from "framer-motion";
+import Link from "next/link";
 
 const ApplyButton = () => {
   const animationControl = useAnimation();
@@ -22,19 +21,19 @@ const ApplyButton = () => {
     <div ref={ref}>
       <motion.div
         animate={animationControl}
-        className="homePage__applyButtonBox"
+        className="relative flex h-fit justify-center px-0 pb-[4vw] pt-[2vw]"
         initial={{ x: "-100vw" }}
       >
-        <S.ApplyButtonLink href="/apply">
-          <S.ApplyButton>
-            <S.ApplyButtonArrow>
+        <Link className="no-underline" href="/apply">
+          <div className="relative mb-[-15%] mt-[10%] flex h-[50px] w-[290px] cursor-pointer justify-center rounded-[30px] bg-[var(--primary-black)] pl-[2px] pr-[6px] pt-[15px] text-[20px] text-white transition-transform duration-[250ms] ease-in-out hover:scale-105">
+            <div className="ml-2 w-5 animate-arrowSlide">
               {" "}
               <span>&#62;</span>
               <span>&#62;</span>{" "}
-            </S.ApplyButtonArrow>
-            <S.ApplyButtonText> theTeam.join()</S.ApplyButtonText>
-          </S.ApplyButton>
-        </S.ApplyButtonLink>
+            </div>
+            <div className="ml-[30px] font-console"> theTeam.join()</div>
+          </div>
+        </Link>
       </motion.div>
     </div>
   );
