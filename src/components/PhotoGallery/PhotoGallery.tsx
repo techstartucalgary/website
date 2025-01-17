@@ -17,7 +17,7 @@ const PhotoGallery = ({ picUrls }: PhotoProps) => {
         transition={{ delay: 0.5 }}
       >
         <div className="text-center">
-          <p className="sm-max:text-regular-font text-babyHeading-size text-white">
+          <p className="text-babyHeading-size·text-white·sm-max:text-regular-font">
             Capturing the Memories: A Look Inside Tech Start! <br /> Interested
             in joining us?
           </p>
