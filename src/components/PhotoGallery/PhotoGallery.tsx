@@ -1,8 +1,7 @@
-import { LazyLoadImage } from "react-lazy-load-image-component";
 import HoverButton from "../HoverButton/HoverButton";
 import { ButtonMode } from "../HoverButton/HoverButton.styles";
 import { motion } from "framer-motion";
-
+import Image from "next/image";
 interface PhotoProps {
   picUrls: string[];
   className?: string;
@@ -33,12 +32,16 @@ const PhotoGallery = ({ picUrls }: PhotoProps) => {
         </div>
         {picUrls.length > 0 && (
           <div className="mx-auto my-8 max-w-5xl columns-1 gap-6 sm:columns-2 lg:columns-3">
-            {picUrls.map((photo: string, index: number) => (
-              <LazyLoadImage
-                height="auto"
+            {picUrls.map((photo_url: string, index: number) => (
+              <Image
+                alt={`gallery picture ${index}`}
                 key={index}
-                src={photo}
-                width="100%"
+                sizes="100vw"
+                src={photo_url}
+                style={{
+                  height: "auto",
+                  maxWidth: "100%",
+                }}
               />
             ))}
           </div>
