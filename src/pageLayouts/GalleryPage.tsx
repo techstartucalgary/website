@@ -26,10 +26,9 @@ const GalleryPage = ({ picUrls }: PhotoProps) => {
         transform="translate(-10vw, 10vw)"
         width={250}
       />
-      <div className="text-center text-white">
+      <div className="text-center text-title-size text-white">
         <motion.h1
           animate={{ opacity: 1 }}
-          className="text-title-size"
           initial={{ opacity: 0 }}
           transition={{ duration: 0.5 }}
         >
