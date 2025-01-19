@@ -16,11 +16,11 @@ const PhotoGallery = ({ picUrls }: PhotoProps) => {
         transition={{ delay: 0.5 }}
       >
         <div className="text-center">
-          <p className="text-babyHeading-size·text-white·sm-max:text-regular-font">
+          <p className="text-babyHeading-size text-white sm-max:text-regular-font">
             Capturing the Memories: A Look Inside Tech Start! <br /> Interested
             in joining us?
           </p>
-          <div className="mt-[3vw] flex justify-center">
+          <div className="my-[3vw] flex justify-center">
             <HoverButton
               glowOnHover={true}
               link="/apply"
@@ -31,17 +31,18 @@ const PhotoGallery = ({ picUrls }: PhotoProps) => {
           </div>
         </div>
         {picUrls.length > 0 && (
-          <div className="mx-auto my-8 max-w-5xl columns-1 gap-6 sm:columns-2 lg:columns-3">
+          <div className="mx-auto mb-6 max-w-5xl columns-1 gap-4 sm:columns-2 lg:columns-3">
             {picUrls.map((photo_url: string, index: number) => (
               <Image
                 alt={`gallery picture ${index}`}
+                className="my-3"
+                height={0}
                 key={index}
+                layout="intrinsic"
                 sizes="100vw"
                 src={photo_url}
-                style={{
-                  height: "auto",
-                  maxWidth: "100%",
-                }}
+                style={{ height: "auto", width: "100%" }}
+                width={0}
               />
             ))}
           </div>
