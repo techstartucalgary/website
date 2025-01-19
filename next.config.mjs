@@ -7,6 +7,7 @@ const nextConfig = {
     remotePatterns: [
       {
         hostname: "lh3.googleusercontent.com",
+        pathname: "/pw/**",
         protocol: "https",
       },
     ],
