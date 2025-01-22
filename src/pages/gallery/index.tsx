@@ -2,7 +2,11 @@ import GalleryPage from "@/pageLayouts/GalleryPage";
 import { getData } from "../api/gallery";
 import { GetServerSideProps } from "next";
 
-export const getServerSideProps: GetServerSideProps = async ({
+interface PhotoProps {
+  picUrls: string[];
+}
+
+export const getServerSideProps: GetServerSideProps<PhotoProps> = async ({
   req: _req,
   res,
 }) => {
@@ -12,15 +16,13 @@ export const getServerSideProps: GetServerSideProps = async ({
       "Cache-Control",
       "public, s-maxage=20, stale-while-revalidate=120",
     );
-    return { props: { picUrls: data || [] } };
+    return { props: { picUrls: data ?? [] } };
   } catch (error) {
-    console.error("Error fetching photos:", error);
-    return { props: { picUrls: [] } }; // Provide an empty array as fallback
+    console.error("Error fetching photos urls:", error);
+    return { props: { picUrls: [] } };
   }
 };
-interface PhotoProps {
-  picUrls: string[];
-}
+
 export default function Gallery({ picUrls }: PhotoProps) {
   return <GalleryPage picUrls={picUrls} />;
 }
