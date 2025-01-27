@@ -1,16 +1,18 @@
-import { ProfileDescriptionDiv } from "./ProfileDescription.styles";
-
 interface ProfileDescriptionProps {
   name: string;
   affiliation: string;
 }
 
-const ProfileDescription = (props: ProfileDescriptionProps) => {
+const ProfileDescription = ({ affiliation, name }: ProfileDescriptionProps) => {
   return (
-    <ProfileDescriptionDiv>
-      <h3>{props.name}</h3>
-      <h4>{props.affiliation}</h4>
-    </ProfileDescriptionDiv>
+    <div className="font-inter -mt-20 w-full text-center">
+      <h3 className="m-0 text-2xl font-extrabold text-white sm:text-xl md:text-lg">
+        {name}
+      </h3>
+      <h4 className="m-0 text-lg font-light text-white sm:text-sm md:text-base">
+        {affiliation}
+      </h4>
+    </div>
   );
 };
 

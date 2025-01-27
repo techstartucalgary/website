@@ -1,7 +1,7 @@
 import React from "react";
 import Profile from "./Profile";
-import * as S from "./Team.styles";
-import "./Team.styles";
+// import * as S from "./Team.styles";
+// import "./Team.styles";
 import {
   type TeamMember,
   executiveTeam,
@@ -30,23 +30,28 @@ const getBaseLength = (category: TeamCategory) => {
   }
 };
 
-const Team = (props: TeamProps) => {
+const Team: React.FC<TeamProps> = ({
+  activeCategory,
+  desktopView,
+  teamMembers,
+}) => {
   return (
-    <S.TeamContainer mobileView={!props.desktopView}>
-      {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
-      {props.teamMembers.map((member: TeamMember) => {
-        return (
-          <Profile
-            activeCategory={props.activeCategory}
-            alt={member.imagePath}
-            key={member.id + getBaseLength(props.activeCategory)}
-            member={member}
-            mobileView={!props.desktopView}
-            profilePic={member.imagePath}
-          />
-        );
-      })}
-    </S.TeamContainer>
+    <div
+      className={`${
+        desktopView ? "flex flex-wrap" : "grid grid-cols-2 gap-2"
+      } relative mx-auto mt-12 max-w-screen-xl justify-center`}
+    >
+      {teamMembers.map((member) => (
+        <Profile
+          activeCategory={activeCategory}
+          alt={member.imagePath}
+          key={member.id + getBaseLength(activeCategory)}
+          member={member}
+          mobileView={!desktopView}
+          profilePic={member.imagePath}
+        />
+      ))}
+    </div>
   );
 };
 

@@ -1,7 +1,6 @@
-import React, { useMemo } from "react";
-import { useState } from "react";
+/* eslint-disable prettier/prettier */
+import React, { useMemo, useState } from "react";
 import Team from "./Team";
-import * as S from "./TeamSection.styles";
 import { executiveTeam, projectManagers, alumniTeam } from "./TeamInformation";
 import { TeamCategory } from "./Team";
 
@@ -9,7 +8,7 @@ type TeamSectionProps = {
   desktopView: boolean;
 };
 
-const TeamSection = (props: TeamSectionProps) => {
+const TeamSection = ({ desktopView }: TeamSectionProps) => {
   const [selectedCategory, setSelectedCategory] =
     useState<TeamCategory>("executives");
 
@@ -25,29 +24,43 @@ const TeamSection = (props: TeamSectionProps) => {
   }, [selectedCategory]);
 
   return (
-    <S.TeamSection>
-      <S.ToggleButtonWrapper>
-        <S.SliderWrapper selectedCategory={selectedCategory}>
-          <S.SliderPosition selectedCategory={selectedCategory} />
-          <S.SliderOption onClick={() => setSelectedCategory("executives")}>
+    <div className="mx-auto p-10 text-center">
+      <h2 className="text-primary-black mb-4 text-4xl font-bold">Our Team</h2>
+
+      {/* Toggle Buttons */}
+      <div className="relative mt-4 flex items-center justify-center">
+        <div className="bg-primary-green relative flex h-14 w-[700px] rounded-full p-1 transition-all">
+          <div
+            className={`absolute left-1 top-1 h-[calc(100%-8px)] w-1/3 rounded-full bg-opacity-90 shadow-md transition-all ${selectedCategory === "executives" ? "bg-primary-green" : selectedCategory === "projectManagers" ? "bg-lightwash-green left-[33.3%]" : "bg-secondary-lime left-[66.6%]"} `}
+          />
+          <button
+            className="flex-1 text-lg font-semibold text-white"
+            onClick={() => setSelectedCategory("executives")}
+          >
             Executives
-          </S.SliderOption>
-          <S.SliderOption
+          </button>
+          <button
+            className="text-turquoise-green flex-1 text-lg font-bold"
             onClick={() => setSelectedCategory("projectManagers")}
           >
             Project Managers
-          </S.SliderOption>
-          <S.SliderOption onClick={() => setSelectedCategory("alumni")}>
+          </button>
+          <button
+            className="text-turquoise-blue flex-1 text-lg font-semibold"
+            onClick={() => setSelectedCategory("alumni")}
+          >
             Alumni
-          </S.SliderOption>
-        </S.SliderWrapper>
-      </S.ToggleButtonWrapper>
+          </button>
+        </div>
+      </div>
+
+      {/* Team Members */}
       <Team
         activeCategory={selectedCategory}
-        desktopView={props.desktopView}
+        desktopView={desktopView}
         teamMembers={getTeamMembers}
       />
-    </S.TeamSection>
+    </div>
   );
 };
 

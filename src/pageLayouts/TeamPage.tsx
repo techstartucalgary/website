@@ -1,9 +1,8 @@
+/* eslint-disable prettier/prettier */
 import TeamSection from "../components/TeamSection/TeamSection";
 import HoverButton from "../components/HoverButton/HoverButton";
 import { ButtonMode } from "../components/HoverButton/HoverButton.styles";
 import { motion } from "framer-motion";
-import * as S from "./TeamPage.styles";
-import * as T from "../components/TeamSection/TeamSection.styles";
 import FounderSection from "../components/TeamFounder/FounderSection";
 import Team from "../components/TeamSection/Team";
 import { boardMembers } from "../components/TeamSection/TeamInformation";
@@ -14,11 +13,14 @@ import dynamic from "next/dynamic";
 const Blobbie = dynamic(() => import("../components/Blobbie"), { ssr: false });
 
 const TeamPage = () => {
-  // set defaultView flag according to screen width cutoff value
-  const { width } = useViewport(); // get screen width
+  const { width } = useViewport();
   const defaultView = width && width > 600 ? true : false;
+
   return (
-    <S.TeamPage id="teamPageTop">
+    <div
+      className="relative box-border h-full overflow-hidden scroll-smooth whitespace-normal border-none bg-black p-0 font-sans leading-6"
+      id="teamPageTop"
+    >
       <Blobbie
         edge={true}
         id={2}
@@ -31,9 +33,11 @@ const TeamPage = () => {
         transform="translate(-10vw, 10vw)"
         width={250}
       />
-      <S.TeamPageHeader>
+
+      <header className="text-secondary-grey bg-white py-12 text-center">
         <motion.h1
           animate={{ opacity: 1 }}
+          className="text-titleSize"
           initial={{ opacity: 0 }}
           transition={{ duration: 0.5 }}
         >
@@ -41,6 +45,7 @@ const TeamPage = () => {
         </motion.h1>
         <motion.p
           animate={{ opacity: 1 }}
+          className="text-babyHeading-size md:text-regular-font"
           initial={{ opacity: 0 }}
           transition={{ delay: 1 }}
         >
@@ -49,6 +54,7 @@ const TeamPage = () => {
         </motion.p>
         <motion.div
           animate={{ opacity: 1 }}
+          className="mt-12 flex justify-center"
           initial={{ opacity: 0 }}
           transition={{ delay: 1.5 }}
         >
@@ -60,22 +66,22 @@ const TeamPage = () => {
             text={"Apply Now"}
           />
         </motion.div>
-      </S.TeamPageHeader>
+      </header>
 
       <h1 className="chonkyHeading chonkyHeading--white chonkyHeading--lessMargin">
         The Board
       </h1>
       <Divider />
       <FounderSection />
-      <T.TeamSection>
+      <section className="p-4">
         <Team
           activeCategory="executives"
           desktopView={defaultView}
           teamMembers={boardMembers}
         />
-      </T.TeamSection>
+      </section>
       <TeamSection desktopView={defaultView} />
-    </S.TeamPage>
+    </div>
   );
 };
 
