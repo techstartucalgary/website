@@ -1,3 +1,5 @@
+
+
 import { MerchDescriptionDiv } from "./MerchDescription.styles";
 
 interface MerchDescriptionProps {
@@ -15,3 +17,4 @@ const MerchDescription = (props: MerchDescriptionProps) => {
 };
 
 export default MerchDescription;
+  
