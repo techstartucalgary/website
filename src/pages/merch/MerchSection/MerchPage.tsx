@@ -33,6 +33,7 @@ const MerchPage = () => {
         </motion.div>
       </div>
       
+
       {/* Render MerchItems in a flex container, centered with up to 3 items per row */}
       <div className="flex flex-wrap justify-center gap-6">
         {MerchItemsData.map((merchItem) => (
@@ -46,7 +47,7 @@ const MerchPage = () => {
           </div>
         ))}
       </div>
-      <div className="m-5"></div>
+      <div className="m-6"></div>
 
       {/* Merch Section */}
       {/* <MerchSection /> */}
