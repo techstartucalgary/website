@@ -1,33 +1,30 @@
 "use client";
+import Link from "next/link";
+import Image from "next/image";
 
 export const MerchItems = ({
-  cloathinImg,
+  clothingImg,
   link,
   price,
   title,
 }: {
-  cloathinImg: string;
+  clothingImg: string;
   link: string;
   price: string;
   title: string;
 }) => {
   return (
-    <a
-      className="group w-full max-w-xs cursor-pointer"
-      href={link}
-      rel="noopener noreferrer"
-      target="_blank"
-    >
+    <Link className="group w-full max-w-xs cursor-pointer" href={link}>
       <div className="relative mx-auto mt-5 h-auto max-w-sm rounded-lg border-4 border-black p-5 shadow-lg transition-all duration-300 ease-in-out group-hover:scale-105 group-hover:opacity-90">
         {/* Image with black border and dark hover effect */}
-        <div className="w-50 h-72relative overflow-hidden rounded-t-lg border-b-4 border-black">
-          <img
+        <div className="relative w-full overflow-hidden rounded-t-lg border-b-4 border-black">
+          <Image
             alt="Merch Image"
-            className="w-full object-contain transition-all duration-300 group-hover:scale-110"
-            src={cloathinImg} // Dynamically set image source
+            className="object-contain transition-all duration-300 group-hover:scale-110"
+            height={533} // Matches aspect ratio (3:4)
+            src={clothingImg}
+            width={400} // Adjust based on aspect ratio
           />
-          {/* Dark overlay on hover */}
-          <div className="absolute left-0 top-0 size-full transition-all duration-300"></div>
         </div>
 
         {/* Title and Price Section */}
@@ -40,12 +37,12 @@ export const MerchItems = ({
 
         {/* Button Section */}
         <div className="mb-3 flex justify-center">
-          <button className="rounded-md bg-black px-10 py-3 text-white transition duration-200 ease-in-out hover:bg-gray-800">
+          <button className="rounded-md bg-black px-10 py-3 text-white transition-all duration-200 ease-in-out hover:bg-gradient-to-l hover:from-[#00B7FF] hover:via-[#64CDB2] hover:to-[#C9E265]">
             Buy Now
           </button>
         </div>
       </div>
-    </a>
+    </Link>
   );
 };
-export default MerchItems; // Default export
+export default MerchItems;

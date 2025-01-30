@@ -7,7 +7,7 @@ import { MerchItemsData } from "../../../lib/data/MerchData";
 
 const Lottie = dynamic(() => import("react-lottie"), { ssr: false });
 
-const MerchPage = () => {
+export const MerchPage = () => {
   return (
     <div
       className="flex flex-col items-center justify-center"
@@ -36,7 +36,7 @@ const MerchPage = () => {
         {MerchItemsData.map((merchItem) => (
           <div className="w-full p-2 sm:w-1/2 lg:w-1/3" key={merchItem.id}>
             <MerchItems
-              cloathinImg={merchItem.cloathinImg}
+              clothingImg={merchItem.clothingImg}
               link={merchItem.link}
               price={merchItem.price}
               title={merchItem.title}
