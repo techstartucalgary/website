@@ -20,7 +20,8 @@
       "@/*": [
         "./src/*"
       ]
-    }
+    },
+    "target": "ES2017"
   },
   "include": [
     "next-env.d.ts",
@@ -29,7 +30,7 @@
     "**/*.tsx",
     "**/*.js",
     "**/*.cjs",
-    "**/*.mjs",
+    "**/*.mjs"
   ],
   "exclude": [
     "node_modules"

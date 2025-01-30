@@ -34,7 +34,8 @@
     "react-tsparticles": "^2.9.3",
     "react-visibility-sensor": "^5.1.1",
     "styled-components": "^6.1.13",
-    "tsparticles": "^2.9.3"
+    "tsparticles": "^2.9.3",
+    "watch": "^1.0.2"
   },
   "devDependencies": {
     "@types/aos": "^3.0.7",
