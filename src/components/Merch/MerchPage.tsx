@@ -1,13 +1,13 @@
 import dynamic from "next/dynamic";
 import { motion } from "framer-motion";
-import { NewlineText } from "../../../utility/Helpers";
-import { merchPageLottieOptions } from "../../../utility/LottieOptions";
+import { NewlineText } from "../../utility/Helpers";
+import { merchPageLottieOptions } from "../../utility/LottieOptions";
 import { MerchItems } from "./MerchItems";
-import { MerchItemsData } from "../../../lib/data/MerchData";
+import { MerchItemsData } from "../../lib/data/MerchData";
 
 const Lottie = dynamic(() => import("react-lottie"), { ssr: false });
 
-export const MerchPage = () => {
+const MerchPage = () => {
   return (
     <div
       className="flex flex-col items-center justify-center"
