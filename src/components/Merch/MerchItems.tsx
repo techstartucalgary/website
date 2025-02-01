@@ -15,7 +15,6 @@ export const MerchItems = ({
   return (
     <Link className="group w-full max-w-xs cursor-pointer" href={link}>
       <div className="relative mx-auto mt-5 h-auto max-w-sm rounded-lg border-4 border-black p-5 shadow-lg transition-all duration-300 ease-in-out group-hover:scale-105 group-hover:opacity-90">
-        {/* Image with black border and dark hover effect */}
         <div className="relative w-full overflow-hidden rounded-t-lg border-b-4 border-black">
           <Image
             alt="Merch Image"

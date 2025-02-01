@@ -33,6 +33,7 @@
     "react-tsparticles": "^2.9.3",
     "react-visibility-sensor": "^5.1.1",
     "styled-components": "^6.1.13",
+    "tailwind-merge": "^3.0.1",
     "tsparticles": "^2.9.3"
   },
   "devDependencies": {

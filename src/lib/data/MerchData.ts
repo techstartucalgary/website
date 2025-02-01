@@ -22,4 +22,3 @@ export const MerchItemsData: MerchItem[] = [
     title: "Crew Neck with Custom Sleeve Print",
   },
 ];
-export default MerchItemsData;

@@ -7,7 +7,7 @@ import { MerchItemsData } from "../../lib/data/MerchData";
 
 const Lottie = dynamic(() => import("react-lottie"), { ssr: false });
 
-const MerchPage = () => {
+const MerchPageContent = () => {
   return (
     <div
       className="flex flex-col items-center justify-center"
@@ -32,7 +32,7 @@ const MerchPage = () => {
       </div>
 
       {/* Merch Items Grid - Max 3 per row */}
-      <div className="flex w-full flex-wrap justify-center gap-6 px-4">
+      <div className="my-6 flex w-full flex-wrap justify-center gap-6 px-4">
         {MerchItemsData.map((merchItem) => (
           <div className="w-full p-2 sm:w-1/2 lg:w-1/3" key={merchItem.id}>
             <MerchItems
@@ -44,13 +44,8 @@ const MerchPage = () => {
           </div>
         ))}
       </div>
-
-      <div className="m-6"></div>
-
-      {/* Merch Section (Optional) */}
-      {/* <MerchSection /> */}
     </div>
   );
 };
 
-export default MerchPage;
+export default MerchPageContent;
