@@ -1,5 +1,5 @@
-import MerchPage from "../../components/Merch/MerchPage";
+import MerchPageContent from "../../components/Merch/MerchPageContent";
 
-export default function MerchPagePage() {
-  return <MerchPage />;
+export default function MerchPage() {
+  return <MerchPageContent />;
 }
