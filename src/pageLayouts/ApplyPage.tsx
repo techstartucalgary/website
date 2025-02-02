@@ -1,43 +1,49 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-
-import Lottie from "react-lottie";
-import "./ApplyPage.css";
-import { applyPageTeamLottieOptions } from "../utility/LottieOptions";
-import execs_24 from "images/execs_24.jpg";
+import styles from "./ApplyPage.module.css";
+import dynamic from "next/dynamic";
 import ApplySection from "../components/ApplySection";
 import Accordion from "../components/Apply/Accordion";
 import Divider from "../components/Divider";
 import HoverButton from "../components/HoverButton/HoverButton";
 import { ButtonMode } from "../components/HoverButton/HoverButton.styles";
-import dynamic from "next/dynamic";
+import { applyPageTeamLottieOptions } from "../utility/LottieOptions";
+import execs_24 from "../images/execs_24.jpg";
 
 const Blobbie = dynamic(() => import("../components/Blobbie"), { ssr: false });
+const Lottie = dynamic(() => import("react-lottie"), { ssr: false });
 
 const ApplyPage = () => {
   const [active, setActive] = useState("");
   return (
-    <div className="applyPage">
-      <div className="applyPage__waves applyPage__waves1"></div>
-      <div className="applyPage__waves applyPage__waves2"></div>
-      <header className="applyPage__showcase" id="applyPageTop">
-        <div className="applyPage__spacing" data-aos="zoom-out-down"></div>
-        <div className="applyPage__primary-wrapper">
+    <div className={styles.applyPage}>
+      <div
+        className={`${styles.applyPage__waves} ${styles.applyPage__waves1}`}
+      ></div>
+      <div
+        className={`${styles.applyPage__waves} ${styles.applyPage__waves2}`}
+      ></div>
+      <header className={styles.applyPage__showcase} id="applyPageTop">
+        <div
+          className={styles.applyPage__spacing}
+          data-aos="zoom-out-down"
+        ></div>
+        <div className={styles.applyPage__primary_wrapper}>
           <motion.h1
             animate={{ opacity: 1 }}
-            className="applyPage__primary-title"
+            className={styles.applyPage__primary_title}
             initial={{ opacity: 0 }}
             transition={{ delay: 0.5 }}
           >
             APPLY
           </motion.h1>
-          {/*<p className="applyPage__primary-description">
+          {/*<p className={styles.applyPage__primary_description}>
             Join a dynamic community dedicated to advancing software development
             and entrepreneurship at the University of Calgary.
   </p>*/}
           <motion.p
             animate={{ opacity: 1 }}
-            className="applyPage__primary-description"
+            className={styles.applyPage__primary_description}
             initial={{ opacity: 0 }}
             transition={{ delay: 1 }}
           >
@@ -55,7 +61,7 @@ const ApplyPage = () => {
         </div>
       </header>
 
-      <div className="applyPage__introContainer">
+      <div className={styles.applyPage__introContainer}>
         <Blobbie
           edge={true}
           id={8}
@@ -68,7 +74,7 @@ const ApplyPage = () => {
           transform="translate(83vw, 80%)"
           width={350}
         />
-        <div className="applyPage__intro">
+        <div className={styles.applyPage__intro}>
           <h1 className="chonkyHeading chonkyHeading--dynamic chonkyHeading--lessMargin">
             What We Do
           </h1>
@@ -97,21 +103,28 @@ const ApplyPage = () => {
           </div>
         </div>
       </div>
-      <div className="applyPage__projectExample">
-        <div className="applyPage__projectExampleText">
+      <div className={styles.applyPage__projectExample}>
+        <div className={styles.applyPage__projectExampleText}>
           <h1>
             Join a project to make new friends, gain new skills, and supercharge
             your portfolio!
           </h1>
         </div>
-        <img alt="Tech Start Members" src={execs_24.src} />
+        <img
+          alt="Tech Start Members"
+          height={300}
+          src={execs_24.src}
+          width={500}
+        />{" "}
       </div>
 
-      <div className="applyPage__container applyPage__projectIntroContainer">
-        <div className="applyPage__projectIntroImg">
+      <div
+        className={`${styles.applyPage__container} ${styles.applyPage__projectIntroContainer}`}
+      >
+        <div className={styles.applyPage__projectIntroImg}>
           <Lottie options={applyPageTeamLottieOptions} />
         </div>
-        <div className="applyPage__projectIntro">
+        <div className={styles.applyPage__projectIntro}>
           <h1 className="chonkyHeading chonkyHeading--dynamic chonkyHeading--white">
             FAQ
           </h1>
@@ -229,8 +242,10 @@ const ApplyPage = () => {
         />
       </div>
 
-      <div className="applyPage__container applyPage__applicationContainer">
-        <div className="applyPage__application">
+      <div
+        className={`${styles.applyPage__container} ${styles.applyPage__applicationContainer}`}
+      >
+        <div className={styles.applyPage__application}>
           <Blobbie
             edge={false}
             id={2}
@@ -248,7 +263,7 @@ const ApplyPage = () => {
             Applications
           </h1>
           <Divider />
-          <ul className="applyPage__applicationUL">
+          <ul className={styles.applyPage__applicationUL}>
             <ApplySection
               applicationLink="https://forms.gle/aH3r7eKwk3sSHhwp8"
               closedStatus="APPLICATIONS CLOSED"

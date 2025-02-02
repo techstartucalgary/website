@@ -19,13 +19,13 @@ const Accordion = (props: AccordionProps) => {
         }
       >
         <S.AccordionContainer>
-          <p>{props.title}</p>
+          <div>{props.title}</div>
           <span>{props.active === props.title ? "-" : "+"}</span>
         </S.AccordionContainer>
       </S.AccordionHeading>
       <S.AccordionContent contentVisible={props.active === props.title}>
         <S.HTML_Container>
-          <p dangerouslySetInnerHTML={{ __html: props.description }}></p>
+          <div dangerouslySetInnerHTML={{ __html: props.description }}></div>
         </S.HTML_Container>
       </S.AccordionContent>
     </S.Accordion>
