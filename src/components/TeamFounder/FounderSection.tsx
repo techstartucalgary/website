@@ -1,7 +1,7 @@
-/* eslint-disable @next/next/no-img-element */
 import React from "react";
 import { founder } from "../TeamSection/TeamInformation";
 import useViewport from "../UseViewport";
+import Image from "next/image";
 
 const FounderSection = () => {
   const { width } = useViewport();
@@ -9,24 +9,26 @@ const FounderSection = () => {
 
   return (
     <div
-      className={`flex w-full flex-col items-center gap-6 md:flex-row md:gap-12 ${
+      className={`mx-auto mt-12 flex max-w-[900px] flex-col items-center justify-center md:flex-row ${
         defaultView ? "text-left" : "text-center"
       }`}
     >
-      {/* Founder Image */}
-      <div className="size-40 shrink-0 md:size-52">
-        <img
+      {/* Founder Image Container */}
+      <div className="relative mb-6 size-64 shrink-0 md:mb-0 md:mr-16 md:size-80">
+        <Image
           alt={founder.name}
-          className="size-full rounded-full object-cover"
+          className="size-full rounded-[80%] object-cover"
+          fill
+          priority
           src={founder.imagePath}
         />
       </div>
 
       {/* Founder Details */}
       <div className="text-white">
-        <span className="block text-2xl font-bold">{founder.name}</span>
-        <span className="block text-lg italic">{founder.affiliation}</span>
-        <p className="mt-4">{founder.description}</p>
+        <span className="block text-4xl font-bold">{founder.name}</span>
+        <span className="block text-2xl italic">{founder.affiliation}</span>
+        <p className="mt-4 text-2xl leading-relaxed">{founder.description}</p>
       </div>
     </div>
   );

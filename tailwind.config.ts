@@ -13,6 +13,7 @@ const config: Config = {
         "turquoise-green": "var(--turquoise-green)",
       },
       fontFamily: {
+        Inter: ["Inter", "Tahoma", "sans-serif"],
         console: ["Consolas", "monaco", "monospace"],
       },
       keyframes: {

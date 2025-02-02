@@ -66,7 +66,7 @@ const TeamPage = () => {
         </motion.div>
       </header>
 
-      <h1 className="chonkyHeading chonkyHeading--white chonkyHeading--lessMargin">
+      <h1 className="my-12 text-center font-bold text-white" style={{ fontSize: "var(--chonky-header-size)" }}>
         The Board
       </h1>
       <Divider />

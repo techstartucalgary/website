@@ -12,7 +12,7 @@ const TeamSection = ({ desktopView }: TeamSectionProps) => {
   const [selectedCategory, setSelectedCategory] =
     useState<TeamCategory>("executives");
 
-  const getTeamMembers = useMemo(() => {
+  const TeamMembers = useMemo(() => {
     switch (selectedCategory) {
       case "projectManagers":
         return projectManagers;
@@ -24,29 +24,34 @@ const TeamSection = ({ desktopView }: TeamSectionProps) => {
   }, [selectedCategory]);
 
   return (
-    <div className="mx-auto p-10 text-center">
-      <h2 className="text-primary-black mb-4 text-4xl font-bold">Our Team</h2>
+    <div className="mx-auto p-[5vw] text-center">
+      <h2 className="mb-0 font-[--chonky-header-weight] text-[--chonky-header-size] text-[--primary-black] md:text-[--thicc-subheading-size]">
+        Our Team
+      </h2>
 
       {/* Toggle Buttons */}
-      <div className="relative mt-4 flex items-center justify-center">
-        <div className="bg-primary-green relative flex h-14 w-[700px] rounded-full p-1 transition-all">
+      <div className="relative mt-[2%] flex items-center justify-center">
+        <div className="relative flex h-[60px] w-[700px] rounded-full bg-[--primary-green] p-[5px]">
           <div
-            className={`absolute left-1 top-1 h-[calc(100%-8px)] w-1/3 rounded-full bg-opacity-90 shadow-md transition-all ${selectedCategory === "executives" ? "bg-primary-green" : selectedCategory === "projectManagers" ? "bg-lightwash-green left-[33.3%]" : "bg-secondary-lime left-[66.6%]"} `}
+            className={`absolute top-[5px] h-[calc(100%-10px)] w-[calc(33.3%-10px)] rounded-full shadow-md transition-[left,background-color] duration-[800ms,200ms] ease-[ease,ease-in-out]
+              ${selectedCategory === "executives" ? "left-[5px] bg-[--primary-green]" : 
+                selectedCategory === "projectManagers" ? "left-[calc(33.3%+5px)] bg-[--lightwash-green]" : 
+                "left-[calc(66.6%+5px)] bg-[--secondary-lime]"}`}
           />
           <button
-            className="flex-1 text-lg font-semibold text-white"
+            className="z-10 flex-1 cursor-pointer p-[10px_5px] text-center text-lg font-medium text-white md:text-base"
             onClick={() => setSelectedCategory("executives")}
           >
             Executives
           </button>
           <button
-            className="text-turquoise-green flex-1 text-lg font-bold"
+            className="z-10 flex-1 cursor-pointer p-[10px_5px] text-center text-lg font-medium text-white md:text-base"
             onClick={() => setSelectedCategory("projectManagers")}
           >
             Project Managers
           </button>
           <button
-            className="text-turquoise-blue flex-1 text-lg font-semibold"
+            className="z-10 flex-1 cursor-pointer p-[10px_5px] text-center text-lg font-medium text-white md:text-base"
             onClick={() => setSelectedCategory("alumni")}
           >
             Alumni
@@ -58,7 +63,7 @@ const TeamSection = ({ desktopView }: TeamSectionProps) => {
       <Team
         activeCategory={selectedCategory}
         desktopView={desktopView}
-        teamMembers={getTeamMembers}
+        teamMembers={TeamMembers}
       />
     </div>
   );
