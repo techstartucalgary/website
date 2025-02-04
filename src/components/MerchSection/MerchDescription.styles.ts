@@ -16,17 +16,21 @@ export const MerchDescriptionDiv = styled.div`
     @media (max-width: 950px) and (min-width: 650px) {
       font-size: 1.1rem;
     }
-    @media (max-width: 350px) {font-size: 1.2rem;}
+    @media (max-width: 350px) {
+      font-size: 1.2rem;
+    }
   }
 
   & > h4 {
     margin: 0%;
     color: var(--secondary-grey);
     font-weight: 300;
-    font-size: 1.1rem;  
+    font-size: 1.1rem;
     @media (max-width: 950px) and (min-width: 650px) {
       font-size: 0.95rem;
     }
-    @media (max-width: 350px) {font-size: 1rem;
+    @media (max-width: 350px) {
+      font-size: 1rem;
     }
+  }
 `;

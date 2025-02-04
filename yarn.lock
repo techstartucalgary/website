@@ -3820,7 +3820,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lodash.debounce@npm:^4.0.6":
+"lodash.debounce@npm:^4.0.6, lodash.debounce@npm:^4.0.8":
   version: 4.0.8
   resolution: "lodash.debounce@npm:4.0.8"
   checksum: 10c0/762998a63e095412b6099b8290903e0a8ddcb353ac6e2e0f2d7e7d03abd4275fe3c689d88960eb90b0dde4f177554d51a690f22a343932ecbc50a5d111849987
@@ -5133,15 +5133,16 @@ __metadata:
     "@types/aos": "npm:^3.0.7"
     "@types/eslint": "npm:^9.6.0"
     "@types/node": "npm:^20"
-    "@types/react": "npm:^18.2.7"
+    "@types/react": "npm:^18"
     "@types/react-dom": "npm:^18"
+    "@types/react-lazy-load-image-component": "npm:^1.6.4"
     "@types/react-lottie": "npm:^1.2.10"
     "@types/react-scroll": "npm:^1.8.10"
     "@typescript-eslint/eslint-plugin": "npm:^7.4.0"
     "@typescript-eslint/parser": "npm:^7.4.0"
     aos: "npm:^2.3.4"
     autoprefixer: "npm:^10.4.20"
-    axios: "npm:^1.7.8"
+    axios: "npm:^1.7.7"
     classnames: "npm:^2.5.1"
     eslint: "npm:8.57.0"
     eslint-config-next: "npm:14.2.14"
@@ -5165,6 +5166,7 @@ __metadata:
     react-countup: "npm:^6.5.3"
     react-dom: "npm:^18"
     react-intersection-observer: "npm:^9.13.1"
+    react-lazy-load-image-component: "npm:^1.6.2"
     react-lottie: "npm:^1.2.4"
     react-multi-carousel: "npm:^2.8.5"
     react-scroll: "npm:^1.9.0"
