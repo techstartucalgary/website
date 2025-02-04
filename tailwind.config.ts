@@ -23,6 +23,10 @@ const config: Config = {
           "50%": { transform: "translateX(20px)" },
         },
       },
+      screens: {
+        "md-max": { max: "48rem" },
+        "sm-max": { max: "43.75rem" },
+      },
     },
   },
 };
