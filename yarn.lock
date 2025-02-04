@@ -864,16 +864,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react-lazy-load-image-component@npm:^1.6.4":
-  version: 1.6.4
-  resolution: "@types/react-lazy-load-image-component@npm:1.6.4"
-  dependencies:
-    "@types/react": "npm:*"
-    csstype: "npm:^3.0.2"
-  checksum: 10c0/f0d6c02439bbd4b899fe78c5a518e121bb333af0f5b36179136551e5c03efd0e8abb20a96dbc70e367858f2268bfcd883c3b6278646c9a09685a53039b1d1da4
-  languageName: node
-  linkType: hard
-
 "@types/react-lottie@npm:^1.2.10":
   version: 1.2.10
   resolution: "@types/react-lottie@npm:1.2.10"
@@ -3889,7 +3879,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lodash.debounce@npm:^4.0.6, lodash.debounce@npm:^4.0.8":
+"lodash.debounce@npm:^4.0.6":
   version: 4.0.8
   resolution: "lodash.debounce@npm:4.0.8"
   checksum: 10c0/762998a63e095412b6099b8290903e0a8ddcb353ac6e2e0f2d7e7d03abd4275fe3c689d88960eb90b0dde4f177554d51a690f22a343932ecbc50a5d111849987
@@ -4891,18 +4881,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-lazy-load-image-component@npm:^1.6.3":
-  version: 1.6.3
-  resolution: "react-lazy-load-image-component@npm:1.6.3"
-  dependencies:
-    lodash.debounce: "npm:^4.0.8"
-    lodash.throttle: "npm:^4.1.1"
-  peerDependencies:
-    react: ^15.x.x || ^16.x.x || ^17.x.x || ^18.x.x || ^19.x.x
-  checksum: 10c0/5237557d90b26aadcaf078ce8fa9b5d2270705d771c3f4cdb39375e7988257f6ba0705b558150b54c695d9a001fbeb3d690638df1bc85759d248a0f01d9659d1
-  languageName: node
-  linkType: hard
-
 "react-lottie@npm:^1.2.4":
   version: 1.2.4
   resolution: "react-lottie@npm:1.2.4"
@@ -5165,7 +5143,6 @@ __metadata:
     "@types/node": "npm:^20"
     "@types/react": "npm:^18.2.7"
     "@types/react-dom": "npm:^18"
-    "@types/react-lazy-load-image-component": "npm:^1.6.4"
     "@types/react-lottie": "npm:^1.2.10"
     "@types/react-scroll": "npm:^1.8.10"
     "@typescript-eslint/eslint-plugin": "npm:^7.4.0"
@@ -5196,7 +5173,6 @@ __metadata:
     react-countup: "npm:^6.5.3"
     react-dom: "npm:^18"
     react-intersection-observer: "npm:^9.13.1"
-    react-lazy-load-image-component: "npm:^1.6.3"
     react-lottie: "npm:^1.2.4"
     react-multi-carousel: "npm:^2.8.5"
     react-scroll: "npm:^1.9.0"
