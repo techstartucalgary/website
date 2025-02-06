@@ -1,13 +1,19 @@
 import PhotoGallery from "../components/PhotoGallery/PhotoGallery";
 import { motion } from "framer-motion";
-import * as S from "./GalleryPage.styles";
 import dynamic from "next/dynamic";
 
 const Blobbie = dynamic(() => import("../components/Blobbie"), { ssr: false });
+interface PhotoProps {
+  picUrls: string[];
+  className?: string;
+}
 
-const GalleryPage = () => {
+const GalleryPage = ({ picUrls }: PhotoProps) => {
   return (
-    <S.GalleryPage id="galleryPageTop">
+    <div
+      className="relative box-border min-h-screen overflow-hidden scroll-smooth whitespace-normal bg-gradient-to-b from-dark-background to-dark-background-end p-0 font-sans"
+      id="galleryPageTop"
+    >
       <Blobbie
         edge={true}
         id={2}
@@ -20,7 +26,7 @@ const GalleryPage = () => {
         transform="translate(-10vw, 10vw)"
         width={250}
       />
-      <S.GalleryPageHeader>
+      <div className="text-center text-title-size text-white">
         <motion.h1
           animate={{ opacity: 1 }}
           initial={{ opacity: 0 }}
@@ -28,10 +34,9 @@ const GalleryPage = () => {
         >
           Gallery
         </motion.h1>
-      </S.GalleryPageHeader>
-
-      <PhotoGallery />
-    </S.GalleryPage>
+      </div>
+      <PhotoGallery picUrls={picUrls} />
+    </div>
   );
 };
 

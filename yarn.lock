@@ -864,16 +864,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react-lazy-load-image-component@npm:^1.6.4":
-  version: 1.6.4
-  resolution: "@types/react-lazy-load-image-component@npm:1.6.4"
-  dependencies:
-    "@types/react": "npm:*"
-    csstype: "npm:^3.0.2"
-  checksum: 10c0/f0d6c02439bbd4b899fe78c5a518e121bb333af0f5b36179136551e5c03efd0e8abb20a96dbc70e367858f2268bfcd883c3b6278646c9a09685a53039b1d1da4
-  languageName: node
-  linkType: hard
-
 "@types/react-lottie@npm:^1.2.10":
   version: 1.2.10
   resolution: "@types/react-lottie@npm:1.2.10"
@@ -901,13 +891,23 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react@npm:*, @types/react@npm:^18":
+"@types/react@npm:*":
   version: 18.3.11
   resolution: "@types/react@npm:18.3.11"
   dependencies:
     "@types/prop-types": "npm:*"
     csstype: "npm:^3.0.2"
   checksum: 10c0/ce80512246ca5bda69db85b9f4f1835189334acfb6b2c4f3eda8cabff1ff1a3ea9ce4f3b895bdbc18c94140aa45592331aa3fdeb557f525c1b048de7ce84fc0e
+  languageName: node
+  linkType: hard
+
+"@types/react@npm:^18.2.7":
+  version: 18.3.18
+  resolution: "@types/react@npm:18.3.18"
+  dependencies:
+    "@types/prop-types": "npm:*"
+    csstype: "npm:^3.0.2"
+  checksum: 10c0/8fb2b00672072135d0858dc9db07873ea107cc238b6228aaa2a9afd1ef7a64a7074078250db38afbeb19064be8ea6af5eac32d404efdd5f45e093cc4829d87f8
   languageName: node
   linkType: hard
 
@@ -1474,14 +1474,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"axios@npm:^1.7.7":
-  version: 1.7.7
-  resolution: "axios@npm:1.7.7"
+"axios@npm:^1.7.8":
+  version: 1.7.8
+  resolution: "axios@npm:1.7.8"
   dependencies:
     follow-redirects: "npm:^1.15.6"
     form-data: "npm:^4.0.0"
     proxy-from-env: "npm:^1.1.0"
-  checksum: 10c0/4499efc89e86b0b49ffddc018798de05fab26e3bf57913818266be73279a6418c3ce8f9e934c7d2d707ab8c095e837fc6c90608fb7715b94d357720b5f568af7
+  checksum: 10c0/23ae2d0105aea9170c34ac9b6f30d9b2ab2fa8b1370205d2f7ce98b9f9510ab420148c13359ee837ea5a4bf2fb028ff225bd2fc92052fb0c478c6b4a836e2d5f
   languageName: node
   linkType: hard
 
@@ -3879,7 +3879,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lodash.debounce@npm:^4.0.6, lodash.debounce@npm:^4.0.8":
+"lodash.debounce@npm:^4.0.6":
   version: 4.0.8
   resolution: "lodash.debounce@npm:4.0.8"
   checksum: 10c0/762998a63e095412b6099b8290903e0a8ddcb353ac6e2e0f2d7e7d03abd4275fe3c689d88960eb90b0dde4f177554d51a690f22a343932ecbc50a5d111849987
@@ -4881,18 +4881,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-lazy-load-image-component@npm:^1.6.2":
-  version: 1.6.2
-  resolution: "react-lazy-load-image-component@npm:1.6.2"
-  dependencies:
-    lodash.debounce: "npm:^4.0.8"
-    lodash.throttle: "npm:^4.1.1"
-  peerDependencies:
-    react: ^15.x.x || ^16.x.x || ^17.x.x || ^18.x.x
-  checksum: 10c0/e0bf069d734c9371cfcea6e9402b6327adf18c6e57c98616f48b38dbbeb5c8d1e9262ad4b8f5626fdd26d5ddfa7c547ff9d17419a9617306195f5fe577f0b430
-  languageName: node
-  linkType: hard
-
 "react-lottie@npm:^1.2.4":
   version: 1.2.4
   resolution: "react-lottie@npm:1.2.4"
@@ -5153,16 +5141,15 @@ __metadata:
     "@types/aos": "npm:^3.0.7"
     "@types/eslint": "npm:^9.6.0"
     "@types/node": "npm:^20"
-    "@types/react": "npm:^18"
+    "@types/react": "npm:^18.2.7"
     "@types/react-dom": "npm:^18"
-    "@types/react-lazy-load-image-component": "npm:^1.6.4"
     "@types/react-lottie": "npm:^1.2.10"
     "@types/react-scroll": "npm:^1.8.10"
     "@typescript-eslint/eslint-plugin": "npm:^7.4.0"
     "@typescript-eslint/parser": "npm:^7.4.0"
     aos: "npm:^2.3.4"
     autoprefixer: "npm:^10.4.20"
-    axios: "npm:^1.7.7"
+    axios: "npm:^1.7.8"
     classnames: "npm:^2.5.1"
     eslint: "npm:8.57.0"
     eslint-config-next: "npm:14.2.14"
@@ -5186,7 +5173,6 @@ __metadata:
     react-countup: "npm:^6.5.3"
     react-dom: "npm:^18"
     react-intersection-observer: "npm:^9.13.1"
-    react-lazy-load-image-component: "npm:^1.6.2"
     react-lottie: "npm:^1.2.4"
     react-multi-carousel: "npm:^2.8.5"
     react-scroll: "npm:^1.9.0"
