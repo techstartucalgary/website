@@ -48,6 +48,8 @@ const Profile: React.FC<ProfileProps> = ({
             className="mt-[15px] aspect-square w-full rounded-full bg-white object-cover"
             draggable={false}
             height={150}
+            loading="eager"
+            priority
             src={profilePic}
             width={150}
           />
