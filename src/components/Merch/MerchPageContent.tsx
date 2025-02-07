@@ -1,11 +1,9 @@
-import dynamic from "next/dynamic";
+import Lottie from "lottie-react";
 import { motion } from "framer-motion";
 import { NewlineText } from "../../utility/Helpers";
 import { merchPageLottieOptions } from "../../utility/LottieOptions";
 import { MerchItems } from "./MerchItems";
 import { MerchItemsData } from "../../lib/data/MerchData";
-
-const Lottie = dynamic(() => import("react-lottie"), { ssr: false });
 
 const MerchPageContent = () => {
   return (
@@ -17,7 +15,7 @@ const MerchPageContent = () => {
       <div className="mb-8 flex w-full flex-col items-center bg-black pb-32">
         <div className="flex w-full items-center justify-center">
           <div className="w-full max-w-xl">
-            <Lottie options={merchPageLottieOptions} />
+            <Lottie {...merchPageLottieOptions} />
           </div>
         </div>
 
