@@ -29,7 +29,7 @@ export const AccordionContainer = styled.div`
     font-size: 27px;
     position: absolute;
     transform: translateY(-6.5px);
-    right: 8%;
+    right: 18%;
     color: var(--primary-green, rgb(106, 235, 80));
     text-shadow: rgb(74, 241, 8);
 

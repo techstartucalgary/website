@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import styles from "./ApplyPage.module.css";
 import dynamic from "next/dynamic";
 import ApplySection from "../components/ApplySection";
 import Accordion from "../components/Apply/Accordion";
@@ -16,41 +15,49 @@ const Lottie = dynamic(() => import("react-lottie"), { ssr: false });
 const ApplyPage = () => {
   const [active, setActive] = useState("");
   return (
-    <div className={styles.applyPage}>
-      <div
-        className={`${styles.applyPage__waves} ${styles.applyPage__waves1}`}
-      ></div>
-      <div
-        className={`${styles.applyPage__waves} ${styles.applyPage__waves2}`}
-      ></div>
-      <header className={styles.applyPage__showcase} id="applyPageTop">
-        <div
-          className={styles.applyPage__spacing}
-          data-aos="zoom-out-down"
-        ></div>
-        <div className={styles.applyPage__primary_wrapper}>
+    <div className="overflow-hidden">
+      <div className="absolute left-0 top-[80vh] h-[100px] w-full animate-[animate1_15s_linear_infinite] bg-[url('../images/wave.png')]"></div>
+      <div className="bg-[position-x:200px] absolute left-0 top-[80vh] h-[120px] w-full animate-[animate2_9s_linear_infinite] bg-[url('../images/wave.png')] opacity-50"></div>
+      <style>
+        {`
+      @keyframes animate1 {
+        0% { background-position-x: 0; }
+        100% { background-position-x: 1000px; }
+      }
+      @keyframes animate2 {
+        0% { background-position-x: 500px; }
+        100% { background-position-x: -250px; }
+      }
+    `}
+      </style>
+      <header
+        className="h-[80vh] w-screen overflow-hidden text-white"
+        id="applyPageTop"
+        style={{
+          backgroundImage:
+            "linear-gradient( var(--primary-green),var(--lightwash-green), var(--baby-blue))",
+        }}
+      >
+        <div data-aos="zoom-out-down"></div>
+        <div className="relative top-[20%] flex flex-col items-start">
           <motion.h1
             animate={{ opacity: 1 }}
-            className={styles.applyPage__primary_title}
+            className="primaryTitle relative top-[20%] ml-[10%] sm:top-[3vh] md:top-[5vh]"
             initial={{ opacity: 0 }}
             transition={{ delay: 0.5 }}
           >
             APPLY
           </motion.h1>
-          {/*<p className={styles.applyPage__primary_description}>
-            Join a dynamic community dedicated to advancing software development
-            and entrepreneurship at the University of Calgary.
-  </p>*/}
           <motion.p
             animate={{ opacity: 1 }}
-            className={styles.applyPage__primary_description}
+            className="relative top-[20%] ml-[10%] text-[clamp(18px,1vw+12px,24px)] sm:top-[3vh] md:top-[5vh]"
             initial={{ opacity: 0 }}
             transition={{ delay: 1 }}
           >
             Apply below to be a Project Manager or Executive! For more
             information, join our{" "}
             {
-              <a href="https://discord.gg/Sxj5QrxRPk">
+              <a className="text-white" href="https://discord.gg/Sxj5QrxRPk">
                 <b>
                   <u>Discord</u>
                 </b>
@@ -60,8 +67,7 @@ const ApplyPage = () => {
           </motion.p>
         </div>
       </header>
-
-      <div className={styles.applyPage__introContainer}>
+      <div className="relative mx-auto my-10 justify-center">
         <Blobbie
           edge={true}
           id={8}
@@ -74,14 +80,18 @@ const ApplyPage = () => {
           transform="translate(83vw, 80%)"
           width={350}
         />
-        <div className={styles.applyPage__intro}>
+        <div className="my-[5%]">
           <h1 className="chonkyHeading chonkyHeading--dynamic chonkyHeading--lessMargin">
             What We Do
           </h1>
           <Divider />
 
-          <div data-aos="fade-down" data-aos-duration="1000">
-            <p className="regularText regularText--largest">
+          <div
+            className="flex justify-center overflow-hidden"
+            data-aos="fade-down"
+            data-aos-duration="1000"
+          >
+            <p className="regularText regularText--largest w-4/5 text-center">
               Tech Start is a collaborative software development club at the
               University of Calgary with a passion for startups. Every semester,
               we create tech projects in teams with a focus on teaching our
@@ -103,28 +113,23 @@ const ApplyPage = () => {
           </div>
         </div>
       </div>
-      <div className={styles.applyPage__projectExample}>
-        <div className={styles.applyPage__projectExampleText}>
-          <h1>
-            Join a project to make new friends, gain new skills, and supercharge
-            your portfolio!
-          </h1>
-        </div>
-        <img
-          alt="Tech Start Members"
-          height={300}
-          src={execs_24.src}
-          width={500}
-        />{" "}
-      </div>
+      <div className="mx-auto mb-[3%] w-[80vw] text-center">
+        <h1 className="mb-5 text-[clamp(24px,0.4vw+24px,30px)] font-semibold">
+          Join a project to make new friends, gain new skills, and supercharge
+          your portfolio!
+        </h1>
 
-      <div
-        className={`${styles.applyPage__container} ${styles.applyPage__projectIntroContainer}`}
-      >
-        <div className={styles.applyPage__projectIntroImg}>
+        <img
+          alt="Project Example"
+          className="mx-auto w-[85vw] max-w-[900px]"
+          src={execs_24.src}
+        />
+      </div>
+      <div className="flex items-center bg-[#202020] text-white">
+        <div className="ml-[7%] inline-block h-[30vw] min-h-[10vw] w-[24vw] min-w-[10vw]">
           <Lottie options={applyPageTeamLottieOptions} />
         </div>
-        <div className={styles.applyPage__projectIntro}>
+        <div className="w-[50vw] bg-[#202020] p-[5%_3%]">
           <h1 className="chonkyHeading chonkyHeading--dynamic chonkyHeading--white">
             FAQ
           </h1>
@@ -241,60 +246,55 @@ const ApplyPage = () => {
           width={130}
         />
       </div>
+      <div className="relative mx-auto my-10 justify-center">
+        <Blobbie
+          edge={false}
+          id={2}
+          transform="translate(clamp(90vw, calc(5vw + 1rem), 40vw), 20%)"
+          width={290}
+        />
+        <Blobbie
+          edge={false}
+          id={3}
+          transform="translate(clamp(-70vw, calc(5vw + 1rem), 40vw), -15%)"
+          width={200}
+        />
 
-      <div
-        className={`${styles.applyPage__container} ${styles.applyPage__applicationContainer}`}
-      >
-        <div className={styles.applyPage__application}>
-          <Blobbie
-            edge={false}
-            id={2}
-            transform="translate(clamp(90vw, calc(5vw + 1rem), 40vw), 20%)"
-            width={290}
-          />
-          <Blobbie
-            edge={false}
-            id={3}
-            transform="translate(clamp(-70vw, calc(5vw + 1rem), 40vw), -15%)"
-            width={200}
-          />
-
-          <h1 className="chonkyHeading chonkyHeading--dynamic chonkyHeading--lessMargin">
-            Applications
-          </h1>
-          <Divider />
-          <ul className={styles.applyPage__applicationUL}>
-            <ApplySection
-              applicationLink="https://forms.gle/aH3r7eKwk3sSHhwp8"
-              closedStatus="APPLICATIONS CLOSED"
-              deadline=""
-              description="Work and grow as a developer, business strategist, or designer.
+        <h1 className="chonkyHeading chonkyHeading--dynamic chonkyHeading--lessMargin">
+          Applications
+        </h1>
+        <Divider />
+        <ul className="md:inline-flex">
+          <ApplySection
+            applicationLink="https://forms.gle/aH3r7eKwk3sSHhwp8"
+            closedStatus="APPLICATIONS CLOSED"
+            deadline=""
+            description="Work and grow as a developer, business strategist, or designer.
                   Collaborate with team members on various platforms to build an exciting project for 1 academic year."
-              role="Project Member"
-              statusIsOpen={true}
-            />
+            role="Project Member"
+            statusIsOpen={true}
+          />
 
-            <ApplySection
-              applicationLink="https://forms.gle/sXrtiz5PQCLdwK6N7"
-              closedStatus="APPLICATIONS CLOSED"
-              deadline=""
-              description="Manage a project for 1 year and lead a team of 6-9
+          <ApplySection
+            applicationLink="https://forms.gle/sXrtiz5PQCLdwK6N7"
+            closedStatus="APPLICATIONS CLOSED"
+            deadline=""
+            description="Manage a project for 1 year and lead a team of 6-9
                     project members to create complex projects."
-              role="Project Manager"
-              statusIsOpen={false}
-            />
+            role="Project Manager"
+            statusIsOpen={false}
+          />
 
-            <ApplySection
-              applicationLink="https://forms.gle/GtioLzJqeNcPYHjB6"
-              closedStatus="APPLICATIONS CLOSED"
-              deadline=""
-              description="Work behind the scenes for 1 academic year to organize project teams, run
+          <ApplySection
+            applicationLink="https://forms.gle/GtioLzJqeNcPYHjB6"
+            closedStatus="APPLICATIONS CLOSED"
+            deadline=""
+            description="Work behind the scenes for 1 academic year to organize project teams, run
                   workshops and events, and grow our club culture. Be a visionary that helps this club fulfill its goals!"
-              role="Executive Team"
-              statusIsOpen={true}
-            />
-          </ul>
-        </div>
+            role="Executive Team"
+            statusIsOpen={true}
+          />
+        </ul>
       </div>
     </div>
   );

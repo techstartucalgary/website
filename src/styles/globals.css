@@ -48,6 +48,10 @@
   );
 }
 
+.primaryTitle {
+  font-size: var(--title-size);
+}
+
 .chonkyHeading {
   font-size: var(--chonky-header-size);
   font-weight: var(--chonky-header-weight);

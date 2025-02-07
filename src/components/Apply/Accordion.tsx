@@ -19,7 +19,7 @@ const Accordion = (props: AccordionProps) => {
         }
       >
         <S.AccordionContainer>
-          <div>{props.title}</div>
+          <p>{props.title}</p>
           <span>{props.active === props.title ? "-" : "+"}</span>
         </S.AccordionContainer>
       </S.AccordionHeading>
