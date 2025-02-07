@@ -1,6 +1,6 @@
 import * as S from "./ProjectsPage.styles";
 import { useState } from "react";
-import Lottie from "react-lottie";
+import Lottie from "lottie-react";
 import { teamProjectLottieOptions } from "../utility/LottieOptions";
 import { motion } from "framer-motion";
 import { PastProjects } from "../components/ProjectSection/ProjectData";
@@ -24,7 +24,7 @@ const ProjectsPage = () => {
       <S.ProjectsPageHeader>
         <S.ProjectsPageHeaderItem>
           <S.LottieDiv>
-            <Lottie options={teamProjectLottieOptions} />
+            <Lottie {...teamProjectLottieOptions} />
           </S.LottieDiv>
         </S.ProjectsPageHeaderItem>
         <S.ProjectsPageHeaderItem>
