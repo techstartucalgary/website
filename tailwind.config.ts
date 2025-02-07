@@ -17,7 +17,6 @@ const config: Config = {
       fontFamily: {
         Inter: ["Inter", "Tahoma", "sans-serif"],
         console: ["Consolas", "monaco", "monospace"],
-        sans: ["Inter", "Tahoma", "sans-serif"],
       },
       fontSize: {
         "babyHeading-size": "1.6rem",
@@ -32,6 +31,7 @@ const config: Config = {
         },
       },
       screens: {
+        "md-max": { max: "48rem" },
         "sm-max": { max: "43.75rem" },
       },
     },

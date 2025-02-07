@@ -9,6 +9,7 @@ import { boardMembers } from "../components/TeamSection/TeamInformation";
 import useViewport from "../components/UseViewport";
 import Divider from "../components/Divider";
 import dynamic from "next/dynamic";
+import PreviousExecTeam from "@/components/PreviousExecTeam/PreviousExecTeam";
 
 const Blobbie = dynamic(() => import("../components/Blobbie"), { ssr: false });
 
@@ -66,7 +67,10 @@ const TeamPage = () => {
         </motion.div>
       </header>
 
-      <h1 className="my-12 text-center font-bold text-white" style={{ fontSize: "var(--chonky-header-size)" }}>
+      <h1
+        className="my-12 text-center font-bold text-white"
+        style={{ fontSize: "var(--chonky-header-size)" }}
+      >
         The Board
       </h1>
       <Divider />
@@ -79,6 +83,7 @@ const TeamPage = () => {
         />
       </section>
       <TeamSection desktopView={defaultView} />
+      <PreviousExecTeam />
     </div>
   );
 };
