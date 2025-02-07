@@ -1,6 +1,6 @@
 import * as S from "./ProjectKeywordsSection.styles";
 import { NewlineText } from "../../utility/Helpers";
-import Lottie from "react-lottie";
+import Lottie from "lottie-react";
 import {
   businessStrategyLottieOptions,
   designLottieOptions,
@@ -15,7 +15,7 @@ const ProjectKeywordsSection = () => {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const lottieDiv = (options: any) => (
     <S.LottieDiv data-aos="fade-left" data-aos-duration="800">
-      <Lottie options={options} />
+      <Lottie {...options} />
     </S.LottieDiv>
   );
 

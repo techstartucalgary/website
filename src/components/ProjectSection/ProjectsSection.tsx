@@ -4,10 +4,8 @@ import Divider from "../Divider";
 import * as S from "./ProjectsSection.styles";
 import useViewport from "../UseViewport";
 import { projectTeamLottieOptions } from "../../utility/LottieOptions";
-import dynamic from "next/dynamic";
 import styles from "../../pageLayouts/HomePage.module.css";
-
-const Lottie = dynamic(() => import("react-lottie"), { ssr: false });
+import Lottie from "lottie-react";
 
 /* Projects section on the homepage */
 export const ProjectsSection = () => {
@@ -54,7 +52,7 @@ export const ProjectsSection = () => {
             <S.ProjectsSectionItem>
               <S.LottieDiv>
                 <Lottie
-                  options={projectTeamLottieOptions}
+                  {...projectTeamLottieOptions}
                   style={{ marginLeft: "5vw" }}
                 />
               </S.LottieDiv>
@@ -68,7 +66,7 @@ export const ProjectsSection = () => {
           </h1>
           <Divider />
           <S.LottieDiv>
-            <Lottie options={projectTeamLottieOptions} />
+            <Lottie {...projectTeamLottieOptions} />
           </S.LottieDiv>
           <p className="regularText regularText--white">
             Every year, Tech Start runs a handful of year-long software
