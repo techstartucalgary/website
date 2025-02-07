@@ -5021,7 +5021,7 @@ __metadata:
     react-dom: "npm:^18.3.1"
     react-intersection-observer: "npm:^9.13.1"
     react-lazy-load-image-component: "npm:^1.6.2"
-    react-lottie: "npm:^1.2.10"
+    react-lottie: "npm:^1.2.4"
     react-multi-carousel: "npm:^2.8.5"
     react-scroll: "npm:^1.9.0"
     react-tsparticles: "npm:^2.9.3"
