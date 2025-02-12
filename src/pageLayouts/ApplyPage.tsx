@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 
-import Lottie from "react-lottie";
+import Lottie from "lottie-react";
 import "./ApplyPage.css";
 import { applyPageTeamLottieOptions } from "../utility/LottieOptions";
 import execs_24 from "images/execs_24.jpg";
@@ -109,7 +109,7 @@ const ApplyPage = () => {
 
       <div className="applyPage__container applyPage__projectIntroContainer">
         <div className="applyPage__projectIntroImg">
-          <Lottie options={applyPageTeamLottieOptions} />
+          <Lottie {...applyPageTeamLottieOptions} />
         </div>
         <div className="applyPage__projectIntro">
           <h1 className="chonkyHeading chonkyHeading--dynamic chonkyHeading--white">
