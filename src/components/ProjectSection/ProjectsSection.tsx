@@ -5,8 +5,9 @@ import * as S from "./ProjectsSection.styles";
 import useViewport from "../UseViewport";
 import { projectTeamLottieOptions } from "../../utility/LottieOptions";
 import styles from "../../pageLayouts/HomePage.module.css";
-import Lottie from "lottie-react";
+import dynamic from "next/dynamic";
 
+const Lottie = dynamic(() => import("lottie-react"), { ssr: false });
 /* Projects section on the homepage */
 export const ProjectsSection = () => {
   const { width } = useViewport(); // get screen width

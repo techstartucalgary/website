@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 
-import Lottie from "lottie-react";
 import "./ApplyPage.css";
 import { applyPageTeamLottieOptions } from "../utility/LottieOptions";
 import execs_24 from "images/execs_24.jpg";
@@ -11,6 +10,8 @@ import Divider from "../components/Divider";
 import HoverButton from "../components/HoverButton/HoverButton";
 import { ButtonMode } from "../components/HoverButton/HoverButton.styles";
 import dynamic from "next/dynamic";
+
+const Lottie = dynamic(() => import("lottie-react"), { ssr: false });
 
 const Blobbie = dynamic(() => import("../components/Blobbie"), { ssr: false });
 

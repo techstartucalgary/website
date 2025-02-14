@@ -1,6 +1,5 @@
 import * as S from "./ProjectKeywordsSection.styles";
 import { NewlineText } from "../../utility/Helpers";
-import Lottie from "lottie-react";
 import {
   businessStrategyLottieOptions,
   designLottieOptions,
@@ -10,6 +9,9 @@ import {
   webDevelopmentLottieOptions,
 } from "../../utility/LottieOptions";
 import useViewport from "../UseViewport";
+import dynamic from "next/dynamic";
+
+const Lottie = dynamic(() => import("lottie-react"), { ssr: false });
 
 const ProjectKeywordsSection = () => {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
