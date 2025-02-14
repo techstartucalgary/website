@@ -1,6 +1,5 @@
 import * as S from "./ProjectsPage.styles";
 import { useState } from "react";
-import Lottie from "lottie-react";
 import { teamProjectLottieOptions } from "../utility/LottieOptions";
 import { motion } from "framer-motion";
 import { PastProjects } from "../components/ProjectSection/ProjectData";
@@ -11,6 +10,9 @@ import ProjectKeywordsSection from "../components/ProjectSection/ProjectKeywords
 import { NewlineText } from "../utility/Helpers";
 import HoverButton from "../components/HoverButton/HoverButton";
 import { ButtonMode } from "../components/HoverButton/HoverButton.styles";
+import dynamic from "next/dynamic";
+
+const Lottie = dynamic(() => import("lottie-react"), { ssr: false });
 
 const ProjectsPage = () => {
   const [featuredProjects] = useState(
