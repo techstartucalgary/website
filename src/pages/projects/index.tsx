@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Lottie from "react-lottie";
+import Lottie from "lottie-react";
 import { teamProjectLottieOptions } from "../../utility/LottieOptions";
 import { motion } from "framer-motion";
 import { PastProjects } from "../../components/ProjectSection/ProjectData";
@@ -38,7 +38,7 @@ const ProjectsPage = () => {
         <div className="md:shrink-0 md:grow-0 md:basis-1/2 md:self-end">
           <div className="mt-[5%] flex justify-center md:mt-0 md:block">
             <div className="md:ml-[25%] md:size-[35vw]">
-              <Lottie options={teamProjectLottieOptions} />
+              <Lottie {...teamProjectLottieOptions} />
             </div>
           </div>
         </div>
