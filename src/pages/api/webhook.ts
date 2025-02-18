@@ -2,9 +2,7 @@ import { NextApiRequest, NextApiResponse } from "next";
 import Stripe from "stripe";
 
 // Initialize Stripe
-const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
-  apiVersion: "2023-10-16",
-});
+const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!);
 
 // Disable automatic body parsing
 export const config = {
@@ -35,8 +33,8 @@ export default async function handler(
   }
 
   // Read raw body (Stripe requires raw body for verification)
-  let rawBody = await new Promise<Buffer>((resolve, reject) => {
-    let data: Buffer[] = [];
+  const rawBody = await new Promise<Buffer>((resolve, reject) => {
+    const data: Buffer[] = [];
     req.on("data", (chunk) => data.push(chunk));
     req.on("end", () => resolve(Buffer.concat(data)));
     req.on("error", (err) => reject(err));
@@ -49,9 +47,14 @@ export default async function handler(
       sig,
       process.env.STRIPE_WEBHOOK_SECRET!,
     );
-  } catch (err: any) {
-    console.error("❌ Webhook Signature Verification Failed:", err.message);
-    return res.status(400).json({ error: err.message });
+  } catch (err: unknown) {
+    if (err instanceof Error) {
+      console.error("❌ Webhook Signature Verification Failed:", err.message);
+      return res.status(400).json({ error: err.message });
+    } else {
+      console.error("❌ Webhook Signature Verification Failed: Unknown error");
+      return res.status(400).json({ error: "Unknown error occurred" });
+    }
   }
 
   console.log("✅ Webhook Event Verified:", { type: event.type });
@@ -71,5 +74,5 @@ export default async function handler(
       console.log("ℹ️ Unhandled Event Type:", event.type);
   }
 
-  return res.status(200).json({ status: "✅ Success", received: true });
+  return res.status(200).json({ received: true, status: "✅ Success" });
 }
