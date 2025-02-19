@@ -18,9 +18,9 @@ export default async function handler(
       line_items: [
         {
           price_data: {
-            currency: "usd",
+            currency: "cad",
             product_data: { name: "Your Product Name" },
-            unit_amount: 100, // Amount in cents (e.g., $1.00)
+            unit_amount: 200, // Amount in cents (e.g., $1.00)
           },
           quantity: 1,
         },
