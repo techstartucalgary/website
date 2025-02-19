@@ -13,18 +13,16 @@ export default async function handler(
   }
 
   try {
+    // Extract the priceId from the request body
+    const { priceId } = req.body;
+    if (!priceId) {
+      return res.status(400).json({ error: "Price ID is required" });
+    }
+
+    // Create a Stripe Checkout Session using the provided price ID
     const session = await stripe.checkout.sessions.create({
-      cancel_url: `${process.env.NEXT_PUBLIC_BASE_URL}/cancel`,
-      line_items: [
-        {
-          price_data: {
-            currency: "cad",
-            product_data: { name: "Your Product Name" },
-            unit_amount: 200, // Amount in cents (e.g., $1.00)
-          },
-          quantity: 1,
-        },
-      ],
+      cancel_url: `${process.env.NEXT_PUBLIC_BASE_URL}/merch`,
+      line_items: [{ price: priceId, quantity: 1 }],
       mode: "payment",
       payment_method_types: ["card"],
       success_url: `${process.env.NEXT_PUBLIC_BASE_URL}/success`,

@@ -38,6 +38,7 @@ const MerchPageContent = () => {
             <MerchItems
               clothingImg={merchItem.clothingImg}
               price={merchItem.price}
+              priceId={merchItem.priceId}
               title={merchItem.title}
             />
           </div>

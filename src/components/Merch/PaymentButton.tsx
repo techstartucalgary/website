@@ -2,13 +2,19 @@
 
 import { useState } from "react";
 
-export default function PaymentButton() {
+export default function PaymentButton({ priceId }: { priceId: string }) {
   const [loading, setLoading] = useState(false);
 
   const handleCheckout = async () => {
     setLoading(true);
     try {
-      const res = await fetch("/api/checkout", { method: "POST" });
+      const res = await fetch("/api/checkout", {
+        body: JSON.stringify({ priceId }), // Send the priceId to the API
+        headers: {
+          "Content-Type": "application/json",
+        },
+        method: "POST",
+      });
       const data = await res.json();
 
       if (data.url) {

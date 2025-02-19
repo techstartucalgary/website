@@ -4,10 +4,12 @@ import PaymentButton from "./PaymentButton";
 export const MerchItems = ({
   clothingImg,
   price,
+  priceId,
   title,
 }: {
   clothingImg: string;
   price: string;
+  priceId: string;
   title: string;
 }) => {
   return (
@@ -36,7 +38,7 @@ export const MerchItems = ({
 
           {/* Button Section */}
           <div className="mb-3 flex justify-center">
-            <PaymentButton />
+            <PaymentButton priceId={priceId} />
           </div>
         </div>
       </div>
