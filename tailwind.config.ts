@@ -20,6 +20,9 @@ const config: Config = {
       screens: {
         "sm-max": { max: "43.75rem" },
       },
+      textColor: {
+        "secondary-grey": "#222222f2",
+      },
     },
   },
 };
