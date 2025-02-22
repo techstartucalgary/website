@@ -37,8 +37,8 @@ const MerchPageContent = () => {
           <div className="w-full p-2 sm:w-1/2 lg:w-1/3" key={merchItem.id}>
             <MerchItems
               clothingImg={merchItem.clothingImg}
-              link={merchItem.link}
               price={merchItem.price}
+              priceId={merchItem.priceId}
               title={merchItem.title}
             />
           </div>
