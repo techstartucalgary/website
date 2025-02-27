@@ -7,6 +7,9 @@
     box-sizing: unset;
   }
 }
+.custom-gradient {
+  background: linear-gradient(180deg, #00B7FF 0%, #64CDB2 50%, #C9E265 100%);
+}
 
 :root {
   /* CSS Variables with global scope */

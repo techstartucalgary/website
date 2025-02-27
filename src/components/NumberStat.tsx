@@ -1,16 +1,12 @@
 import { useState } from "react";
-import styles from "./NumberStat.module.css";
 import CountUp from "react-countup";
 import VisibilitySensor from "react-visibility-sensor";
-import classNames from "classnames";
 
 type NumberStatProps = {
   number: number;
   suffix?: string;
   stat: string;
 };
-
-const cx = classNames.bind(styles);
 
 const NumberStat = (props: NumberStatProps) => {
   const [countupActive, setCountupActive] = useState(true);
@@ -25,7 +21,7 @@ const NumberStat = (props: NumberStatProps) => {
   };
 
   return (
-    <div className={styles.numberStat}>
+    <div>
       <CountUp
         delay={0.2}
         duration={2.0}
@@ -43,13 +39,15 @@ const NumberStat = (props: NumberStatProps) => {
               detectVisible(visible, start);
             }}
           >
-            <div className={cx(styles.numberStat__number, "gradient-text")}>
+            <div className="gradient-text text-[4rem] font-extrabold transition duration-500 ease-in-out hover:scale-110 hover:bg-[#313131] hover:bg-gradient-to-b hover:from-[#313131] hover:to-[#363636] hover:text-[#313131]">
               <span ref={countUpRef} />
             </div>
           </VisibilitySensor>
         )}
       </CountUp>
-      <p className={styles.numberStat__stat}>{props.stat}</p>
+      <p className="mt-[10px] text-xl font-semibold text-[var(--secondary-grey)] transition duration-500 ease-in-out">
+        {props.stat}
+      </p>
     </div>
   );
 };

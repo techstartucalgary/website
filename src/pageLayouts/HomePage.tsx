@@ -1,7 +1,5 @@
 import tsu_logo from "../images/tech-start-logo-white.png";
-import styles from "./HomePage.module.css";
 import { motion } from "framer-motion";
-import classNames from "classnames";
 
 import NumberStat from "../components/NumberStat";
 import Divider from "../components/Divider";
@@ -12,19 +10,24 @@ import EventsSection from "../components/EventsSection/EventsSection";
 import { ProjectsSection } from "../components/ProjectSection/ProjectsSection";
 import ApplyButton from "../components/ApplyButton";
 
-const cx = classNames.bind(styles);
-
 const Blobbie = dynamic(() => import("../components/Blobbie"), { ssr: false });
 
 const HomePage = () => {
   return (
-    <div className={styles.homePage}>
-      <header className={styles.homePage__hero} id="homePageTop">
+    <div className="m-0 box-border overflow-hidden border-none leading-normal">
+      <header
+        className="relative flex h-[60vw] flex-col text-center md:h-[70vw]"
+        id="homePageTop"
+        style={{
+          backgroundImage:
+            "linear-gradient(rgb(0, 0, 0), var(--primary-black))",
+        }}
+      >
         <Particle />
-        <div className={styles.homePage__logoContainer}>
+        <div className="pointer-events-none relative z-[3]">
           <motion.img
             animate={{ opacity: 1 }}
-            className={styles.homePage__logo}
+            className="mx-auto mt-[50px] w-[85%] max-w-[800px]"
             initial={{ opacity: 0 }}
             src={tsu_logo.src}
             transition={{ duration: 0.5 }}
@@ -32,7 +35,7 @@ const HomePage = () => {
         </div>
         <motion.p
           animate={{ opacity: 1 }}
-          className={styles.homePage__headerSubtitle}
+          className="pointer-events-none z-[3] mb-[100%] mt-0 text-[5vw] font-bold leading-[1.1] text-white"
           initial={{ opacity: 0 }}
           transition={{ delay: 1 }}
         >
@@ -40,12 +43,7 @@ const HomePage = () => {
         </motion.p>
       </header>
 
-      <section
-        className={cx(
-          styles.homePage__section,
-          styles["homePage__section--aboutUs"],
-        )}
-      >
+      <section className="relative bg-white pb-[5em] pt-[8em] text-center">
         <Blobbie
           edge={true}
           id={8}
@@ -65,7 +63,7 @@ const HomePage = () => {
           transform="translate(clamp(80vw, calc(5vw + 1rem), -30vw), -30%)"
           width={250}
         />
-        <div className={styles.homePage__container}>
+        <div className="mx-auto my-0 w-[85%] max-w-[65em] text-center text-white">
           <h1 className="chonkyHeading chonkyHeading--lessMargin">
             {`We're the innovators on campus!`}
           </h1>
@@ -92,7 +90,7 @@ const HomePage = () => {
             transform="translate(75vw, -20%)"
             width={300}
           />
-          <div className={styles.homePage__numberContainer}>
+          <div className="mt-[30px] grid grid-cols-1 gap-x-[30px] md:mt-[75px] md:grid-cols-3">
             <NumberStat number={20} stat="projects so far" />
             <NumberStat number={230} stat="members so far" />
             <NumberStat
@@ -101,7 +99,7 @@ const HomePage = () => {
               suffix={"%"}
             />
           </div>
-          <div className={styles.homePage__applyButtonBox}>
+          <div className="relative flex h-fit justify-center px-0 pb-[4vw] pt-[2vw]">
             <ApplyButton />
           </div>
         </div>
@@ -109,12 +107,7 @@ const HomePage = () => {
 
       <ProjectsSection />
 
-      <section
-        className={cx(
-          styles.homePage__section,
-          styles["homePage__section--events"],
-        )}
-      >
+      <section className="relative bg-white py-[8em]">
         <Blobbie
           edge={true}
           id={3}
@@ -128,19 +121,14 @@ const HomePage = () => {
           width={350}
         />
 
-        <div className={styles.homePage__container}>
+        <div className="mx-auto my-0 w-[85%] max-w-[65em] text-center text-white">
           <h1 className="chonkyHeading chonkyHeading--lessMargin">Events</h1>
           <Divider />
           <EventsSection />
         </div>
       </section>
 
-      <section
-        className={cx(
-          styles.homePage__section,
-          styles["homePage__section--sponsors"],
-        )}
-      >
+      <section className="relative bg-white pb-[70px] pt-[20px] md:pb-[150px]">
         <Blobbie
           edge={true}
           id={9}
