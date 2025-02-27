@@ -4,7 +4,7 @@ import { TeamMember } from "./TeamInformation";
 import ProfileDescription from "./ProfileDescription";
 import SocialMedia from "../SocialMedia/SocialMedia";
 import { SocialMediaColor } from "../../utility/SharedStyles";
-import { faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
+import Linkedin from "../icons/Linkedin";
 
 // props for team profile
 type ProfileProps = {
@@ -54,11 +54,9 @@ const Profile = (props: ProfileProps) => {
         <S.LinksSection
           backgroundColor={getBackgroundColor(props.activeCategory)}
         >
-          <SocialMedia
-            color={SocialMediaColor.White}
-            icon={faLinkedinIn}
-            link={props.member.linkedin}
-          />
+          <SocialMedia href={props.member.linkedin}>
+            <Linkedin />
+          </SocialMedia>
         </S.LinksSection>
       )}
 
