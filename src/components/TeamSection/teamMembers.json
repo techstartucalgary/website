@@ -4,107 +4,107 @@
     "name": "Joel Happ",
     "affiliation": "Founder & Chairman",
     "description": "During the heart of the pandemic and his undergrad years of software engineering, Joel founded Tech Start UCalgary, envisioning a collaborative hub for students and tech enthusiasts to ideate, create, and grow together outside the classroom. His aim was to foster a vibrant, inclusive community where innovation meets passion, laying the groundwork for tech-driven progress within the University of Calgary!",
-    "imagePath": "Joel_Happ.jpeg",
+    "imagePath": "/images/team/Joel_Happ.jpeg",
     "linkedin": "https://www.linkedin.com/in/joel-happ/"
   },
   "executiveTeam": [
     {
       "name": "Rachel Renegado",
       "affiliation": "Co-President",
-      "imagePath": "Rachel_Renegado.jpg",
+      "imagePath": "/images/team/Rachel_Renegado.jpg",
       "linkedin": "https://www.linkedin.com/in/rachel-renegado-544409201"
     },
     {
       "name": "Aarsh Shah",
       "affiliation": "Co-President",
-      "imagePath": "Aarsh_Shah.jpg",
+      "imagePath": "/images/team/Aarsh_Shah.jpg",
       "linkedin": "https://www.linkedin.com/in/aarsh-shah-0a84161a9/"
     },
     {
       "name": "Maheen Raza",
       "affiliation": "VP Internal",
-      "imagePath": "Maheen_Raza.jpg",
+      "imagePath": "/images/team/Maheen_Raza.jpg",
       "linkedin": "https://www.linkedin.com/in/maheen-raza-40b780229/"
     },
     {
       "name": "Labib Afshar Ahmed",
       "affiliation": "Co-VP Finance",
-      "imagePath": "Labib_Ahmed.jpg",
+      "imagePath": "/images/team/Labib_Ahmed.jpg",
       "linkedin": "https://www.linkedin.com/in/labib-afsar-ahmed/"
     },
     {
       "name": "Ivan Imshenetskyy",
       "affiliation": "Co-VP Finance",
-      "imagePath": "Ivan_Imshenetskyy.jpg",
+      "imagePath": "/images/team/Ivan_Imshenetskyy.jpg",
       "linkedin": "https://www.linkedin.com/in/imivani/"
     },
     {
       "name": "Ana Laura Espinosa Garza",
       "affiliation": "VP External",
-      "imagePath": "Ana_Laura.jpg",
+      "imagePath": "/images/team/Ana_Laura.jpg",
       "linkedin": "https://www.linkedin.com/in/ana-laura-espinosa-garza-136a281b0/"
     },
     {
       "name": "Carol Wang",
       "affiliation": "VP Community",
-      "imagePath": "Carol_Wang.jpg",
+      "imagePath": "/images/team/Carol_Wang.jpg",
       "linkedin": "https://www.linkedin.com/in/carol-wang3116/"
     },
     {
       "name": "Estefy Caballero",
       "affiliation": "VP Communications",
-      "imagePath": "Estefy_Caballero.jpg",
+      "imagePath": "/images/team/Estefy_Caballero.jpg",
       "linkedin": "https://www.linkedin.com/in/estefanía-caballero-864aab25a/"
     },
     {
       "name": "Esther Thompson",
       "affiliation": "Jr VP Communications",
-      "imagePath": "Esther_Thompson.jpg",
+      "imagePath": "/images/team/Esther_Thompson.jpg",
       "linkedin": "https://www.linkedin.com/in/esther-thompson-2436911b4/"
     },
     {
       "name": "Ben Schmidt",
       "affiliation": "Co-VP Development",
-      "imagePath": "Ben_Schmidt.jpg",
+      "imagePath": "/images/team/Ben_Schmidt.jpg",
       "linkedin": "https://www.linkedin.com/in/benschmidt2343/"
     },
     {
       "name": "Youssef Hamed",
       "affiliation": "Co-VP Development",
-      "imagePath": "Youssef_Hamed.jpg",
+      "imagePath": "/images/team/Youssef_Hamed.jpg",
       "linkedin": "https://www.linkedin.com/in/youssef-walid-hamed/"
     },
     {
       "name": "Brian Nguyen",
       "affiliation": "Senior Web Developer",
-      "imagePath": "Brian_Nguyen.jpg",
+      "imagePath": "/images/team/Brian_Nguyen.jpg",
       "linkedin": "https://www.linkedin.com/in/nguyennbrian/"
     },
     {
       "name": "Parsa Kargari",
       "affiliation": "Technical Advisor",
-      "imagePath": "Parsa_Kargari.jpg",
+      "imagePath": "/images/team/Parsa_Kargari.jpg",
       "linkedin": "https://www.linkedin.com/in/parsa-kargari/"
     },
     {
       "name": "Mehrnaz Zafari",
       "affiliation": "Cloud Advisor",
-      "imagePath": "Mehrnaz_Zafari.jpg",
+      "imagePath": "/images/team/Mehrnaz_Zafari.jpg",
       "linkedin": "https://www.linkedin.com/in/mehrnaz-zafari/"
     }
   ],
   "projectManagers": [],
-   "alumniTeam": [
+  "alumniTeam": [
     {
       "name": "Janita",
       "affiliation": "Alumni VP Design",
-      "imagePath": "Janita.jpg",
+      "imagePath": "/images/team/Janita.jpg",
       "linkedin": "https://www.linkedin.com/in/janitamahum/"
     },
     {
       "name": "Sajwal",
       "affiliation": "Alumni VP Strategy",
-      "imagePath": "Sajwal.jpeg",
+      "imagePath": "/images/team/Sajwal.jpeg",
       "linkedin": "https://www.linkedin.com/in/sajwal/"
     }
   ],
@@ -112,19 +112,19 @@
     {
       "name": "Niyousha Raeesinejad",
       "affiliation": "2022-2024 President",
-      "imagePath": "Niyousha_Raeesinejad.jpg",
+      "imagePath": "/images/team/Niyousha_Raeesinejad.jpg",
       "linkedin": "https://www.linkedin.com/in/niyoushar/"
     },
     {
       "name": "Tyler Chan",
       "affiliation": "2023-2024 President",
-      "imagePath": "Tyler_Chan.jpg",
+      "imagePath": "/images/team/Tyler_Chan.jpg",
       "linkedin": "https://www.linkedin.com/in/chan-tyler/"
     },
     {
       "name": "Rajpreet Gill",
       "affiliation": "2022-2023 President",
-      "imagePath": "Rajpreet_Gill.jpg",
+      "imagePath": "/images/team/Rajpreet_Gill.jpg",
       "linkedin": "https://www.linkedin.com/in/rajpreet-gill/"
     }
   ]

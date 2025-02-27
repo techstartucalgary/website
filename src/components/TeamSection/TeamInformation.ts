@@ -21,14 +21,14 @@ export type FounderInfo = TeamMember & FounderDescription;
 
 export const founder: FounderInfo = {
   ...teamData.founder,
-  imagePath: importImage(teamData.founder.imagePath),
+  imagePath: teamData.founder.imagePath,
 };
 
 export const executiveTeam: TeamMember[] = teamData.executiveTeam.map(
   (exec, index) => ({
     id: index,
     ...exec,
-    image: importImage(exec.imagePath),
+    image: exec.imagePath,
   }),
 );
 
@@ -54,7 +54,7 @@ export const alumniTeam: TeamMember[] = teamData.alumniTeam.map(
   (alum, index) => ({
     id: index,
     ...alum,
-    image: importImage(alum.imagePath),
+    image: alum.imagePath,
   }),
 );
 
@@ -62,6 +62,6 @@ export const boardMembers: TeamMember[] = teamData.boardMembers.map(
   (bm, index) => ({
     id: index,
     ...bm,
-    image: importImage(bm.imagePath),
+    image: bm.imagePath,
   }),
 );

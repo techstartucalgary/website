@@ -1,12 +1,11 @@
 import React from "react";
-import * as S from "./Profile.styles";
+import Image from "next/image";
 import { TeamMember } from "./TeamInformation";
 import ProfileDescription from "./ProfileDescription";
 import SocialMedia from "../SocialMedia/SocialMedia";
-import { SocialMediaColor } from "../../utility/SharedStyles";
 import { faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
 
-// props for team profile
+// Props for team profile
 type ProfileProps = {
   key: number;
   mobileView: boolean;
@@ -16,57 +15,61 @@ type ProfileProps = {
   activeCategory: string;
 };
 
-const getBackgroundColor = (category: string): SocialMediaColor => {
+const getBackgroundColor = (category: string) => {
   switch (category) {
     case "executives":
-      return SocialMediaColor.ToggleGreen;
+      return "bg-[var(--primary-green)]";
     case "projectManagers":
-      return SocialMediaColor.ToggleBlue;
+      return "bg-[var(--primary-blue)]";
     case "alumni":
-      return SocialMediaColor.ToggleYellow;
+      return "bg-[var(--secondary-lime)]";
     default:
-      return SocialMediaColor.ToggleBlue;
+      return "bg-blue-500";
   }
 };
 
-const Profile = (props: ProfileProps) => {
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const preventDragHandler = (e: any) => e.preventDefault();
-
+const Profile: React.FC<ProfileProps> = ({
+  activeCategory,
+  alt,
+  member,
+  mobileView,
+  profilePic,
+}) => {
   return (
-    <S.ProfileDiv
-      data-aos={!props.mobileView && "zoom-in"}
-      data-aos-duration={!props.mobileView && "1000"}
-      mobileView={props.mobileView}
+    <div
+      className="relative mx-[1%] mb-10 flex w-[clamp(150px,20%,300px)] flex-col items-center sm:w-60 md:w-72 lg:w-80"
+      data-aos={!mobileView ? "zoom-in" : ""}
+      data-aos-duration={!mobileView ? "1000" : ""}
     >
-      {props.profilePic && (
-        <S.ProfileIconDiv>
-          <img
-            alt={props.alt}
-            key={props.key}
-            onDragStart={preventDragHandler}
-            src={props.profilePic}
+      {profilePic && (
+        <div className="relative flex w-full justify-center">
+          <Image
+            alt={alt}
+            className="mt-[15px] aspect-square w-full rounded-full bg-white object-cover"
+            draggable={false}
+            height={150}
+            loading="eager"
+            priority
+            src={profilePic}
+            width={150}
           />
-        </S.ProfileIconDiv>
+
+          {member.linkedin && (
+            <div
+              className={`absolute right-[15%] top-[60%] flex translate-x-1/2 translate-y-1/2 items-center justify-center ${getBackgroundColor(activeCategory)} size-[75px] rounded-full sm:size-[80px] md:size-[90px] lg:size-[100px]`}
+            >
+              <SocialMedia
+                color="White"
+                icon={faLinkedinIn}
+                link={member.linkedin}
+              />
+            </div>
+          )}
+        </div>
       )}
 
-      {props.member.linkedin && (
-        <S.LinksSection
-          backgroundColor={getBackgroundColor(props.activeCategory)}
-        >
-          <SocialMedia
-            color={SocialMediaColor.White}
-            icon={faLinkedinIn}
-            link={props.member.linkedin}
-          />
-        </S.LinksSection>
-      )}
-
-      <ProfileDescription
-        affiliation={props.member.affiliation}
-        name={props.member.name}
-      />
-    </S.ProfileDiv>
+      <ProfileDescription affiliation={member.affiliation} name={member.name} />
+    </div>
   );
 };
 
