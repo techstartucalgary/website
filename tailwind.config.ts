@@ -18,7 +18,10 @@ const config: Config = {
         "title-size": "clamp(1.4rem, calc(15vw + 1rem), 8rem)",
       },
       screens: {
-        "sm-max": { max: "43.75rem" },
+        "max-width-thousand": { max: "62.5rem" }, //1000px
+        "max-xs": { max: "37.5rem" }, //600px
+        "min-width-thousand": { min: "62.5rem" }, //1000px
+        "sm-max": { max: "43.75rem" }, //700px
       },
       textColor: {
         "secondary-grey": "#222222f2",
