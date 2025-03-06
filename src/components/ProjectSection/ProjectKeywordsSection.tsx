@@ -16,7 +16,7 @@ const ProjectKeywordsSection = () => {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const lottieDiv = (options: any) => (
     <div
-      className="max-width-thousand:h-[30vw] max-width-thousand:w-[30vw] h-[15vw] w-[15vw]"
+      className="h-[15vw] w-[15vw] max-width-thousand:h-[30vw] max-width-thousand:w-[30vw]"
       data-aos="fade-left"
       data-aos-duration="800"
     >
@@ -26,7 +26,7 @@ const ProjectKeywordsSection = () => {
 
   const projectKeyword = (keyword: JSX.Element[]) => (
     <h3
-      className="babyHeading babyHeading--white max-xs:text-base mr-[10%] [&>p]:m-0"
+      className="babyHeading babyHeading--white mr-[10%] max-xs:text-base [&>p]:m-0"
       data-aos="fade-right"
       data-aos-duration="1000"
     >
@@ -40,7 +40,7 @@ const ProjectKeywordsSection = () => {
   const { width } = useViewport(); // get screen width
 
   return (
-    <div className="max-width-thousand:grid-cols-2 max-width-thousand:pr-0 max-xs:pl-[10vw] px-[3vw] py-[7vw] [&>div]:grid [&>div]:grid-cols-2 [&>div]:pr-[12vw] [&>div]:text-right [&>h3]:self-center">
+    <div className="px-[3vw] py-[7vw] max-width-thousand:grid-cols-2 max-width-thousand:pr-0 max-xs:pl-[10vw] [&>div]:grid [&>div]:grid-cols-2 [&>div]:pr-[12vw] [&>div]:text-right [&>h3]:self-center">
       {width && width > 1000 ? (
         <div>
           <GridItem>
