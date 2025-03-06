@@ -21,7 +21,7 @@ const FounderSection = () => {
           fill
           loading="eager"
           priority
-          src={founder.imagePath}
+          src={founder.image}
         />
       </div>
 

@@ -93,7 +93,38 @@
       "linkedin": "https://www.linkedin.com/in/mehrnaz-zafari/"
     }
   ],
-  "projectManagers": [],
+  "projectManagers": [
+    {
+      "name": "Alvi Zaman",
+      "affiliation": "Project Manager",
+      "imagePath": "/images/team/Alvi.jpg",
+      "linkedin": "https://www.linkedin.com/in/alvi-zaman-ab3395285/"
+    },
+    {
+      "name": "Amirhossein Foroughi",
+      "affiliation": "Project Manager",
+      "imagePath": "/images/team/Amir.jpeg",
+      "linkedin": "https://www.linkedin.com/in/ahforoughi/"
+    },
+    {
+      "name": "Debo Dam",
+      "affiliation": "Project Manager",
+      "imagePath": "/images/team/Debo.jpeg",
+      "linkedin": "https://www.linkedin.com/in/debojeetdam/"
+    },
+    {
+      "name": "James Mtendamema",
+      "affiliation": "Project Manager",
+      "imagePath": "/images/team/James.jpeg",
+      "linkedin": "https://www.linkedin.com/in/james-mtendamema-601b87198/"
+    },
+    {
+      "name": "Phuong Thao Nguyen",
+      "affiliation": "Project Manager",
+      "imagePath": "/images/team/Thao.jpeg",
+      "linkedin": "https://www.linkedin.com/in/pthaon/"
+    }
+  ],
   "alumniTeam": [
     {
       "name": "Janita",
