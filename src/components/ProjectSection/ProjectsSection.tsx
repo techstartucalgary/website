@@ -19,7 +19,7 @@ export const ProjectsSection = () => {
             Tech Start Projects
           </h1>
           <Divider />
-          <div className="max-width-thousandFourHundred:grid-cols-[2fr_1.1fr] min-width-thousandFourHundred:grid-cols-[2fr_1.2fr] max-width-thousandTwoHundred:grid-cols-[2fr_1fr] mt-[3vw] grid">
+          <div className="mt-[3vw] grid max-width-thousandFourHundred:grid-cols-[2fr_1.1fr] max-width-thousandTwoHundred:grid-cols-[2fr_1fr] min-width-thousandFourHundred:grid-cols-[2fr_1.2fr]">
             {" "}
             {/*ProjectDescriptionDiv*/}
             <div className="w-fit">
