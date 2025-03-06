@@ -3,6 +3,7 @@ import Projects from "../Projects";
 import useViewport from "../UseViewport";
 
 import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
 
 type ProjectSectionProps = {
   projects: Project[];
@@ -35,7 +36,7 @@ const ProjectSection = (props: ProjectSectionProps) => {
     <div className="mx-[5%] mb-[10%] mt-[5%] grid md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3">
       {width && width < 1024 ? (
         <Carousel
-          autoPlay={false}
+          autoPlay={true}
           autoPlaySpeed={2000}
           containerClass="carousel-container"
           customTransition="all .5"
