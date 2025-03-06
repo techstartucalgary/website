@@ -1,50 +1,34 @@
 import SocialMedia from "../SocialMedia/SocialMedia";
-import { SocialMediaColor } from "../../utility/SharedStyles";
-import {
-  faInstagram,
-  faDiscord,
-  faLinkedin,
-  faYoutube,
-  faGithub,
-  faTiktok,
-} from "@fortawesome/free-brands-svg-icons";
+import Instagram from "../icons/Instagram";
+import Discord from "../icons/Discord";
+import Github from "../icons/Github";
+import Linkedin from "../icons/Linkedin";
+import Youtube from "../icons/Youtube";
+import Tiktok from "../icons/Tiktok";
 
 const Footer = () => (
-  <div className="absolute flex min-h-20 w-full items-center justify-center bg-[var(--primary-black)] bg-cover px-4 py-12 text-xs text-black md:text-[clamp(0.8rem,calc(2vw+0.2rem),1rem)]">
-    <div className="flex w-auto items-center justify-center px-4 py-0 md:px-4 md:py-14">
-      <SocialMedia
-        color={SocialMediaColor.Gradient}
-        icon={faInstagram}
-        link="https://www.instagram.com/techstartucalgary/"
-      />
-
-      <SocialMedia
-        color={SocialMediaColor.Gradient}
-        icon={faDiscord}
-        link="https://discord.gg/Sxj5QrxRPk"
-      />
-      <SocialMedia
-        color={SocialMediaColor.Gradient}
-        icon={faGithub}
-        link="https://github.com/techstartucalgary"
-      />
-      <SocialMedia
-        color={SocialMediaColor.Gradient}
-        icon={faLinkedin}
-        link="https://www.linkedin.com/company/tech-start-ucalgary"
-      />
-      <SocialMedia
-        color={SocialMediaColor.Gradient}
-        icon={faYoutube}
-        link="https://www.youtube.com/channel/UCIg1JPlWSXSwIdvqHKGiX9g"
-      />
-      <SocialMedia
-        color={SocialMediaColor.Gradient}
-        icon={faTiktok}
-        link="https://www.tiktok.com/@techstartuofc"
-      />
+  <div className="absolute block min-h-20 w-dvw items-center justify-center bg-[var(--primary-black)] bg-cover py-12 text-sm text-black md:inline-flex md:text-base">
+    <div className="flex items-center justify-center p-0 px-4 md:px-4 md:py-14">
+      <SocialMedia href="https://www.instagram.com/techstartucalgary/">
+        <Instagram gradient />
+      </SocialMedia>
+      <SocialMedia href="https://discord.gg/Sxj5QrxRPk">
+        <Discord gradient />
+      </SocialMedia>
+      <SocialMedia href="https://github.com/techstartucalgary">
+        <Github gradient />
+      </SocialMedia>
+      <SocialMedia href="https://www.linkedin.com/company/tech-start-ucalgary">
+        <Linkedin gradient />
+      </SocialMedia>
+      <SocialMedia href="https://www.youtube.com/channel/UCIg1JPlWSXSwIdvqHKGiX9g">
+        <Youtube gradient />
+      </SocialMedia>
+      <SocialMedia href="https://www.tiktok.com/@techstartuofc">
+        <Tiktok gradient />
+      </SocialMedia>
     </div>
-    <div className="max-[900px]:mb-8 max-[900px]:flex max-[900px]:justify-center">
+    <p className="my-3 flex justify-center text-center text-white md:px-4">
       <iframe
         height="32"
         src="https://github.com/sponsors/techstartucalgary/button"
@@ -52,10 +36,10 @@ const Footer = () => (
         title="Sponsor techstartucalgary"
         width="114"
       ></iframe>
-    </div>
-    <div className="px-4 py-0 text-center text-white">
+    </p>
+    <p className="px-4 text-center text-white">
       © {new Date().getFullYear()} Tech Start UCalgary
-    </div>
+    </p>
   </div>
 );
 
