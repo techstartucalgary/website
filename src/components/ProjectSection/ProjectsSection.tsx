@@ -13,16 +13,20 @@ export const ProjectsSection = () => {
   const { width } = useViewport(); // get screen width
 
   return (
-    <S.ProjectsSection>
+    <div className="max-[500px]:pb-20 bg-dark-background pb-32 pt-12 text-white">
       {width && width > 1200 ? (
         <div className={styles.homePage__container}>
           <h1 className="chonkyHeading chonkyHeading--white chonkyHeading--lessMargin">
             Tech Start Projects
           </h1>
           <Divider />
-          <S.ProjectDescriptionDiv>
-            <S.ProjectsSectionItem>
-              <p className="regularText regularText--white">
+          <div className="max-width-thousandFourHundred:grid-cols-[2fr_1.1fr] min-width-thousandFourHundred:grid-cols-[2fr_1.2fr] max-width-thousandTwoHundred:grid-cols-[2fr_1fr] mt-[3vw] grid">
+            {" "}
+            {/*ProjectDescriptionDiv*/}
+            <div className="w-fit">
+              {" "}
+              {/*ProjectSectionItem*/}
+              <p className="regularText regularText--white m-0 text-left">
                 Every year, Tech Start runs a handful of year-long software
                 development projects, each led by an experienced project
                 manager. Each project aims to solve a compelling problem by
@@ -39,8 +43,8 @@ export const ProjectsSection = () => {
                 skills, meet friends, and network with the tech community on
                 campus.
               </p>
-
-              <S.projectButtonDiv>
+              <div className="max-width-thousandTwoHundred:mt-[12vw] min-width-thousandTwoHundred:mt-[3vw] min-width-thousandTwoHundred:w-fit">
+                {/* ProjectButtonDiv */}
                 <HoverButton
                   glowOnHover={true}
                   link={"/projects"}
@@ -48,17 +52,17 @@ export const ProjectsSection = () => {
                   mode={ButtonMode.GRADIENT}
                   text={"Check out our projects!"}
                 />
-              </S.projectButtonDiv>
-            </S.ProjectsSectionItem>
-            <S.ProjectsSectionItem>
-              <S.LottieDiv>
+              </div>
+            </div>
+            <div className="w-fit">
+              <div className="max-width-thousandTwoHundred:mx-0 max-width-thousandTwoHundred:mb-[5vw] max-width-thousandTwoHundred:ml-[12vw] max-width-thousandTwoHundred:h-[60vw] max-width-thousandTwoHundred:w-[60vw] max-width-thousandTwoHundred:items-center min-width-thousandTwoHundred:absolute min-width-thousandTwoHundred:bottom-0 min-width-thousandTwoHundred:mb-[8vw] h-[30vw] w-[30vw]">
                 <Lottie
                   {...projectTeamLottieOptions}
                   style={{ marginLeft: "5vw" }}
                 />
-              </S.LottieDiv>
-            </S.ProjectsSectionItem>
-          </S.ProjectDescriptionDiv>
+              </div>
+            </div>
+          </div>
         </div>
       ) : (
         <div className={styles.homePage__container}>
@@ -95,6 +99,6 @@ export const ProjectsSection = () => {
           </S.projectButtonDiv>
         </div>
       )}
-    </S.ProjectsSection>
+    </div>
   );
 };
