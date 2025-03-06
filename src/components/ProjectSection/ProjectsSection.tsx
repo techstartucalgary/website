@@ -1,7 +1,6 @@
 import HoverButton from "../HoverButton/HoverButton";
 import { ButtonMode } from "../HoverButton/HoverButton.styles";
 import Divider from "../Divider";
-import * as S from "./ProjectsSection.styles";
 import useViewport from "../UseViewport";
 import { projectTeamLottieOptions } from "../../utility/LottieOptions";
 import styles from "../../pageLayouts/HomePage.module.css";
@@ -43,7 +42,7 @@ export const ProjectsSection = () => {
                 skills, meet friends, and network with the tech community on
                 campus.
               </p>
-              <div className="max-width-thousandTwoHundred:mt-[12vw] min-width-thousandTwoHundred:mt-[3vw] min-width-thousandTwoHundred:w-fit">
+              <div className="mt-[3vw] w-fit">
                 {/* ProjectButtonDiv */}
                 <HoverButton
                   glowOnHover={true}
@@ -55,7 +54,7 @@ export const ProjectsSection = () => {
               </div>
             </div>
             <div className="w-fit">
-              <div className="max-width-thousandTwoHundred:mx-0 max-width-thousandTwoHundred:mb-[5vw] max-width-thousandTwoHundred:ml-[12vw] max-width-thousandTwoHundred:h-[60vw] max-width-thousandTwoHundred:w-[60vw] max-width-thousandTwoHundred:items-center min-width-thousandTwoHundred:absolute min-width-thousandTwoHundred:bottom-0 min-width-thousandTwoHundred:mb-[8vw] h-[30vw] w-[30vw]">
+              <div className="absolute bottom-0 mb-[8vw] h-[30vw] w-[30vw]">
                 <Lottie
                   {...projectTeamLottieOptions}
                   style={{ marginLeft: "5vw" }}
@@ -70,9 +69,9 @@ export const ProjectsSection = () => {
             Tech Start Projects
           </h1>
           <Divider />
-          <S.LottieDiv>
+          <div className="mb-[5vw] ml-[12vw] h-[60vw] w-[60vw] items-center">
             <Lottie {...projectTeamLottieOptions} />
-          </S.LottieDiv>
+          </div>
           <p className="regularText regularText--white">
             Every year, Tech Start runs a handful of year-long software
             development projects, each led by an experienced project manager.
@@ -89,14 +88,14 @@ export const ProjectsSection = () => {
             Tech Start project is the best way to gain skills, meet friends, and
             network with the tech community on campus.
           </p>
-          <S.projectButtonDiv>
+          <div className="mt-[12vw]">
             <HoverButton
               link={"/projects"}
               linkIsInternal={true}
               mode={ButtonMode.GRADIENT}
               text={"Check out our projects!"}
             />
-          </S.projectButtonDiv>
+          </div>
         </div>
       )}
     </div>
