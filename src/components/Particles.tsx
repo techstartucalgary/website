@@ -2,7 +2,6 @@ import { useCallback } from "react";
 import type { Container, Engine } from "tsparticles-engine";
 import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
-import styles from "./particles.module.css";
 
 const Particle = () => {
   const particlesInit = useCallback(async (engine: Engine) => {
@@ -22,7 +21,7 @@ const Particle = () => {
   );
   return (
     <Particles
-      className={styles.particle_container}
+      className="absolute inset-y-0 left-0 z-0 m-0 size-full"
       id="tsparticles"
       init={particlesInit}
       loaded={particlesLoaded}

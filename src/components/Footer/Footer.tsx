@@ -1,4 +1,3 @@
-import * as S from "./Footer.styles";
 import SocialMedia from "../SocialMedia/SocialMedia";
 import { SocialMediaColor } from "../../utility/SharedStyles";
 import {
@@ -11,8 +10,8 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 
 const Footer = () => (
-  <S.Footer>
-    <S.SocialMediaSection>
+  <div className="absolute flex min-h-20 w-full items-center justify-center bg-[var(--primary-black)] bg-cover px-4 py-12 text-xs text-black md:text-[clamp(0.8rem,calc(2vw+0.2rem),1rem)]">
+    <div className="flex w-auto items-center justify-center px-4 py-0 md:px-4 md:py-14">
       <SocialMedia
         color={SocialMediaColor.Gradient}
         icon={faInstagram}
@@ -44,8 +43,8 @@ const Footer = () => (
         icon={faTiktok}
         link="https://www.tiktok.com/@techstartuofc"
       />
-    </S.SocialMediaSection>
-    <S.SponsorIFrameDiv>
+    </div>
+    <div className="max-[900px]:mb-8 max-[900px]:flex max-[900px]:justify-center">
       <iframe
         height="32"
         src="https://github.com/sponsors/techstartucalgary/button"
@@ -53,9 +52,11 @@ const Footer = () => (
         title="Sponsor techstartucalgary"
         width="114"
       ></iframe>
-    </S.SponsorIFrameDiv>
-    <S.Copyright>© {new Date().getFullYear()} Tech Start UCalgary</S.Copyright>
-  </S.Footer>
+    </div>
+    <div className="px-4 py-0 text-center text-white">
+      © {new Date().getFullYear()} Tech Start UCalgary
+    </div>
+  </div>
 );
 
 export default Footer;

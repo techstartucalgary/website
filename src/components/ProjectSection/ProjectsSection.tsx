@@ -3,7 +3,6 @@ import { ButtonMode } from "../HoverButton/HoverButton.styles";
 import Divider from "../Divider";
 import useViewport from "../UseViewport";
 import { projectTeamLottieOptions } from "../../utility/LottieOptions";
-import styles from "../../pageLayouts/HomePage.module.css";
 import dynamic from "next/dynamic";
 
 const Lottie = dynamic(() => import("lottie-react"), { ssr: false });
@@ -12,9 +11,12 @@ export const ProjectsSection = () => {
   const { width } = useViewport(); // get screen width
 
   return (
-    <div className="max-[500px]:pb-20 bg-dark-background pb-32 pt-12 text-white">
+    <section
+      className="relative px-0 pb-[8em] pt-[5em] sm:pb-[5em]"
+      style={{ background: "var(--dark-background)" }}
+    >
       {width && width > 1200 ? (
-        <div className={styles.homePage__container}>
+        <div className="mx-auto my-0 w-[85%] max-w-[65em] text-center text-white">
           <h1 className="chonkyHeading chonkyHeading--white chonkyHeading--lessMargin">
             Tech Start Projects
           </h1>
@@ -61,7 +63,7 @@ export const ProjectsSection = () => {
           </div>
         </div>
       ) : (
-        <div className={styles.homePage__container}>
+        <div className="mx-auto my-0 w-[85%] max-w-[65em] text-center text-white">
           <h1 className="chonkyHeading chonkyHeading--white chonkyHeading--lessMargin">
             Tech Start Projects
           </h1>
@@ -95,6 +97,6 @@ export const ProjectsSection = () => {
           </div>
         </div>
       )}
-    </div>
+    </section>
   );
 };

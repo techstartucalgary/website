@@ -16,9 +16,6 @@ const GradientStyles = css`
   -moz-text-fill-color: transparent;
   display: initial;
 
-  & path {
-    fill: url("#customSVGFromIndexDotHTML");
-  }
 `;
 
 export const SocialMediaIcon = styled.a<{ color: SocialMediaColor }>`
