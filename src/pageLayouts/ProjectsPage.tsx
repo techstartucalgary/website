@@ -119,9 +119,9 @@ const ProjectsPage = () => {
           className="regularText--white"
           style={{ marginBottom: "3%", textAlign: "center" }}
         >
-          {`Explore the diverse talents of our community, and witness innovation
-          in action. <br></br> Have an idea for a cool project you'd like to
-          bring to life with Tech Start?`}
+          Explore the diverse talents of our community, and witness innovation
+          in action. <br /> Have an idea for a cool project you&apos;d like to
+          bring to life with Tech Start?
         </h3>
         <div className="mb-[1%] flex justify-center">
           <HoverButton
