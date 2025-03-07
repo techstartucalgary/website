@@ -19,11 +19,8 @@ export const ProjectsSection = () => {
             Tech Start Projects
           </h1>
           <Divider />
-          <div className="mt-[3vw] grid max-width-thousandFourHundred:grid-cols-[2fr_1.1fr] max-width-thousandTwoHundred:grid-cols-[2fr_1fr] min-width-thousandFourHundred:grid-cols-[2fr_1.2fr]">
-            {" "}
-            {/*ProjectDescriptionDiv*/}
-            <div className="w-fit">
-              {" "}
+          <div className="mt-12 grid grid-cols-1 items-center gap-8 lg:grid-cols-2">
+            <div className="flex flex-col space-y-8">
               {/*ProjectSectionItem*/}
               <p className="regularText regularText--white m-0 text-left">
                 Every year, Tech Start runs a handful of year-long software
@@ -53,8 +50,8 @@ export const ProjectsSection = () => {
                 />
               </div>
             </div>
-            <div className="w-fit">
-              <div className="absolute bottom-0 mb-[8vw] h-[30vw] w-[30vw]">
+            <div className="flex items-center justify-center">
+              <div className="h-auto w-full max-w-3xl">
                 <Lottie
                   {...projectTeamLottieOptions}
                   style={{ marginLeft: "5vw" }}

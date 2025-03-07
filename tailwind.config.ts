@@ -19,12 +19,8 @@ const config: Config = {
       },
       screens: {
         "max-width-thousand": { max: "62.5rem" }, //1000px
-        "max-width-thousandFourHundred": { max: "1400px" },
-        "max-width-thousandTwoHundred": { max: "1200px" },
         "max-xs": { max: "37.5rem" }, //600px
         "min-width-thousand": { min: "62.5rem" }, //1000px
-        "min-width-thousandFourHundred": { min: "1400px" },
-        "min-width-thousandTwoHundred": { min: "1200px" },
         "sm-max": { max: "43.75rem" }, //700px
       },
       textColor: {
