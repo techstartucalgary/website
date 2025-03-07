@@ -22,6 +22,17 @@ export default async function handler(
     // Create a Stripe Checkout Session using the provided price ID
     const session = await stripe.checkout.sessions.create({
       cancel_url: `${process.env.NEXT_PUBLIC_BASE_URL}/merch`,
+      custom_fields: [
+        {
+          key: "name",
+          label: {
+            custom: "Full Name",
+            type: "custom",
+          },
+          optional: false,
+          type: "text",
+        },
+      ],
       line_items: [{ price: priceId, quantity: 1 }],
       mode: "payment",
       payment_method_types: ["card"],
