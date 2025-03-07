@@ -7,6 +7,7 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 import { Inter } from "next/font/google";
 import Head from "next/head";
+import "../components/ProjectSection/carousel-with-custom-dots.css"; // used in ProjectSection.tsx
 
 const inter = Inter({ subsets: ["latin"] });
 
