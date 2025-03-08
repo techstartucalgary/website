@@ -13,6 +13,27 @@ export interface Event {
 
 export const highlightedEvents: Event[] = [
   {
+    date: "TBA",
+    description:
+      "Join us for our 2025 Final Showcase, where we celebrate the incredible achievements of our project teams. This event promises to set new standards for innovation and excellence.",
+    image: FinalShowcase24_img.src,
+    link: "https://www.eventbrite.ca/e/techstarts-final-showcase-tickets-823300141887",
+    time: "TBA",
+    title: "Final Showcase 2025",
+  },
+  {
+    date: "TBA",
+    description:
+      "We are hosting a Tech Talk featuring one of our sponsors, Pason! ....",
+    image: PasonTechTalk_img.src,
+    link: "https://www.linkedin.com/posts/tech-start-ucalgary_at-our-last-dev-night-we-hosted-a-tech-talk-activity-7130289774577254400-ESeU?utm_source=share&utm_medium=member_desktop",
+    time: "TBA",
+    title: "Pason Tech Talk",
+  },
+];
+
+export const previousEvents: Event[] = [
+  {
     date: "Saturday, April 27, 2024",
     description:
       "Our 2024 Final Showcase was an astounding success, pushing our club to new heights and setting even higher standards for what project teams are able to achieve. Congratulations to all the project teams for their achievements this year! ",
