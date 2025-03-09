@@ -18,11 +18,12 @@ export const MerchItems = ({
         <div className="relative mx-auto mt-5 h-auto max-w-sm rounded-lg border-4 border-black p-5 shadow-lg transition-all duration-300 ease-in-out group-hover:scale-105 group-hover:opacity-90">
           <div className="relative w-full overflow-hidden rounded-t-lg border-b-4 border-black">
             <Image
-              alt="Merch Image"
+              alt={title} // Improved accessibility
               className="object-contain transition-all duration-300 group-hover:scale-110"
               height={533} // Matches aspect ratio (3:4)
-              src={clothingImg}
-              width={400} // Adjust based on aspect ratio
+              priority // Faster loading
+              src={clothingImg || "/default-image.png"} // Fixed Image Issue
+              width={400}
             />
           </div>
 
@@ -32,7 +33,7 @@ export const MerchItems = ({
               {title}
             </h1>
             <p className="mt-2 text-center text-lg text-gray-700">
-              ${price} CAD
+              ${Number(price || 0).toFixed(2)} CAD
             </p>
           </div>
 

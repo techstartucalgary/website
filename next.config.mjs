@@ -10,6 +10,10 @@ const nextConfig = {
         pathname: "/pw/**",
         protocol: "https",
       },
+      {
+        hostname: "files.stripe.com",
+        protocol: "https",
+      },
     ],
   },
   reactStrictMode: true,
