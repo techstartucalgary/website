@@ -1,6 +1,6 @@
 import styles from "./Navbar.module.css";
 import { useState } from "react";
-import logo from "../images/tech-start-logo-white.png";
+import logo from "/public/tech-start-logo-white.png";
 import { motion } from "framer-motion";
 import ScrollableLink from "../utility/ScrollableLink";
 
