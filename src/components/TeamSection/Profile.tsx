@@ -37,7 +37,7 @@ const Profile: React.FC<ProfileProps> = ({
 }) => {
   return (
     <div
-      className="relative mx-[1%] mb-10 flex w-[clamp(150px,20%,300px)] flex-col items-center sm:w-60 md:w-72 lg:w-80"
+      className="relative mx-auto mb-10 flex w-full max-w-[400px] flex-col items-center sm:w-60 md:w-72 lg:w-80"
       data-aos={!mobileView ? "zoom-in" : ""}
       data-aos-duration={!mobileView ? "1000" : ""}
     >
@@ -45,7 +45,7 @@ const Profile: React.FC<ProfileProps> = ({
         <div className="relative flex w-full justify-center">
           <Image
             alt={alt}
-            className="mt-[15px] aspect-square w-full rounded-full bg-white object-cover"
+            className="mt-4 aspect-square w-full max-w-[300px] rounded-full bg-white object-cover"
             draggable={false}
             height={150}
             loading="eager"
@@ -56,7 +56,7 @@ const Profile: React.FC<ProfileProps> = ({
 
           {member.linkedin && (
             <div
-              className={`absolute right-[15%] top-[60%] flex translate-x-1/2 translate-y-1/2 items-center justify-center ${getBackgroundColor(activeCategory)} size-[75px] rounded-full sm:size-[80px] md:size-[90px] lg:size-[100px]`}
+              className={`absolute right-[10%] top-[70%] flex translate-x-1/2 translate-y-1/2 items-center justify-center ${getBackgroundColor(activeCategory)} size-[60px] rounded-full sm:size-[80px] md:size-[90px] lg:size-[100px]`}
             >
               <SocialMedia
                 color="White"
@@ -68,7 +68,13 @@ const Profile: React.FC<ProfileProps> = ({
         </div>
       )}
 
-      <ProfileDescription affiliation={member.affiliation} name={member.name} />
+      {/* Space between image and name to prevent overlap */}
+      <div className="mt-4 w-full text-center">
+        <ProfileDescription
+          affiliation={member.affiliation}
+          name={member.name}
+        />
+      </div>
     </div>
   );
 };

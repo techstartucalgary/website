@@ -5,14 +5,10 @@ import Image from "next/image";
 
 const FounderSection = () => {
   const { width } = useViewport();
-  const defaultView = width && width > 600 ? true : false;
+  const defaultView = width && width > 600;
 
   return (
-    <div
-      className={`mx-auto mt-12 flex max-w-[900px] flex-col items-center justify-center md:flex-row ${
-        defaultView ? "text-left" : "text-center"
-      }`}
-    >
+    <div className="mx-auto mt-12 flex max-w-[900px] flex-col items-center justify-center md:flex-row">
       {/* Founder Image Container */}
       <div className="relative mb-6 size-64 shrink-0 md:mb-0 md:mr-16 md:size-80">
         <Image
@@ -27,9 +23,25 @@ const FounderSection = () => {
 
       {/* Founder Details */}
       <div className="text-white">
-        <span className="block text-4xl font-bold">{founder.name}</span>
-        <span className="block text-2xl italic">{founder.affiliation}</span>
-        <p className="mt-4 text-2xl leading-relaxed">{founder.description}</p>
+        <span
+          className={`block font-bold ${
+            defaultView ? "text-4xl" : "text-[30px]"
+          }`}
+        >
+          {founder.name}
+        </span>
+        <span
+          className={`block italic ${defaultView ? "text-2xl" : "text-xl"}`}
+        >
+          {founder.affiliation}
+        </span>
+        <p
+          className={`mt-4 leading-relaxed ${
+            defaultView ? "text-2xl" : "text-lg"
+          }`}
+        >
+          {founder.description}
+        </p>
       </div>
     </div>
   );
