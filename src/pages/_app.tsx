@@ -7,6 +7,8 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 import { Inter } from "next/font/google";
 import Head from "next/head";
+import Footer from "@/components/Footer/Footer";
+import GradientDef from "@/components/icons/GradientDef";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -23,8 +25,10 @@ export default function App({ Component, pageProps }: AppProps) {
       </Head>
       <ScrollToTop />
       <div className={inter.className}>
+        <GradientDef />
         <Navbar />
         <Component {...pageProps} />
+        <Footer />
       </div>
     </>
   );
