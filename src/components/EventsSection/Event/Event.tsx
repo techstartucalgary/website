@@ -1,4 +1,3 @@
-import * as S from "./Event.styles";
 import HoverButton from "../../HoverButton/HoverButton";
 import { ButtonMode } from "../../HoverButton/HoverButton.styles";
 
@@ -13,26 +12,29 @@ type EventProps = {
 };
 
 const Event = (props: EventProps) => {
-  const textClasses = ["babyHeading", "regularText"];
-
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const preventDragHandler = (e: any) => e.preventDefault();
 
   const fadeDirection = "fade-right";
 
   return (
-    <S.Event data-aos={fadeDirection} data-aos-duration="2000">
-      <S.EventImage
+    <div
+      className="mb-5 rounded-[30px] bg-gradient-to-t from-turquoise-blue to-turquoise-green p-[1.5%] md:p-[3%]"
+      data-aos={fadeDirection}
+      data-aos-duration="2000"
+    >
+      <img
         alt={props.title}
+        className="float-left clear-right mb-[3%] block w-full max-w-full rounded-[20px] md:m-[2%] md:mb-[3%] md:w-3/5"
         onDragStart={preventDragHandler}
         src={props.image}
       />
 
-      <S.EventText>
+      <div className="px-0 sm:px-0 md:px-0 lg:px-0">
         <p className="babyHeading babyHeading--bolder">{props.title}</p>
-        <p className={textClasses[1]}>{props.description}</p>
-        <S.DatetimeButtonDiv>
-          <p className={textClasses[1]}>
+        <p className="regularText">{props.description}</p>
+        <div style={{ height: "clamp(6vh, 6vh + 7%, 12vh)" }}>
+          <p className="regularText mb-[3vh]">
             {props.date} | {props.time}
           </p>
           <div>
@@ -43,9 +45,9 @@ const Event = (props: EventProps) => {
               text={"Check it Out!"}
             />
           </div>
-        </S.DatetimeButtonDiv>
-      </S.EventText>
-    </S.Event>
+        </div>
+      </div>
+    </div>
   );
 };
 

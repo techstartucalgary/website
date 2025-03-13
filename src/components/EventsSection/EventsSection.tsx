@@ -1,10 +1,9 @@
 import { highlightedEvents } from "./EventInformation";
 import Event from "./Event/Event";
-import * as S from "./EventsSection.styles";
 
 const EventsSection = () => {
   return (
-    <S.EventsSectionContainer>
+    <div className="z-[100] block items-center justify-center">
       <p className="regularText" style={{ marginBottom: "10%" }}>
         {`Every semester, Tech Start UCalgary organizes and hosts a range of
         events, both online and on campus. We cover a wide array of topics, from
@@ -15,7 +14,7 @@ const EventsSection = () => {
         the public - no club membership is required!`}
       </p>
 
-      <S.EventsContainer style={{ textAlign: "left" }}>
+      <div className="grid" style={{ textAlign: "left" }}>
         {highlightedEvents.map((event, i) => {
           return (
             <Event
@@ -29,8 +28,8 @@ const EventsSection = () => {
             />
           );
         })}
-      </S.EventsContainer>
-    </S.EventsSectionContainer>
+      </div>
+    </div>
   );
 };
 

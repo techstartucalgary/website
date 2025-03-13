@@ -1,16 +1,17 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import dynamic from "next/dynamic";
+import { applyPageTeamLottieOptions } from "../utility/LottieOptions";
+import execs_24 from "images/execs_24.jpg";
 import ApplySection from "../components/ApplySection";
 import Accordion from "../components/Apply/Accordion";
 import Divider from "../components/Divider";
 import HoverButton from "../components/HoverButton/HoverButton";
 import { ButtonMode } from "../components/HoverButton/HoverButton.styles";
-import { applyPageTeamLottieOptions } from "../utility/LottieOptions";
-import execs_24 from "../images/execs_24.jpg";
+
+const Lottie = dynamic(() => import("lottie-react"), { ssr: false });
 
 const Blobbie = dynamic(() => import("../components/Blobbie"), { ssr: false });
-const Lottie = dynamic(() => import("react-lottie"), { ssr: false });
 
 const ApplyPage = () => {
   const [active, setActive] = useState("");
@@ -127,7 +128,7 @@ const ApplyPage = () => {
       </div>
       <div className="flex items-center bg-[#202020] text-white">
         <div className="ml-[7%] inline-block h-[30vw] min-h-[10vw] w-[24vw] min-w-[10vw]">
-          <Lottie options={applyPageTeamLottieOptions} />
+          <Lottie {...applyPageTeamLottieOptions} />
         </div>
         <div className="w-[50vw] bg-[#202020] p-[5%_3%]">
           <h1 className="chonkyHeading chonkyHeading--dynamic chonkyHeading--white">
