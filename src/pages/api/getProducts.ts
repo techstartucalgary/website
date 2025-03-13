@@ -6,9 +6,8 @@ if (!process.env.STRIPE_SECRET_KEY) {
 }
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY, {
-  apiVersion: "2025-01-27.acacia", // Ensure consistent API versioning
+  apiVersion: "2025-02-24.acacia",
 });
-
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse,
@@ -21,10 +20,12 @@ export default async function handler(
   }
 
   try {
-    res.setHeader("Cache-Control", "no-store, max-age=0, must-revalidate"); // Ensures fresh response
+    res.setHeader("Cache-Control", "no-store, max-age=0, must-revalidate");
 
     // Fetch prices from Stripe
-    const prices = await stripe.prices.list({ limit: 5 });
+    const prices = await stripe.prices.search({
+      query: 'active:"true"',
+    });
 
     // Fetch product details for each price entry
     const productDetails = await Promise.all(
@@ -35,10 +36,11 @@ export default async function handler(
           );
 
           return {
-            amount: Number(price.unit_amount || 0) / 100, // Convert cents to dollars
-            clothingImg: product.images?.[0] || "/default-image.png", // Default fallback
+            active: product.active ?? price.active, // Ensure active status is retrieved
+            clothingImg: product.images?.[0] || "/default-image.png",
             currency: price.currency,
             id: price.id,
+            price: (price.unit_amount ?? 0) / 100, // Convert cents to dollars
             priceId: price.id,
             productId: product.id,
             title: product.name || "Unknown Product",
@@ -46,10 +48,11 @@ export default async function handler(
         } catch (err) {
           console.error(`Error fetching product ${price.product}:`, err);
           return {
-            amount: "unit_amount_decimal",
+            active: price.active, // Ensure active status is still included
             clothingImg: "/default-image.png",
             currency: price.currency,
             id: price.id,
+            price: (price.unit_amount ?? 0) / 100, // Fix incorrect unit amount
             priceId: price.id,
             productId: price.product,
             title: "Error Fetching Product",

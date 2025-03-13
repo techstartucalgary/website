@@ -8,13 +8,13 @@ export const MerchItems = ({
   title,
 }: {
   clothingImg: string;
-  price: string;
+  price: number;
   priceId: string;
   title: string;
 }) => {
   return (
     <div className="flex items-center justify-center">
-      <div className="group w-full max-w-xs cursor-pointer">
+      <div className="group w-full max-w-xs">
         <div className="relative mx-auto mt-5 h-auto max-w-sm rounded-lg border-4 border-black p-5 shadow-lg transition-all duration-300 ease-in-out group-hover:scale-105 group-hover:opacity-90">
           <div className="relative w-full overflow-hidden rounded-t-lg border-b-4 border-black">
             <Image
@@ -33,11 +33,10 @@ export const MerchItems = ({
               {title}
             </h1>
             <p className="mt-2 text-center text-lg text-gray-700">
-              ${Number(price || 0).toFixed(2)} CAD
+              {price?.toFixed(2)} CAD
             </p>
           </div>
 
-          {/* Button Section */}
           <div className="mb-3 flex justify-center">
             <PaymentButton priceId={priceId} />
           </div>
