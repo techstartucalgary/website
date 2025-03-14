@@ -1,4 +1,3 @@
-import * as S from "./ProjectSection.styles";
 import { Project } from "./ProjectData";
 import Projects from "../Projects";
 import useViewport from "../UseViewport";
@@ -33,8 +32,9 @@ const ProjectSection = (props: ProjectSectionProps) => {
   const { width } = useViewport(); // get screen width
 
   return (
-    <S.ProjectSectionDiv>
-      {width && width < 1055 ? (
+    // <div className="max-[1055px]:ml-[8%] min-[1055px]:grid min-[1055px]:ml-[7%] min-[1055px]:grid-cols-2 min-width-thousand:grid-cols-3 mx-[5%] mb-[10%] ml-[11%] mt-[5%]">
+    <div className="mx-[5%] mb-[10%] mt-[5%] grid md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3">
+      {width && width < 1024 ? (
         <Carousel
           autoPlay={true}
           autoPlaySpeed={2000}
@@ -77,7 +77,7 @@ const ProjectSection = (props: ProjectSectionProps) => {
           );
         })
       )}
-    </S.ProjectSectionDiv>
+    </div>
   );
 };
 

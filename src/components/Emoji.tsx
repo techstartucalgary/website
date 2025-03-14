@@ -1,5 +1,3 @@
-import { memo } from "react";
-
 type EmojiProps = {
   label?: string;
   symbol: string;
@@ -16,4 +14,4 @@ const Emoji = (props: EmojiProps) => (
   </span>
 );
 
-export default memo(Emoji);
+export default Emoji;

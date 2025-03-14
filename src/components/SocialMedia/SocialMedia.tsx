@@ -1,23 +1,24 @@
-import Link from "next/link";
-import { memo, PropsWithChildren } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { IconDefinition } from "@fortawesome/fontawesome-common-types";
+import { SocialMediaIcon } from "./SocialMedia.styles";
+import { SocialMediaColor } from "../../utility/SharedStyles";
 
 interface SocialMediaProps {
-  href: string;
+  color: SocialMediaColor;
+  link: string;
+  icon: IconDefinition;
 }
 
-const SocialMedia = (props: PropsWithChildren<SocialMediaProps>) => {
-  return props.href === "" ? (
-    <div className="z-10 mx-4 my-0 inline-block transition-all duration-300 ease-in-out hover:scale-105 md:mx-2">
-      {props.children}
-    </div>
+const SocialMedia = (props: SocialMediaProps) => {
+  return props.link === " " ? (
+    <SocialMediaIcon color={props.color}>
+      <FontAwesomeIcon icon={props.icon} size="3x" />
+    </SocialMediaIcon>
   ) : (
-    <Link
-      className="z-10 mx-4 my-0 inline-block transition-all duration-300 ease-in-out hover:scale-105 md:mx-2"
-      href={props.href}
-    >
-      {props.children}
-    </Link>
+    <SocialMediaIcon color={props.color} href={props.link}>
+      <FontAwesomeIcon icon={props.icon} size="3x" />
+    </SocialMediaIcon>
   );
 };
 
-export default memo(SocialMedia);
+export default SocialMedia;
