@@ -1,4 +1,3 @@
-import * as S from "./ProjectKeywordsSection.styles";
 import { NewlineText } from "../../utility/Helpers";
 import {
   businessStrategyLottieOptions,
@@ -16,56 +15,63 @@ const Lottie = dynamic(() => import("lottie-react"), { ssr: false });
 const ProjectKeywordsSection = () => {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const lottieDiv = (options: any) => (
-    <S.LottieDiv data-aos="fade-left" data-aos-duration="800">
+    <div
+      className="h-[15vw] w-[15vw] max-width-thousand:h-[30vw] max-width-thousand:w-[30vw]"
+      data-aos="fade-left"
+      data-aos-duration="800"
+    >
       <Lottie {...options} />
-    </S.LottieDiv>
+    </div>
   );
 
   const projectKeyword = (keyword: JSX.Element[]) => (
-    <S.Keyword
-      className="babyHeading babyHeading--white"
+    <h3
+      className="babyHeading babyHeading--white mr-[10%] max-xs:text-base [&>p]:m-0"
       data-aos="fade-right"
       data-aos-duration="1000"
     >
       {keyword}
-    </S.Keyword>
+    </h3>
   );
 
+  const GridItem: React.FC<{ children: React.ReactNode }> = ({ children }) => (
+    <div className="ml-auto flex items-center justify-center">{children}</div>
+  );
   const { width } = useViewport(); // get screen width
 
   return (
-    <S.ProjectKeywordsSectionDiv>
+    <div className="px-[3vw] py-[7vw] max-width-thousand:grid-cols-2 max-width-thousand:pr-0 max-xs:pl-[10vw] [&>div]:grid [&>div]:grid-cols-2 [&>div]:pr-[12vw] [&>div]:text-right [&>h3]:self-center">
       {width && width > 1000 ? (
         <div>
-          <S.GridItem>
+          <GridItem>
             {projectKeyword(NewlineText("Business\nStrategy"))}
             {lottieDiv(businessStrategyLottieOptions)}
-          </S.GridItem>
+          </GridItem>
 
-          <S.GridItem>
+          <GridItem>
             {projectKeyword(NewlineText("Design"))}
             {lottieDiv(designLottieOptions)}
-          </S.GridItem>
+          </GridItem>
 
-          <S.GridItem>
+          <GridItem>
             {projectKeyword(NewlineText("Requirements\nEngineering"))}
             {lottieDiv(handshakeLottieOptions)}
-          </S.GridItem>
+          </GridItem>
 
-          <S.GridItem>
+          <GridItem>
             {projectKeyword(NewlineText("Project\nManagement"))}
             {lottieDiv(projectManagementLottieOptions)}
-          </S.GridItem>
+          </GridItem>
 
-          <S.GridItem>
+          <GridItem>
             {projectKeyword(NewlineText("Programming"))}
             {lottieDiv(programmingLottieOptions)}
-          </S.GridItem>
+          </GridItem>
 
-          <S.GridItem>
+          <GridItem>
             {projectKeyword(NewlineText("Web/Mobile\nDevelopment"))}
             {lottieDiv(webDevelopmentLottieOptions)}
-          </S.GridItem>
+          </GridItem>
         </div>
       ) : (
         <div>
@@ -88,7 +94,7 @@ const ProjectKeywordsSection = () => {
           {lottieDiv(webDevelopmentLottieOptions)}
         </div>
       )}
-    </S.ProjectKeywordsSectionDiv>
+    </div>
   );
 };
 
