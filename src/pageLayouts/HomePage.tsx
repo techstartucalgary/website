@@ -1,4 +1,4 @@
-import tsu_logo from "/public/tech-start-logo-white.png";
+import tsu_logo from "../images/tech-start-logo-white.png";
 import { motion } from "framer-motion";
 
 import NumberStat from "../components/NumberStat";
@@ -16,7 +16,7 @@ const HomePage = () => {
   return (
     <div className="m-0 box-border overflow-hidden border-none leading-normal">
       <header
-        className="relative flex h-[60vw] flex-col text-center md:h-[70vw]"
+        className="relative flex h-[60vw] flex-col text-center md:h-[70vw] max-xs:pb-8"
         id="homePageTop"
         style={{
           backgroundImage:

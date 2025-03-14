@@ -1,13 +1,16 @@
-import imgDjango from "/public/guides/django.png";
-import imgGit from "/public/guides/git.png";
-import imgWebDev from "/public/guides/webdev.png";
-import imgReact from "/public/guides/react.png";
-import imgApi from "/public/guides/api.png";
+import "./GuidesSection.css";
+import imgDjango from "images/guides/django.png";
+import imgGit from "images/guides/git.png";
+import imgWebDev from "images/guides/webdev.png";
+import imgReact from "images/guides/react.png";
+import imgApi from "images/guides/api.png";
+import { GlobalStyles } from "../../types/Themes.js";
 import Guide from "./Guide";
-import { memo } from "react";
 
 const GuidesSection = () => (
-  <section className="flex flex-wrap justify-center gap-x-[100px] gap-y-20 text-center">
+  <section className="techGuidesSection">
+    <GlobalStyles />
+
     <Guide
       description="Learn Django, a python-based web framework for building backends, APIs, multi-page applications, and more!"
       guideName="Django Guide"
@@ -45,4 +48,4 @@ const GuidesSection = () => (
   </section>
 );
 
-export default memo(GuidesSection);
+export default GuidesSection;

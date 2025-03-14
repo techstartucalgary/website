@@ -1,10 +1,7 @@
-/* eslint-disable sort-keys/sort-keys-fix */
-/* eslint-disable sort-keys */
 import type { Config } from "tailwindcss";
 
 const config: Config = {
   content: ["./src/**/*.{js,ts,jsx,tsx,mdx}"],
-  darkMode: "class",
   plugins: [],
   theme: {
     extend: {
@@ -16,14 +13,10 @@ const config: Config = {
         "dark-background-end": "rgb(26, 26, 26)", // turquoise green
         "turquoise-blue": "var(--turquoise-blue)",
         "turquoise-green": "var(--turquoise-green)",
-        // colors resources page
-        "docs-page-black": "#404440",
-        "primary-green": "#4dd6a8",
       },
       fontFamily: {
         console: ["Consolas", "monaco", "monospace"],
         sans: ["Inter", "Tahoma", "sans-serif"],
-        inter: ['"Inter"', "Tahoma", "sans-serif"],
       },
       fontSize: {
         "babyHeading-size": "1.6rem",
@@ -38,7 +31,13 @@ const config: Config = {
         },
       },
       screens: {
-        "sm-max": { max: "43.75rem" },
+        "max-width-thousand": { max: "62.5rem" }, //1000px
+        "max-xs": { max: "37.5rem" }, //600px
+        "min-width-thousand": { min: "62.5rem" }, //1000px
+        "sm-max": { max: "43.75rem" }, //700px
+      },
+      textColor: {
+        "secondary-grey": "#222222f2",
       },
     },
   },
