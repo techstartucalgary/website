@@ -2,8 +2,7 @@ import React from "react";
 import Image from "next/image";
 import { TeamMember } from "./TeamInformation";
 import ProfileDescription from "./ProfileDescription";
-import SocialMedia from "../SocialMedia/SocialMedia";
-import { faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
+import SocialMediaIcon from "../SocialMedia/SocialMediaIcon";
 
 // Props for team profile
 type ProfileProps = {
@@ -20,7 +19,7 @@ const getBackgroundColor = (category: string) => {
     case "executives":
       return "bg-[var(--primary-green)]";
     case "projectManagers":
-      return "bg-[var(--primary-blue)]";
+      return "bg-[var(--lightwash-green)]";
     case "alumni":
       return "bg-[var(--secondary-lime)]";
     default:
@@ -37,7 +36,7 @@ const Profile: React.FC<ProfileProps> = ({
 }) => {
   return (
     <div
-      className="mx-[1%] mb-10 flex w-[clamp(150px,20%,300px)] flex-col items-center sm:w-60 md:w-72 lg:w-80"
+      className="relative mx-auto mb-10 flex w-full max-w-[400px] flex-col items-center sm:w-60 md:w-72 lg:w-80"
       data-aos={!mobileView ? "zoom-in" : ""}
       data-aos-duration={!mobileView ? "1000" : ""}
     >
@@ -45,7 +44,7 @@ const Profile: React.FC<ProfileProps> = ({
         <div className="flex w-full justify-center">
           <Image
             alt={alt}
-            className="mt-[15px] aspect-square w-full rounded-full bg-white object-cover"
+            className="mt-4 aspect-square w-full max-w-[300px] rounded-full bg-white object-cover"
             draggable={false}
             height={150}
             src={profilePic}
@@ -54,19 +53,23 @@ const Profile: React.FC<ProfileProps> = ({
         </div>
       )}
 
-      {member.linkedin && (
-        <div
-          className={`absolute bottom-0 right-0 flex items-center justify-center ${getBackgroundColor(activeCategory)} size-[60px] rounded-full sm:size-[70px] md:size-[70px] lg:size-[80px]`}
-        >
-          <SocialMedia
-            color="White"
-            icon={faLinkedinIn}
-            link={member.linkedin}
-          />
+          {member.linkedin && (
+            <div
+              className={`absolute right-0 top-3/4 flex items-center justify-center ${getBackgroundColor(activeCategory)} size-[60px] rounded-full sm:size-[75px] md:size-[95px]`}
+            >
+              <SocialMediaIcon link={member.linkedin} />
+            </div>
+          )}
         </div>
       )}
 
-      <ProfileDescription affiliation={member.affiliation} name={member.name} />
+      {/* Space between image and name to prevent overlap */}
+      <div className="mt-4 w-full text-center">
+        <ProfileDescription
+          affiliation={member.affiliation}
+          name={member.name}
+        />
+      </div>
     </div>
   );
 };

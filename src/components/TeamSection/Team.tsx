@@ -46,11 +46,11 @@ const Team: React.FC<TeamProps> = ({
       {teamMembers.map((member) => (
         <Profile
           activeCategory={activeCategory}
-          alt={member.imagePath}
+          alt={member.image}
           key={member.id + getBaseLength(activeCategory)}
           member={member}
           mobileView={!desktopView}
-          profilePic={member.imagePath}
+          profilePic={member.image}
         />
       ))}
     </div>

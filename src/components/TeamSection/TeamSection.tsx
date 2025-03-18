@@ -23,6 +23,15 @@ const TeamSection = ({ desktopView }: TeamSectionProps) => {
     }
   }, [selectedCategory]);
 
+  const bgColor = useMemo(() => {
+    const colors = {
+      alumni: "bg-[--secondary-lime]",
+      executives: "bg-[--primary-green]",
+      projectManagers: "bg-[--lightwash-green]",
+    };
+    return colors[selectedCategory];
+  }, [selectedCategory]);
+
   return (
     <div className="mx-auto p-[5vw] text-center">
       <h2 className="mb-0 font-[--chonky-header-weight] text-[--chonky-header-size] text-[--primary-black] md:text-[--thicc-subheading-size]">
@@ -31,31 +40,28 @@ const TeamSection = ({ desktopView }: TeamSectionProps) => {
 
       {/* Toggle Buttons */}
       <div className="relative mt-[2%] flex items-center justify-center">
-        <div className="relative flex h-[60px] w-[700px] rounded-full bg-[--primary-green] p-[5px]">
+        <div
+          className={`relative flex h-[60px] w-[700px] rounded-full p-[5px] transition-colors duration-200 ${bgColor}`}
+        >
           <div
-            className={`absolute top-[5px] h-[calc(100%-10px)] w-[calc(33.3%-10px)] rounded-full shadow-md transition-[left,background-color] duration-[800ms,200ms] ease-[ease,ease-in-out]
-              ${selectedCategory === "executives" ? "left-[5px] bg-[--primary-green]" : 
-                selectedCategory === "projectManagers" ? "left-[calc(33.3%+5px)] bg-[--lightwash-green]" : 
-                "left-[calc(66.6%+5px)] bg-[--secondary-lime]"}`}
+            className={`absolute top-[5px] h-[calc(100%-10px)] w-[calc(33.3%-10px)] rounded-full shadow-md transition-[left,background-color] duration-[800ms,200ms] ease-[ease,ease-in-out] ${bgColor} ${
+              selectedCategory === "executives"
+                ? "left-[5px]"
+                : selectedCategory === "projectManagers"
+                  ? "left-[calc(33.3%+5px)]"
+                  : "left-[calc(66.6%+5px)]"
+            }`}
           />
-          <button
-            className="z-10 flex-1 cursor-pointer p-[10px_5px] text-center text-lg font-medium text-white md:text-base"
-            onClick={() => setSelectedCategory("executives")}
-          >
-            Executives
-          </button>
-          <button
-            className="z-10 flex-1 cursor-pointer p-[10px_5px] text-center text-lg font-medium text-white md:text-base"
-            onClick={() => setSelectedCategory("projectManagers")}
-          >
-            Project Managers
-          </button>
-          <button
-            className="z-10 flex-1 cursor-pointer p-[10px_5px] text-center text-lg font-medium text-white md:text-base"
-            onClick={() => setSelectedCategory("alumni")}
-          >
-            Alumni
-          </button>
+          {["executives", "projectManagers", "alumni"].map((category) => (
+            <button
+              className="z-10 flex-1 cursor-pointer p-[10px_5px] text-center text-lg font-semibold text-white sm:text-xl md:text-2xl"
+              key={category}
+              onClick={() => setSelectedCategory(category as TeamCategory)}
+            >
+              {category.charAt(0).toUpperCase() +
+                category.slice(1).replace(/([A-Z])/g, " $1")}
+            </button>
+          ))}
         </div>
       </div>
 

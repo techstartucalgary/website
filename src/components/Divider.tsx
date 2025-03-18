@@ -1,19 +1,19 @@
 import dividerIMG from "../images/divider.svg";
-import * as S from "./Divider.styles";
 import Image from "next/image";
 
 function Divider() {
   return (
-    <S.DividerDiv>
-      <S.DividerGradient>
+    <div className="w-full">
+      <div>
         <Image
           alt="gradient divider"
+          className="mx-auto mb-[10px] mt-[-10px] block w-[min(30%_250px)] min-w-[175px]"
           height={10}
           src={dividerIMG}
           width={250}
         />
-      </S.DividerGradient>
-    </S.DividerDiv>
+      </div>
+    </div>
   );
 }
 

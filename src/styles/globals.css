@@ -7,6 +7,9 @@
     box-sizing: unset;
   }
 }
+.custom-gradient {
+  background: linear-gradient(180deg, #00b7ff 0%, #64cdb2 50%, #c9e265 100%);
+}
 
 :root {
   /* CSS Variables with global scope */
@@ -196,10 +199,6 @@ p,
   position: relative;
 }
 
-.switch__label {
-  z-index: 11;
-}
-
 a {
   color: var(--primary-green);
 }
@@ -208,3 +207,4 @@ body {
   margin: 0;
   padding: 0;
 }
+

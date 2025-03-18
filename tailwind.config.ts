@@ -1,7 +1,10 @@
+/* eslint-disable sort-keys/sort-keys-fix */
+/* eslint-disable sort-keys */
 import type { Config } from "tailwindcss";
 
 const config: Config = {
   content: ["./src/**/*.{js,ts,jsx,tsx,mdx}"],
+  darkMode: "class",
   plugins: [],
   theme: {
     extend: {
@@ -13,10 +16,15 @@ const config: Config = {
         "dark-background-end": "rgb(26, 26, 26)", // turquoise green
         "turquoise-blue": "var(--turquoise-blue)",
         "turquoise-green": "var(--turquoise-green)",
+        // colors resources page
+        "docs-page-black": "#404440",
+        "primary-green": "#4dd6a8",
       },
       fontFamily: {
         Inter: ["Inter", "Tahoma", "sans-serif"],
         console: ["Consolas", "monaco", "monospace"],
+        sans: ["Inter", "Tahoma", "sans-serif"],
+        inter: ['"Inter"', "Tahoma", "sans-serif"],
       },
       fontSize: {
         "babyHeading-size": "1.6rem",

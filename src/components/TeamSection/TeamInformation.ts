@@ -1,15 +1,13 @@
 import teamData from "./teamMembers.json";
 
 // dynamically import image based on the imageName parameter
-const importImage = (imageName: string) => {
-  return require(`../../images/team/${imageName}`);
-};
+//const importImage = (imageName: string) => `../../images/team/${imageName}`;
 
 export type TeamMember = {
   id: number;
   name: string;
   affiliation: string; // Affiliation refers to roles and projects for executives and PMs respectively
-  imagePath: string;
+  image: string;
   linkedin: string;
 };
 
@@ -21,7 +19,7 @@ export type FounderInfo = TeamMember & FounderDescription;
 
 export const founder: FounderInfo = {
   ...teamData.founder,
-  imagePath: teamData.founder.imagePath,
+  image: teamData.founder.imagePath,
 };
 
 export const executiveTeam: TeamMember[] = teamData.executiveTeam.map(
@@ -33,18 +31,16 @@ export const executiveTeam: TeamMember[] = teamData.executiveTeam.map(
 );
 
 export const projectManagers: TeamMember[] = teamData.projectManagers?.length
-  ? teamData.projectManagers.map((pm: TeamMember, index: number) => ({
-      affiliation: pm.affiliation,
+  ? teamData.projectManagers.map((pm, index) => ({
       id: index,
-      imagePath: importImage(pm.imagePath),
-      linkedin: pm.linkedin,
-      name: pm.name,
+      ...pm,
+      image: pm.imagePath,
     }))
   : [
       {
         affiliation: "",
         id: 0,
-        imagePath: "",
+        image: "",
         linkedin: "",
         name: "Coming Soon",
       },
