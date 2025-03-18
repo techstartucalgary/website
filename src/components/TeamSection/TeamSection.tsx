@@ -1,5 +1,4 @@
-/* eslint-disable prettier/prettier */
-import React, { useMemo, useState } from "react";
+import React, { useMemo, useState, useEffect } from "react";
 import Team from "./Team";
 import { executiveTeam, projectManagers, alumniTeam } from "./TeamInformation";
 import { TeamCategory } from "./Team";
@@ -11,6 +10,16 @@ type TeamSectionProps = {
 const TeamSection = ({ desktopView }: TeamSectionProps) => {
   const [selectedCategory, setSelectedCategory] =
     useState<TeamCategory>("executives");
+
+  useEffect(() => {
+    setTimeout(() => {
+      setSelectedCategory((prev) => prev); // Forces a re-render without changing the state
+    }, 100);
+  }, []);
+
+  useEffect(() => {
+    window.dispatchEvent(new Event("resize"));
+  }, [selectedCategory]);
 
   const TeamMembers = useMemo(() => {
     switch (selectedCategory) {

@@ -15,6 +15,7 @@ const FounderSection = () => {
           alt={founder.name}
           className="size-full rounded-[80%] object-cover"
           fill
+          loading="eager"
           priority
           src={founder.image}
         />
