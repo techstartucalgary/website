@@ -1,5 +1,7 @@
 import React from "react";
 import Profile from "./Profile";
+// import * as S from "./Team.styles";
+// import "./Team.styles";
 import {
   type TeamMember,
   executiveTeam,

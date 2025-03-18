@@ -39,6 +39,7 @@ const config: Config = {
         },
       },
       screens: {
+        "md-max": { max: "48rem" },
         "sm-max": { max: "43.75rem" },
       },
     },
