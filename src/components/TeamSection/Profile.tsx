@@ -2,8 +2,7 @@ import React from "react";
 import Image from "next/image";
 import { TeamMember } from "./TeamInformation";
 import ProfileDescription from "./ProfileDescription";
-import SocialMedia from "../SocialMedia/SocialMedia";
-import { faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
+import SocialMediaIcon from "../SocialMedia/SocialMediaIcon";
 
 // Props for team profile
 type ProfileProps = {
@@ -20,7 +19,7 @@ const getBackgroundColor = (category: string) => {
     case "executives":
       return "bg-[var(--primary-green)]";
     case "projectManagers":
-      return "bg-[var(--primary-blue)]";
+      return "bg-[var(--lightwash-green)]";
     case "alumni":
       return "bg-[var(--secondary-lime)]";
     default:
@@ -56,13 +55,9 @@ const Profile: React.FC<ProfileProps> = ({
 
           {member.linkedin && (
             <div
-              className={`absolute right-[10%] top-[70%] flex translate-x-1/2 translate-y-1/2 items-center justify-center ${getBackgroundColor(activeCategory)} size-[60px] rounded-full sm:size-[80px] md:size-[90px] lg:size-[100px]`}
+              className={`absolute right-0 top-3/4 flex items-center justify-center ${getBackgroundColor(activeCategory)} size-[90px] rounded-full`}
             >
-              <SocialMedia
-                color="White"
-                icon={faLinkedinIn}
-                link={member.linkedin}
-              />
+              <SocialMediaIcon link={member.linkedin} />
             </div>
           )}
         </div>

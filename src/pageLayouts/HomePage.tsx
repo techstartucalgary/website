@@ -1,4 +1,4 @@
-import tsu_logo from "../images/tech-start-logo-white.png";
+import tsu_logo from "/public/tech-start-logo-white.png";
 import { motion } from "framer-motion";
 
 import NumberStat from "../components/NumberStat";
