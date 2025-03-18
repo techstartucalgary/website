@@ -41,17 +41,17 @@ const Profile: React.FC<ProfileProps> = ({
       data-aos-duration={!mobileView ? "1000" : ""}
     >
       {profilePic && (
-        <div className="flex w-full justify-center">
+        <div className="relative flex w-full justify-center">
           <Image
             alt={alt}
             className="mt-4 aspect-square w-full max-w-[300px] rounded-full bg-white object-cover"
             draggable={false}
             height={150}
+            loading="eager"
+            priority
             src={profilePic}
             width={150}
           />
-        </div>
-      )}
 
           {member.linkedin && (
             <div
