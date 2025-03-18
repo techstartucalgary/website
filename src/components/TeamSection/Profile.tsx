@@ -55,7 +55,7 @@ const Profile: React.FC<ProfileProps> = ({
 
           {member.linkedin && (
             <div
-              className={`absolute right-0 top-3/4 flex items-center justify-center ${getBackgroundColor(activeCategory)} size-[90px] rounded-full`}
+              className={`absolute right-0 top-3/4 flex items-center justify-center ${getBackgroundColor(activeCategory)} size-[60px] rounded-full sm:size-[75px] md:size-[95px]`}
             >
               <SocialMediaIcon link={member.linkedin} />
             </div>

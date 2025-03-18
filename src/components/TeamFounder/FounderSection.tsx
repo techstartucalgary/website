@@ -22,7 +22,7 @@ const FounderSection = () => {
       </div>
 
       {/* Founder Details */}
-      <div className="text-white">
+      <div className="px-4 text-white md:px-0">
         <span
           className={`block font-bold ${
             defaultView ? "text-4xl" : "text-[30px]"

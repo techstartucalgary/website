@@ -63,7 +63,7 @@ const TeamSection = ({ desktopView }: TeamSectionProps) => {
           />
           {["executives", "projectManagers", "alumni"].map((category) => (
             <button
-              className="z-10 flex-1 cursor-pointer p-[10px_5px] text-center text-lg font-medium text-white md:text-base"
+              className="z-10 flex-1 cursor-pointer p-[10px_5px] text-center text-lg font-semibold text-white sm:text-xl md:text-2xl"
               key={category}
               onClick={() => setSelectedCategory(category as TeamCategory)}
             >
