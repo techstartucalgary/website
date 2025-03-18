@@ -9,6 +9,7 @@ import { Inter } from "next/font/google";
 import Head from "next/head";
 import Footer from "@/components/Footer/Footer";
 import GradientDef from "@/components/icons/GradientDef";
+import "../components/ProjectSection/carousel-with-custom-dots.css"; // used in ProjectSection.tsx
 
 const inter = Inter({ subsets: ["latin"] });
 

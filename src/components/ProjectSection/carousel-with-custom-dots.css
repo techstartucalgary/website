@@ -1,0 +1,9 @@
+/* Carousel default dot color */
+.react-multi-carousel-dot button {
+  background-color: white !important;
+}
+
+/* Carousel active dot color */
+.react-multi-carousel-dot--active button {
+  background-color: black !important;
+}
