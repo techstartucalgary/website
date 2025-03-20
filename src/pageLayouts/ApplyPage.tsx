@@ -2,7 +2,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import dynamic from "next/dynamic";
 import { applyPageTeamLottieOptions } from "../utility/LottieOptions";
-import execs_24 from "images/execs_24.jpg";
+import execs_24 from "../images/execs_24.jpg";
 import ApplySection from "../components/ApplySection";
 import Accordion from "../components/Apply/Accordion";
 import Divider from "../components/Divider";
