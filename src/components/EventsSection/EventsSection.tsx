@@ -1,7 +1,26 @@
-import { highlightedEvents } from "./EventInformation";
+// import { highlightedEvents } from "./EventInformation";
 import Event from "./Event/Event";
+import { HighlightedEventsFields } from "@/lib/contentful/contentfulModels";
 
-const EventsSection = () => {
+const formatDate = (dateString: string): string => {
+  const date = new Date(dateString);
+  const newDate = date
+    .toLocaleDateString("en-US", {
+      day: "numeric",
+      month: "long",
+      weekday: "long",
+      year: "numeric",
+    })
+    .replace(/(\d)(?=(st|nd|rd|th))/, "$1");
+  console.log(newDate);
+  return newDate;
+};
+
+const EventsSection = ({
+  highlightedEvents,
+}: {
+  highlightedEvents: HighlightedEventsFields[];
+}) => {
   return (
     <div className="z-[100] block items-center justify-center">
       <p className="regularText" style={{ marginBottom: "10%" }}>
@@ -18,11 +37,11 @@ const EventsSection = () => {
         {highlightedEvents.map((event, i) => {
           return (
             <Event
-              date={event.date}
+              date={formatDate(event.date)}
               description={event.description}
               image={event.image}
               key={i}
-              link={event.link}
+              link={event.link || ""}
               time={event.time}
               title={event.title}
             />

@@ -9,10 +9,15 @@ import dynamic from "next/dynamic";
 import EventsSection from "../components/EventsSection/EventsSection";
 import { ProjectsSection } from "../components/ProjectSection/ProjectsSection";
 import ApplyButton from "../components/ApplyButton";
+import { HighlightedEventsFields } from "@/lib/contentful/contentfulModels";
 
 const Blobbie = dynamic(() => import("../components/Blobbie"), { ssr: false });
 
-const HomePage = () => {
+const HomePage = ({
+  highlightedEvents,
+}: {
+  highlightedEvents: HighlightedEventsFields[];
+}) => {
   return (
     <div className="m-0 box-border overflow-hidden border-none leading-normal">
       <header
@@ -124,7 +129,7 @@ const HomePage = () => {
         <div className="mx-auto my-0 w-[85%] max-w-[65em] text-center text-white">
           <h1 className="chonkyHeading chonkyHeading--lessMargin">Events</h1>
           <Divider />
-          <EventsSection />
+          <EventsSection highlightedEvents={highlightedEvents} />
         </div>
       </section>
 
