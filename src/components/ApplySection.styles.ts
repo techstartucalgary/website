@@ -8,7 +8,7 @@ export const ApplicationContent = styled.article`
   position: relative;
   margin: 1%;
   justify-content: center;
-  margin-bottom: 10%;
+  margin-bottom: 30%;
   font-size: clamp(16px, calc(0.15vw + 16px), 22px);
   line-height: 30px;
   font-weight: 300;
@@ -35,6 +35,7 @@ export const ApplicationContent = styled.article`
     min-height: max-content;
     width: 30%;
     margin: 1%;
+    margin-bottom: 5%;
     justify-content: center;
     color: rgb(20, 20, 20);
     background-color: rgb(255, 255, 255);
