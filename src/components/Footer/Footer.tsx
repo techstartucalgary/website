@@ -7,8 +7,8 @@ import Youtube from "../icons/Youtube";
 import Tiktok from "../icons/Tiktok";
 
 const Footer = () => (
-  <div className="absolute block min-h-20 w-dvw items-center justify-center bg-[var(--primary-black)] bg-cover py-12 text-sm text-black md:inline-flex md:text-base">
-    <div className="flex items-center justify-center p-0 px-4 md:px-4 md:py-14">
+  <div className="absolute block min-h-20 w-dvw items-center justify-center bg-[var(--primary-black)] bg-cover px-4 py-12 text-sm text-black md:text-base lg:inline-flex">
+    <div className="flex items-center justify-center px-4 py-14 lg:px-1 lg:py-0">
       <SocialMedia href="https://www.instagram.com/techstartucalgary/">
         <Instagram gradient />
       </SocialMedia>
