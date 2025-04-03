@@ -7,12 +7,12 @@ interface SocialMediaProps {
 
 const SocialMedia = (props: PropsWithChildren<SocialMediaProps>) => {
   return props.href === "" ? (
-    <div className="z-10 mx-4 my-0 inline-block transition-all duration-300 ease-in-out hover:scale-105 md:mx-2">
+    <div className="xs:mx-2 z-10 mx-2 my-0 inline-block transition-all duration-300 ease-in-out hover:scale-105">
       {props.children}
     </div>
   ) : (
     <Link
-      className="z-10 mx-4 my-0 inline-block transition-all duration-300 ease-in-out hover:scale-105 md:mx-2"
+      className="xs:mx-2 z-10 mx-2 my-0 inline-block transition-all duration-300 ease-in-out hover:scale-105"
       href={props.href}
     >
       {props.children}
