@@ -1,28 +1,49 @@
 import React from "react";
 import { founder } from "../TeamSection/TeamInformation";
 import useViewport from "../UseViewport";
-import * as F from "./FounderSection.styles";
+import Image from "next/image";
 
 const FounderSection = () => {
-  const { width } = useViewport(); // get screen width
-  const defaultView = width && width > 600 ? true : false;
+  const { width } = useViewport();
+  const defaultView = width && width > 600;
+
   return (
-    <F.FounderContainer mobileView={!defaultView}>
-      <F.FounderImageContainer>
-        <F.FounderImg src={founder.imagePath} />
-      </F.FounderImageContainer>
-      <div className="regularText--white">
-        <span style={{ fontSize: "30px", fontWeight: "bold" }}>
+    <div className="mx-auto mt-12 flex max-w-[900px] flex-col items-center justify-center md:flex-row">
+      {/* Founder Image Container */}
+      <div className="relative mb-6 size-64 shrink-0 md:mb-0 md:mr-16 md:size-80">
+        <Image
+          alt={founder.name}
+          className="size-full rounded-[80%] object-cover"
+          fill
+          loading="eager"
+          priority
+          src={founder.image}
+        />
+      </div>
+
+      {/* Founder Details */}
+      <div className="px-4 text-white md:px-0">
+        <span
+          className={`block font-bold ${
+            defaultView ? "text-4xl" : "text-[30px]"
+          }`}
+        >
           {founder.name}
         </span>
-        <br />
-        <span style={{ fontStyle: "italic" }}>{founder.affiliation}</span>
-        <br />
-        <br />
-        {founder.description}
-        <br />
+        <span
+          className={`block italic ${defaultView ? "text-2xl" : "text-xl"}`}
+        >
+          {founder.affiliation}
+        </span>
+        <p
+          className={`mt-4 leading-relaxed ${
+            defaultView ? "text-2xl" : "text-lg"
+          }`}
+        >
+          {founder.description}
+        </p>
       </div>
-    </F.FounderContainer>
+    </div>
   );
 };
 
