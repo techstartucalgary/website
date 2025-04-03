@@ -25,7 +25,7 @@ const Accordion = (props: AccordionProps) => {
       </S.AccordionHeading>
       <S.AccordionContent contentVisible={props.active === props.title}>
         <S.HTML_Container>
-          <p dangerouslySetInnerHTML={{ __html: props.description }}></p>
+          <div dangerouslySetInnerHTML={{ __html: props.description }}></div>
         </S.HTML_Container>
       </S.AccordionContent>
     </S.Accordion>
