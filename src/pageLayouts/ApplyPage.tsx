@@ -11,6 +11,147 @@ import { ButtonMode } from "../components/HoverButton/HoverButton.styles";
 
 const Lottie = dynamic(() => import("lottie-react"), { ssr: false });
 
+const faqAccordionData = [
+  {
+    title: "What roles are there in a project?",
+    description: `<strong>Project Software Developer</strong></br>
+      As a developer, you will learn to architect and build awesome
+      projects and participate in team events. You want
+      to collaborate with your team to build awesome software and learn
+      professional development practices.
+      </br></br>
+      <strong>Business Strategist</strong></br>
+      As a strategist, you will focus on the business side of the
+      project, working alongside the Executive VP Strategy to learn
+      and develop a business deliverable i.e. business plan, business 
+      canvas, report, and/or pitch at the end of the term. This can be saved
+      for your portfolio to share with future employers.
+      </br></br>
+      <strong>Project Designer</strong></br>
+      As a designer, you will be in charge of making the
+      attractive, creative interfaces that provide great user experiences for the front-end
+      of your project. This role requires creativity, a practical and user-friendly 
+      perspective, and an eye for art!
+      </br></br>
+      <strong>Project Manager</strong> (separate application)</br>
+      As a project manager, you will be in charge of organizing, coordinating, and 
+      leading the team to create complex projects! This involves leading
+      weekly team meetings, leading the team vision, and guiding the project process.`,
+  },
+  {
+    title: "Why join a project?",
+    description: `
+      You will get to
+      <li>learn and exercise professional development and design practices </li>
+      <li>experience the full cycle of developing a project from nothing </li>
+      <li>experience and practice development, business, or design skills </li>
+      <li>work collaboratively on a project and learn from those around you</li>
+      <li>expand your portfolio by working on a team project</li>
+      <li>make friendships and connections with UCalgary's best  </li>`,
+  },
+  {
+    title: "What is required to take part in a project?",
+    description: `
+      A passion for learning and experimenting, and a willingness to get involved! We welcome everyone of all skill levels, whether you are a complete
+      beginner just starting out or if you’ve done several internships and have
+      a portfolio of awesome projects.`,
+  },
+  {
+    title: "What commitments are expected of project members?",
+    description: `
+      Team members must be able to attend the majority of our weekly dev nights, which are held on Thursdays from 5:30-7:30PM.
+      </br></br>
+      Beyond the dev nights, you should expect to contribute a minimum of 1-2 hours of additional work per week.
+      </br></br>
+      Additional team meetings may be arranged by your Project Manager when necessary.`,
+  },
+  {
+    title: "How do teams pick an idea for their project?",
+    description: `
+      Your Project Manager will pick one of the following ways to decide the team's project focus:
+      </br></br>
+      <strong>Focused</strong></br>
+      The project starts off with a specific idea or concept from the get-go. These ideas are pitched at the 
+      first Tech Start meeting to give you an idea of the types of projects your team will make! Then your team works together to brainstorm adaptations 
+      and improvements to the idea, alongside the technologies and platforms to work with!
+      </br></br>
+      <strong>Open-Ended</strong></br>
+      Rather than starting with ideas, projects start in mind with what technologies and platforms they will use, keeping in mind 
+      the project manager's previous experiences. Then, based off that, you as a team get to pick 
+      a concept, purpose, and scope for the project according to your interests and ideas!`,
+  },
+  {
+    title: "Do we try to monetize projects?",
+    description: `
+      Tech Start projects are themed around startups and entrepreneurship. 
+      Our teams use entrepreneurial thinking to guide their decision making and design their 
+      project around fulfilling a specific market niche and meeting the needs of a target audience. 
+      Despite this theme, Tech Start projects are not about building real startups - instead, 
+      we're focused on teaching skills, providing mentorship, and building projects that can boost 
+      your portfolio and your career. That said, if you want to pursue your project as a real entrepreneurial 
+      venture and monetize it outside of Tech Start, we're able to provide support and direct you to resources 
+      that you can use.`,
+  },
+  {
+    title: "What does the Executive Team do?",
+    description: `The Executive Team runs behind the scenes to organize and maintain
+      project teams, run workshops and events, and much more. There are
+      many portfolios on the team, each essential to the carrying out
+      the entrepreneurial and inventive vision for the community. More
+      information on unique roles is in our application!`,
+  },
+];
+
+const applications = [
+  {
+    applicationLink: "https://forms.gle/aH3r7eKwk3sSHhwp8",
+    closedStatus: "APPLICATIONS CLOSED",
+    deadline: "",
+    description:
+      "Work and grow as a developer, business strategist, or designer. Collaborate with team members on various platforms to build an exciting project for 1 academic year.",
+    role: "Project Member",
+    statusIsOpen: true,
+  },
+  {
+    applicationLink: "https://forms.gle/sXrtiz5PQCLdwK6N7",
+    closedStatus: "APPLICATIONS CLOSED",
+    deadline: "",
+    description:
+      "Manage a project for 1 year and lead a team of 6-9 project members to create complex projects.",
+    role: "Project Manager",
+    statusIsOpen: false,
+  },
+  {
+    applicationLink: "https://forms.gle/GtioLzJqeNcPYHjB6",
+    closedStatus: "APPLICATIONS CLOSED",
+    deadline: "",
+    description:
+      "Work behind the scenes for 1 academic year to organize project teams, run workshops and events, and grow our club culture. Be a visionary that helps this club fulfill its goals!",
+    role: "Executive Team",
+    statusIsOpen: true,
+  },
+];
+
+const AnimationStyles = () => (
+  <style jsx global>{`
+    @keyframes animate1 {
+      0% {
+        background-position-x: 0;
+      }
+      100% {
+        background-position-x: 1000px;
+      }
+    }
+    @keyframes animate2 {
+      0% {
+        background-position-x: 500px;
+      }
+      100% {
+        background-position-x: -250px;
+      }
+    }
+  `}</style>
+);
 const Blobbie = dynamic(() => import("../components/Blobbie"), { ssr: false });
 
 const ApplyPage = () => {
@@ -19,18 +160,7 @@ const ApplyPage = () => {
     <div className="overflow-hidden">
       <div className="absolute left-0 top-[80vh] h-[100px] w-full animate-[animate1_15s_linear_infinite] bg-[url('../images/wave.png')]"></div>
       <div className="bg-[position-x:200px] absolute left-0 top-[80vh] h-[120px] w-full animate-[animate2_9s_linear_infinite] bg-[url('../images/wave.png')] opacity-50"></div>
-      <style>
-        {`
-      @keyframes animate1 {
-        0% { background-position-x: 0; }
-        100% { background-position-x: 1000px; }
-      }
-      @keyframes animate2 {
-        0% { background-position-x: 500px; }
-        100% { background-position-x: -250px; }
-      }
-    `}
-      </style>
+      <AnimationStyles />
       <header
         className="h-[80vh] w-screen overflow-hidden text-white"
         id="applyPageTop"
@@ -126,119 +256,23 @@ const ApplyPage = () => {
           src={execs_24.src}
         />
       </div>
-      <div className="flex items-center bg-[#202020] text-white">
-        <div className="ml-[7%] inline-block h-[30vw] min-h-[10vw] w-[24vw] min-w-[10vw]">
+      <div className="flex flex-col items-center bg-[#202020] text-white md:flex-row">
+        <div className="mt-[40px] w-[60vw] min-w-[10vw] scale-[1.5] md:ml-[7%] md:mt-0 md:w-[24vw] md:scale-125">
           <Lottie {...applyPageTeamLottieOptions} />
         </div>
         <div className="w-[50vw] bg-[#202020] p-[5%_3%]">
           <h1 className="chonkyHeading chonkyHeading--dynamic chonkyHeading--white">
             FAQ
           </h1>
-          <Accordion
-            active={active}
-            description="<strong>Project Software Developer</strong></br>
-              As a developer, you will learn to architect and build awesome
-              projects and participate in team events. You want
-              to collaborate with your team to build awesome software and learn
-              professional development practices.
-              </br></br>
-              <strong>Business Strategist</strong></br>
-              As a strategist, you will focus on the business side of the
-              project, working alongside the Executive VP Strategy to learn
-              and develop a business deliverable i.e. business plan, business 
-              canvas, report, and/or pitch at the end of the term. This can be saved
-              for your portfolio to share with future employers.
-              </br></br>
-              <strong>Project Designer</strong></br>
-              As a designer, you will be in charge of making the
-              attractive, creative interfaces that provide great user experiences for the front-end
-              of your project. This role requires creativity, a practical and user-friendly 
-              perspective, and an eye for art!
-              </br></br>
-              <strong>Project Manager</strong> (separate application)</br>
-              As a project manager, you will be in charge of organizing, coordinating, and 
-              leading the team to create complex projects! This involves leading
-              weekly team meetings, leading the team vision, and guiding the project process."
-            setActive={setActive}
-            title="What roles are there in a project?"
-          />
-          <Accordion
-            active={active}
-            description="
-            You will get to
-            <li>learn and exercise professional development and design practices </li>
-            <li>experience the full cycle of developing a project from nothing </li>
-            <li>experience and practice development, business, or design skills </li>
-            <li>work collaboratively on a project and learn from those around you</li>
-            <li>expand your portfolio by working on a team project</li>
-            <li>make friendships and connections with UCalgary's best  </li>"
-            setActive={setActive}
-            title="Why join a project?"
-          />
-          <Accordion
-            active={active}
-            description="
-                    A passion for learning and experimenting, and a willingness to get involved! We welcome everyone of all skill levels, whether you are a complete
-              beginner just starting out or if you’ve done several internships and have
-              a portfolio of awesome projects."
-            setActive={setActive}
-            title="What is required to take part in a project?"
-          />
-          <Accordion
-            active={active}
-            description="
-            Team members must be able to attend the majority of our weekly dev nights, which are held on Thursdays from 5:30-7:30PM.
-            </br></br>
-            Beyond the dev nights, you should expect to contribute a minimum of 1-2 hours of additional work per week.
-            </br></br>
-            Additional team meetings may be arranged by your Project Manager when necessary.
-            "
-            setActive={setActive}
-            title="What commitments are expected of project members?"
-          />
-          <Accordion
-            active={active}
-            description="
-              Your Project Manager will pick one of the following ways to decide the team's project focus:
-              </br></br>
-              <strong>Focused</strong></br>
-              The project starts off with a specific idea or concept from the get-go. These ideas are pitched at the 
-              first Tech Start meeting to give you an idea of the types of projects your team will make! Then your team works together to brainstorm adaptations 
-              and improvements to the idea, alongside the technologies and platforms to work with!
-              </br></br>
-              <strong>Open-Ended</strong></br>
-              Rather than starting with ideas, projects start in mind with what technologies and platforms they will use, keeping in mind 
-              the project manager's previous experiences. Then, based off that, you as a team get to pick 
-              a concept, purpose, and scope for the project according to your interests and ideas!
-              </br></br>
-              "
-            setActive={setActive}
-            title="How do teams pick an idea for their project?"
-          />
-          <Accordion
-            active={active}
-            description="
-            Tech Start projects are themed around startups and entrepreneurship. 
-            Our teams use entrepreneurial thinking to guide their decision making and design their 
-            project around fulfilling a specific market niche and meeting the needs of a target audience. 
-            Despite this theme, Tech Start projects are not about building real startups - instead, 
-            we're focused on teaching skills, providing mentorship, and building projects that can boost 
-            your portfolio and your career. That said, if you want to pursue your project as a real entrepreneurial 
-            venture and monetize it outside of Tech Start, we're able to provide support and direct you to resources 
-            that you can use."
-            setActive={setActive}
-            title="Do we try to monetize projects?"
-          />
-          <Accordion
-            active={active}
-            description="The Executive Team runs behind the scenes to organize and maintain
-              project teams, run workshops and events, and much more. There are
-              many portfolios on the team, each essential to the carrying out
-              the entrepreneurial and inventive vision for the community. More
-              information on unique roles is in our application!"
-            setActive={setActive}
-            title="What does the Executive Team do?"
-          />
+          {faqAccordionData.map((data, index) => (
+            <Accordion
+              key={index}
+              active={active}
+              setActive={setActive}
+              title={data.title}
+              description={data.description}
+            />
+          ))}
         </div>
         <Blobbie
           edge={false}
@@ -266,35 +300,17 @@ const ApplyPage = () => {
         </h1>
         <Divider />
         <ul className="md:inline-flex">
-          <ApplySection
-            applicationLink="https://forms.gle/aH3r7eKwk3sSHhwp8"
-            closedStatus="APPLICATIONS CLOSED"
-            deadline=""
-            description="Work and grow as a developer, business strategist, or designer.
-                  Collaborate with team members on various platforms to build an exciting project for 1 academic year."
-            role="Project Member"
-            statusIsOpen={true}
-          />
-
-          <ApplySection
-            applicationLink="https://forms.gle/sXrtiz5PQCLdwK6N7"
-            closedStatus="APPLICATIONS CLOSED"
-            deadline=""
-            description="Manage a project for 1 year and lead a team of 6-9
-                    project members to create complex projects."
-            role="Project Manager"
-            statusIsOpen={false}
-          />
-
-          <ApplySection
-            applicationLink="https://forms.gle/GtioLzJqeNcPYHjB6"
-            closedStatus="APPLICATIONS CLOSED"
-            deadline=""
-            description="Work behind the scenes for 1 academic year to organize project teams, run
-                  workshops and events, and grow our club culture. Be a visionary that helps this club fulfill its goals!"
-            role="Executive Team"
-            statusIsOpen={true}
-          />
+          {applications.map((section, index) => (
+            <ApplySection
+              key={index}
+              applicationLink={section.applicationLink}
+              closedStatus={section.closedStatus}
+              deadline={section.deadline}
+              description={section.description}
+              role={section.role}
+              statusIsOpen={section.statusIsOpen}
+            />
+          ))}
         </ul>
       </div>
     </div>
