@@ -26,7 +26,6 @@ const ProjectsPage = () => {
       className="[&>h2]: relative box-border size-full overflow-hidden scroll-smooth whitespace-normal bg-dark-background px-[3wv] py-0 font-sans"
       id="projectsPageTop"
     >
-      {/* // eslint-disable-next-line prettier/prettier */}
       <div className="mb-[25%] bg-white py-[5em] text-center text-secondary-grey md:mb-[15%] md:flex">
         <div className="md:shrink-0 md:grow-0 md:basis-1/2 md:self-end">
           <div className="mt-[5%] flex justify-center md:mt-0 md:block">
