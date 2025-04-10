@@ -13,7 +13,6 @@ const Lottie = dynamic(() => import("lottie-react"), { ssr: false });
 
 const faqAccordionData = [
   {
-    title: "What roles are there in a project?",
     description: `<strong>Project Software Developer</strong></br>
       As a developer, you will learn to architect and build awesome
       projects and participate in team events. You want
@@ -37,9 +36,9 @@ const faqAccordionData = [
       As a project manager, you will be in charge of organizing, coordinating, and 
       leading the team to create complex projects! This involves leading
       weekly team meetings, leading the team vision, and guiding the project process.`,
+    title: "What roles are there in a project?",
   },
   {
-    title: "Why join a project?",
     description: `
       You will get to
       <li>learn and exercise professional development and design practices </li>
@@ -48,25 +47,25 @@ const faqAccordionData = [
       <li>work collaboratively on a project and learn from those around you</li>
       <li>expand your portfolio by working on a team project</li>
       <li>make friendships and connections with UCalgary's best  </li>`,
+    title: "Why join a project?",
   },
   {
-    title: "What is required to take part in a project?",
     description: `
       A passion for learning and experimenting, and a willingness to get involved! We welcome everyone of all skill levels, whether you are a complete
       beginner just starting out or if you’ve done several internships and have
       a portfolio of awesome projects.`,
+    title: "What is required to take part in a project?",
   },
   {
-    title: "What commitments are expected of project members?",
     description: `
       Team members must be able to attend the majority of our weekly dev nights, which are held on Thursdays from 5:30-7:30PM.
       </br></br>
       Beyond the dev nights, you should expect to contribute a minimum of 1-2 hours of additional work per week.
       </br></br>
       Additional team meetings may be arranged by your Project Manager when necessary.`,
+    title: "What commitments are expected of project members?",
   },
   {
-    title: "How do teams pick an idea for their project?",
     description: `
       Your Project Manager will pick one of the following ways to decide the team's project focus:
       </br></br>
@@ -79,9 +78,9 @@ const faqAccordionData = [
       Rather than starting with ideas, projects start in mind with what technologies and platforms they will use, keeping in mind 
       the project manager's previous experiences. Then, based off that, you as a team get to pick 
       a concept, purpose, and scope for the project according to your interests and ideas!`,
+    title: "How do teams pick an idea for their project?",
   },
   {
-    title: "Do we try to monetize projects?",
     description: `
       Tech Start projects are themed around startups and entrepreneurship. 
       Our teams use entrepreneurial thinking to guide their decision making and design their 
@@ -91,14 +90,15 @@ const faqAccordionData = [
       your portfolio and your career. That said, if you want to pursue your project as a real entrepreneurial 
       venture and monetize it outside of Tech Start, we're able to provide support and direct you to resources 
       that you can use.`,
+    title: "Do we try to monetize projects?",
   },
   {
-    title: "What does the Executive Team do?",
     description: `The Executive Team runs behind the scenes to organize and maintain
       project teams, run workshops and events, and much more. There are
       many portfolios on the team, each essential to the carrying out
       the entrepreneurial and inventive vision for the community. More
       information on unique roles is in our application!`,
+    title: "What does the Executive Team do?",
   },
 ];
 
@@ -133,7 +133,7 @@ const applications = [
 ];
 
 const AnimationStyles = () => (
-  <style jsx global>{`
+  <style>{`
     @keyframes animate1 {
       0% {
         background-position-x: 0;
@@ -266,11 +266,11 @@ const ApplyPage = () => {
           </h1>
           {faqAccordionData.map((data, index) => (
             <Accordion
-              key={index}
               active={active}
+              description={data.description}
+              key={index}
               setActive={setActive}
               title={data.title}
-              description={data.description}
             />
           ))}
         </div>
@@ -302,11 +302,11 @@ const ApplyPage = () => {
         <ul className="md:inline-flex">
           {applications.map((section, index) => (
             <ApplySection
-              key={index}
               applicationLink={section.applicationLink}
               closedStatus={section.closedStatus}
               deadline={section.deadline}
               description={section.description}
+              key={index}
               role={section.role}
               statusIsOpen={section.statusIsOpen}
             />

@@ -1,17 +1,17 @@
 type ApplySectionProps = {
-  role: string;
-  description: string;
-  statusIsOpen: boolean;
   applicationLink: string;
   closedStatus: string;
   deadline: string;
+  description: string;
+  role: string;
+  statusIsOpen: boolean;
 };
 
 const ApplySection = (props: ApplySectionProps) => (
   <div
+    className="relative mb-[30%] rounded-[10px] bg-white p-5 text-center text-[clamp(16px,_calc(0.15vw+16px),_22px)] font-light leading-[30px] text-[rgb(20,20,20)] md:mb-[5%] md:w-[30%]"
     data-aos="fade-down"
     data-aos-duration="1000"
-    className="relative mb-[30%] rounded-[10px] bg-white p-5 text-center text-[clamp(16px,_calc(0.15vw+16px),_22px)] font-light leading-[30px] text-[rgb(20,20,20)] md:mb-[5%] md:w-[30%]"
   >
     <li>
       <h2 className="text-xl font-semibold">{props.role}</h2>
