@@ -27,7 +27,7 @@ const SponsorSection = () => {
         })}
       </div>
       <div className="mb-[5%]">
-        <p className="justify-center text-center text-[1.2rem] text-[var(--secondary-grey)]">
+        <p className="justify-center text-center text-regular-font text-[var(--secondary-grey)]">
           Special thank you to our industry sponsors, collaboration partners,
           and featured guests. <br />
           Interested? Reach out at&nbsp;
