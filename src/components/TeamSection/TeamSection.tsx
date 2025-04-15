@@ -12,14 +12,12 @@ const TeamSection = ({ desktopView }: TeamSectionProps) => {
     useState<TeamCategory>("executives");
 
   useEffect(() => {
-    setTimeout(() => {
+    const timeoutId = setTimeout(() => {
       setSelectedCategory((prev) => prev); // Forces a re-render without changing the state
     }, 100);
-  }, []);
 
-  useEffect(() => {
-    window.dispatchEvent(new Event("resize"));
-  }, [selectedCategory]);
+    return () => clearTimeout(timeoutId); // Clean up on unmount
+  }, []);
 
   const TeamMembers = useMemo(() => {
     switch (selectedCategory) {
