@@ -17,7 +17,7 @@ export const highlightedEvents: Event[] = [
     description:
       "Join us for our 2025 Final Showcase, where we celebrate the incredible achievements of our project teams. This event promises to set new standards for innovation and excellence.",
     image: FinalShowcase24_img.src,
-    link: "https://www.eventbrite.ca/e/techstarts-final-showcase-tickets-823300141887",
+    link: "https://www.eventbrite.ca/e/tech-start-ucalgary-final-showcase-tickets-1286230141979?aff=erelexpmlt",
     time: "12:00 - 4:00PM",
     title: "Final Showcase 2025",
   },
