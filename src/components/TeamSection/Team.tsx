@@ -39,7 +39,7 @@ const Team: React.FC<TeamProps> = ({
       className={`${
         desktopView
           ? "flex flex-row flex-wrap justify-center"
-          : "grid grid-cols-2 gap-2 sm:grid-cols-1"
+          : "grid grid-cols-1 gap-2 sm:grid-cols-2"
       } relative mx-auto mt-12 max-w-screen-xl justify-center`}
     >
       {teamMembers.map((member) => (

@@ -36,7 +36,11 @@ const Profile: React.FC<ProfileProps> = ({
 }) => {
   return (
     <div
-      className="relative mx-auto mb-10 flex w-full max-w-[400px] flex-col items-center sm:w-60 md:w-72 lg:w-80"
+      className={`relative ${
+        mobileView
+          ? "mx-auto mb-0 w-full max-w-[400px]"
+          : "mx-[1%] mb-10 w-[clamp(150px,20%,300px)]"
+      }`}
       data-aos={!mobileView ? "zoom-in" : ""}
       data-aos-duration={!mobileView ? "1000" : ""}
     >
@@ -55,7 +59,7 @@ const Profile: React.FC<ProfileProps> = ({
 
           {member.linkedin && (
             <div
-              className={`absolute right-0 top-3/4 flex items-center justify-center ${getBackgroundColor(activeCategory)} size-[60px] rounded-full sm:size-[75px] md:size-[95px]`}
+              className={`absolute right-0 top-3/4 flex items-center justify-center ${getBackgroundColor(activeCategory)} size-[60px] rounded-full lg:size-[70x]`}
             >
               <SocialMediaIcon link={member.linkedin} />
             </div>

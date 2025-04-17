@@ -45,10 +45,6 @@ const TeamSection = ({ desktopView }: TeamSectionProps) => {
 
   return (
     <div className="mx-auto p-[5vw] text-center">
-      <h2 className="mb-0 font-[--chonky-header-weight] text-[--chonky-header-size] text-[--primary-black] md:text-[--thicc-subheading-size]">
-        Our Team
-      </h2>
-
       {/* Toggle Buttons */}
       <div className="relative mt-[2%] flex items-center justify-center">
         <div
