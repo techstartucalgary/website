@@ -1,12 +1,8 @@
 import React from "react";
 import { founder } from "../TeamSection/TeamInformation";
-import useViewport from "../UseViewport";
 import Image from "next/image";
 
 const FounderSection = () => {
-  const { width } = useViewport();
-  const defaultView = width && width > 600;
-
   return (
     <div className="mx-auto mt-12 flex max-w-[900px] flex-col items-center justify-center md:flex-row">
       {/* Founder Image Container */}
@@ -23,25 +19,16 @@ const FounderSection = () => {
 
       {/* Founder Details */}
       <div className="px-4 text-white md:px-0">
-        <span
-          className={`block font-bold ${
-            defaultView ? "text-4xl" : "text-[30px]"
-          }`}
-        >
-          {founder.name}
-        </span>
-        <span
-          className={`block italic ${defaultView ? "text-2xl" : "text-xl"}`}
-        >
+        <span className={"block text-[30px] font-bold"}>{founder.name}</span>
+        <br />
+        <span className={"text-regular-font italic"}>
           {founder.affiliation}
         </span>
-        <p
-          className={`mt-4 leading-relaxed ${
-            defaultView ? "text-2xl" : "text-lg"
-          }`}
-        >
+        <br />
+        <br />
+        <span className={"mt-4 text-regular-font leading-relaxed"}>
           {founder.description}
-        </p>
+        </span>
       </div>
     </div>
   );

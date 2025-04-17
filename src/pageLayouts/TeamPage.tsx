@@ -37,7 +37,7 @@ const TeamPage = () => {
 
       <header className="flex min-h-[50vh] flex-col bg-white py-[3em] text-center text-[var(--secondary-grey)]">
         <motion.h1
-          className="isolate my-[0.67em] mb-6 font-bold text-[var(--title-size)]"
+          className="isolate my-[0.67em] font-bold text-[var(--title-size)]"
           initial={{ opacity: 1 }}
           style={{ fontSize: "var(--title-size)" }} // Fallback for variable issue
         >

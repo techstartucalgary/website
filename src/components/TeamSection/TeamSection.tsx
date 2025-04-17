@@ -19,6 +19,10 @@ const TeamSection = ({ desktopView }: TeamSectionProps) => {
     return () => clearTimeout(timeoutId); // Clean up on unmount
   }, []);
 
+  useEffect(() => {
+    window.dispatchEvent(new Event("resize")); // The team images show up when scrolling
+  }, [selectedCategory]);
+
   const TeamMembers = useMemo(() => {
     switch (selectedCategory) {
       case "projectManagers":
