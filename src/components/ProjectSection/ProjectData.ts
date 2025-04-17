@@ -4,28 +4,28 @@
  * All image sizes should be a 16:9 Aspect ratio
  */
 
-import techStartWebsite from "images/projects/techStartWebsite.png";
-import supplyMe from "images/projects/supplyMe.png";
-import resumeTracker from "images/projects/resumetracker.png";
-import oneHub from "images/projects/oneHub.png";
-import aquavolution from "images/projects/aquavolution.jpg";
-import snowbot from "images/projects/snowbot.jpg";
-import noteAid from "images/projects/noteAid.jpg";
-import whereTo from "images/projects/whereTo.jpg";
-import lifeLine from "images/projects/lifeline.png";
-import easyMeal from "images/projects/easymeal.jpg";
-import airm from "images/projects/AiRM.png";
-import techstarcade from "images/projects/Techstarcade.jpg";
-import bandist from "images/projects/Bandist.jpg";
-import cyberHire from "images/projects/CyberHire.jpg";
-import achevio from "images/projects/Achevio.png";
-import campusBuddy from "images/projects/CampusBuddy.jpg";
-import locaLoyalty from "images/projects/LocaLoyalty.png";
-import craftXR from "images/projects/Craftxr.jpg";
-import reThread from "images/projects/Rethread.png";
-import fyr from "images/projects/ForYourResearch.jpg";
-import easyMealTeam from "images/showcaseWinners/2023_best_overall.jpg";
-import localoyaltyTeam from "images/showcaseWinners/2024_best_overall.jpg";
+import techStartWebsite from "../../../public/projects/techStartWebsite.png";
+import supplyMe from "../../../public/projects/supplyMe.png";
+import resumeTracker from "../../../public/projects/resumetracker.png";
+import oneHub from "../../../public/projects/oneHub.png";
+import aquavolution from "../../../public/projects/aquavolution.jpg";
+import snowbot from "../../../public/projects/snowbot.jpg";
+import noteAid from "../../../public/projects/noteAid.jpg";
+import whereTo from "../../../public/projects/whereTo.jpg";
+import lifeLine from "../../../public/projects/lifeline.png";
+import easyMeal from "../../../public/projects/easymeal.jpg";
+import airm from "../../../public/projects/AiRM.png";
+import techstarcade from "../../../public/projects/Techstarcade.jpg";
+import bandist from "../../../public/projects/Bandist.jpg";
+import cyberHire from "../../../public/projects/CyberHire.jpg";
+import achevio from "../../../public/projects/Achevio.png";
+import campusBuddy from "../../../public/projects/CampusBuddy.jpg";
+import locaLoyalty from "../../../public/projects/LocaLoyalty.png";
+import craftXR from "../../../public/projects/Craftxr.jpg";
+import reThread from "../../../public/projects/Rethread.png";
+import fyr from "../../../public/projects/ForYourResearch.jpg";
+import easyMealTeam from "../../../public/showcaseWinners/2023_best_overall.jpg";
+import localoyaltyTeam from "../../../public/showcaseWinners/2024_best_overall.jpg";
 
 // Project type definition
 export type Project = {
