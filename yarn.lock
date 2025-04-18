@@ -1475,14 +1475,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"axios@npm:^1.7.8":
-  version: 1.7.8
-  resolution: "axios@npm:1.7.8"
+"axios@npm:^1.8.2":
+  version: 1.8.4
+  resolution: "axios@npm:1.8.4"
   dependencies:
     follow-redirects: "npm:^1.15.6"
     form-data: "npm:^4.0.0"
     proxy-from-env: "npm:^1.1.0"
-  checksum: 10c0/23ae2d0105aea9170c34ac9b6f30d9b2ab2fa8b1370205d2f7ce98b9f9510ab420148c13359ee837ea5a4bf2fb028ff225bd2fc92052fb0c478c6b4a836e2d5f
+  checksum: 10c0/450993c2ba975ffccaf0d480b68839a3b2435a5469a71fa2fb0b8a55cdb2c2ae47e609360b9c1e2b2534b73dfd69e2733a1cf9f8215bee0bcd729b72f801b0ce
   languageName: node
   linkType: hard
 
@@ -5126,7 +5126,7 @@ __metadata:
     "@typescript-eslint/parser": "npm:^7.4.0"
     aos: "npm:^2.3.4"
     autoprefixer: "npm:^10.4.20"
-    axios: "npm:^1.7.8"
+    axios: "npm:^1.8.2"
     classnames: "npm:^2.5.1"
     eslint: "npm:8.57.0"
     eslint-config-next: "npm:14.2.14"
