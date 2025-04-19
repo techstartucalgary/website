@@ -21,6 +21,7 @@ const config: Config = {
         "primary-green": "#4dd6a8",
       },
       fontFamily: {
+        Inter: ["Inter", "Tahoma", "sans-serif"],
         console: ["Consolas", "monaco", "monospace"],
         sans: ["Inter", "Tahoma", "sans-serif"],
         inter: ['"Inter"', "Tahoma", "sans-serif"],
