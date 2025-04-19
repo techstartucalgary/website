@@ -36,6 +36,8 @@ const TeamPage = () => {
       />
 
       <header className="flex min-h-[50vh] flex-col bg-white py-[3em] text-center text-[var(--secondary-grey)]">
+        <br />
+        <br />
         <motion.h1
           className="isolate my-[0.67em] font-bold text-[var(--title-size)]"
           initial={{ opacity: 1 }}
@@ -43,6 +45,8 @@ const TeamPage = () => {
         >
           Our Team
         </motion.h1>
+        <br />
+        <br />
         <motion.p
           className="isolate my-8 px-6 text-[var(--babyHeading-size)] md:text-[var(--regular-font)]"
           initial={{ opacity: 1 }}
