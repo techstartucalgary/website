@@ -57,7 +57,7 @@ const PreviousExecTeam = () => {
         .map((team: PrevExecTeam) => {
           return (
             <>
-              <div className="mx-auto my-12 w-2/5 md-max:w-4/5">
+              <div className="md-max:w-4/5 mx-auto my-12 w-2/5">
                 {team.picture ? (
                   <Image
                     alt={" "}
@@ -76,7 +76,7 @@ const PreviousExecTeam = () => {
                 )}
               </div>
               {/* </S.Carousel> */}
-              <div className="mx-auto grid max-w-[85%] grid-cols-3 gap-8 md-max:grid-cols-2">
+              <div className="md-max:grid-cols-2 mx-auto grid max-w-[85%] grid-cols-3 gap-8">
                 {team.members.length > 0 && (
                   <>
                     {team.members.map((member, index) => (
