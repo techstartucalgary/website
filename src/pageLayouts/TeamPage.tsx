@@ -1,24 +1,27 @@
+/* eslint-disable prettier/prettier */
 import TeamSection from "../components/TeamSection/TeamSection";
 import HoverButton from "../components/HoverButton/HoverButton";
 import { ButtonMode } from "../components/HoverButton/HoverButton.styles";
 import { motion } from "framer-motion";
-import * as S from "./TeamPage.styles";
-import * as T from "../components/TeamSection/TeamSection.styles";
 import FounderSection from "../components/TeamFounder/FounderSection";
 import Team from "../components/TeamSection/Team";
 import { boardMembers } from "../components/TeamSection/TeamInformation";
 import useViewport from "../components/UseViewport";
 import Divider from "../components/Divider";
 import dynamic from "next/dynamic";
+import PreviousExecTeam from "@/components/PreviousExecTeam/PreviousExecTeam";
 
 const Blobbie = dynamic(() => import("../components/Blobbie"), { ssr: false });
 
 const TeamPage = () => {
-  // set defaultView flag according to screen width cutoff value
-  const { width } = useViewport(); // get screen width
+  const { width } = useViewport();
   const defaultView = width && width > 600 ? true : false;
+
   return (
-    <S.TeamPage id="teamPageTop">
+    <div
+      className="relative box-border h-full overflow-hidden scroll-smooth whitespace-normal border-none bg-black p-0 font-sans leading-6"
+      id="teamPageTop"
+    >
       <Blobbie
         edge={true}
         id={2}
@@ -31,24 +34,30 @@ const TeamPage = () => {
         transform="translate(-10vw, 10vw)"
         width={250}
       />
-      <S.TeamPageHeader>
+
+      <header className="flex min-h-[50vh] flex-col bg-white py-[3em] text-center text-[var(--secondary-grey)]">
+        <br />
+        <br />
         <motion.h1
-          animate={{ opacity: 1 }}
-          initial={{ opacity: 0 }}
-          transition={{ duration: 0.5 }}
+          className="isolate my-[0.67em] font-bold text-[var(--title-size)]"
+          initial={{ opacity: 1 }}
+          style={{ fontSize: "var(--title-size)" }} // Fallback for variable issue
         >
           Our Team
         </motion.h1>
+        <br />
+        <br />
         <motion.p
-          animate={{ opacity: 1 }}
-          initial={{ opacity: 0 }}
-          transition={{ delay: 1 }}
+          className="isolate my-8 px-6 text-[var(--babyHeading-size)] md:text-[var(--regular-font)]"
+          initial={{ opacity: 1 }}
+          style={{ fontSize: "var(--babyHeading-size)" }} // Ensure correct application
         >
           Tech Start is only possible thanks to our team of talented, passionate
           leaders. Interested in joining us?
         </motion.p>
         <motion.div
           animate={{ opacity: 1 }}
+          className="mt-12 flex justify-center"
           initial={{ opacity: 0 }}
           transition={{ delay: 1.5 }}
         >
@@ -60,22 +69,26 @@ const TeamPage = () => {
             text={"Apply Now"}
           />
         </motion.div>
-      </S.TeamPageHeader>
+      </header>
 
-      <h1 className="chonkyHeading chonkyHeading--white chonkyHeading--lessMargin">
+      <h1
+        className="my-12 text-center font-bold text-white"
+        style={{ fontSize: "var(--chonky-header-size)" }}
+      >
         The Board
       </h1>
       <Divider />
       <FounderSection />
-      <T.TeamSection>
+      <section className="p-4">
         <Team
           activeCategory="executives"
           desktopView={defaultView}
           teamMembers={boardMembers}
         />
-      </T.TeamSection>
+      </section>
       <TeamSection desktopView={defaultView} />
-    </S.TeamPage>
+      <PreviousExecTeam />
+    </div>
   );
 };
 

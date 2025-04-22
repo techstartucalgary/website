@@ -1,37 +1,12 @@
 /**
- * Colors for social media icon styling.
+ * Tailwind color classes for social media icon styling.
  */
 export enum SocialMediaColor {
-  Green = "Green",
+  Green = "text-green-500",
+  Black = "text-black",
   Gradient = "Gradient",
-  Black = "Black",
-  ToggleGreen = "ToggleGreen",
-  ToggleBlue = "ToggleBlue",
-  ToggleYellow = "ToggleYellow",
-  White = "White",
+  ToggleGreen = "text-green-600",
+  ToggleBlue = "text-blue-500",
+  ToggleYellow = "text-yellow-500",
+  White = "text-white",
 }
-
-/**
- * Function to handle social media colors.
- *
- * @param color social media color
- * @returns css color
- */
-export const handleColor = (color: SocialMediaColor) => {
-  switch (color) {
-    case SocialMediaColor.Black:
-      return "black";
-    case SocialMediaColor.Green:
-      return "var(--primary-green)";
-    case SocialMediaColor.ToggleGreen:
-      return "var(--toggle-green)";
-    case SocialMediaColor.ToggleBlue:
-      return "var(--toggle-blue)";
-    case SocialMediaColor.ToggleYellow:
-      return "var(--secondary-lime)";
-    case SocialMediaColor.White:
-      return "white";
-    default:
-      return "";
-  }
-};

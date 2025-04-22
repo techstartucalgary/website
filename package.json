@@ -16,6 +16,7 @@
     "@fortawesome/free-brands-svg-icons": "^6.6.0",
     "@fortawesome/free-regular-svg-icons": "^6.6.0",
     "@fortawesome/react-fontawesome": "^0.2.2",
+    "@heroicons/react": "^2.2.0",
     "@mui/material": "^6.1.2",
     "aos": "^2.3.4",
     "axios": "^1.7.8",
@@ -26,6 +27,7 @@
     "react": "^18",
     "react-countup": "^6.5.3",
     "react-dom": "^18",
+    "react-icons": "^5.5.0",
     "react-intersection-observer": "^9.13.1",
     "react-lazy-load-image-component": "^1.6.2",
     "react-multi-carousel": "^2.8.5",
@@ -33,7 +35,8 @@
     "react-tsparticles": "^2.9.3",
     "react-visibility-sensor": "^5.1.1",
     "styled-components": "^6.1.13",
-    "tsparticles": "^2.9.3"
+    "tsparticles": "^2.9.3",
+    "watch": "^1.0.2"
   },
   "devDependencies": {
     "@types/aos": "^3.0.7",

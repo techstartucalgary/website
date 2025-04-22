@@ -11,7 +11,7 @@ interface PhotoProps {
 const GalleryPage = ({ picUrls }: PhotoProps) => {
   return (
     <div
-      className="relative box-border min-h-screen overflow-hidden scroll-smooth whitespace-normal bg-gradient-to-b from-dark-background to-dark-background-end p-0 font-sans"
+      className="relative box-border min-h-screen overflow-hidden scroll-smooth whitespace-normal bg-gradient-to-b from-dark-background to-dark-background-end p-0 font-[Inter]"
       id="galleryPageTop"
     >
       <Blobbie
