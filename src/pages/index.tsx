@@ -17,9 +17,6 @@ export async function getStaticProps() {
       order: ["fields.date"],
     })
     .then((entry) => {
-      entry.items.forEach((item) => {
-        console.log(item);
-      });
       return entry.items.map((item) => ({
         date: item.fields.date as string,
         description: item.fields.description as string,

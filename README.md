@@ -18,6 +18,8 @@ We welcome contributions from anyone who shares our passion for the tech industr
 
 To contribute to our website, please see our [Contribution Guidelines](contribution-guidelines.md) for more information on how to get started.
 
+To contribute to the Contentful integration, check out [Contentful migration documentation_Mar 2025](https://docs.google.com/document/d/1ellGHdAOVuLA_LjZ66NxVje38flJDJxOBwFKsTShAig/edit?tab=t.0). It includes setup steps, and code structure.
+
 ## 🎉Join Our Community
 
 To stay up-to-date with the latest news and events from Tech Start UCalgary, follow us on [Instagram](https://www.instagram.com/techstartucalgary/) and [LinkedIn](https://www.linkedin.com/company/tech-start-ucalgary), and join our [Discord server](https://discord.gg/Sxj5QrxRPk)!
