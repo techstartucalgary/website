@@ -10,11 +10,11 @@ const Lottie = dynamic(() => import("lottie-react"), { ssr: false });
 const MerchPageContent = () => {
   return (
     <div
-      className="flex flex-col items-center justify-center"
+      className="flex flex-col items-center justify-center bg-dark-background"
       id="merchPageTop"
     >
       {/* Header Section */}
-      <div className="mb-8 flex w-full flex-col items-center bg-black pb-32">
+      <div className="mb-8 flex w-full flex-col items-center bg-dark-background pb-32">
         <div className="flex w-full items-center justify-center">
           <div className="w-full max-w-xl">
             <Lottie {...merchPageLottieOptions} />
