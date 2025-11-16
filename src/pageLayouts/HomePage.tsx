@@ -16,7 +16,7 @@ const HomePage = () => {
   return (
     <div className="m-0 box-border overflow-hidden border-none leading-normal">
       <header
-        className="relative flex h-[60vw] flex-col text-center md:h-[70vw]"
+        className="relative flex min-h-[35vh] flex-col items-center justify-center text-center md:min-h-[115vh] md:items-center md:justify-start md:pt-8"
         id="homePageTop"
         style={{
           backgroundImage:
@@ -27,7 +27,7 @@ const HomePage = () => {
         <div className="pointer-events-none relative z-[3]">
           <motion.img
             animate={{ opacity: 1 }}
-            className="mx-auto mt-[50px] w-[85%] max-w-[800px]"
+            className="mx-auto w-[85%] max-w-[800px] md:w-[90%] md:max-w-[900px]"
             initial={{ opacity: 0 }}
             src={tsu_logo.src}
             transition={{ duration: 0.5 }}
@@ -35,7 +35,7 @@ const HomePage = () => {
         </div>
         <motion.p
           animate={{ opacity: 1 }}
-          className="pointer-events-none z-[3] mb-[100%] mt-0 text-[5vw] font-bold leading-[1.1] text-white"
+          className="pointer-events-none z-[3] mb-8 mt-4 text-[5vw] font-bold leading-[1.1] text-white md:mb-10"
           initial={{ opacity: 0 }}
           transition={{ delay: 1 }}
         >

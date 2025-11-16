@@ -26,6 +26,7 @@ const Particle = () => {
       init={particlesInit}
       loaded={particlesLoaded}
       options={{
+        fullScreen: { enable: false },
         interactivity: {
           detect_on: "canvas",
           events: {
@@ -135,6 +136,7 @@ const Particle = () => {
         },
         retina_detect: false,
       }}
+      style={{ height: "100%", width: "100%" }}
     />
   );
 };
