@@ -19,7 +19,7 @@ const TeamPage = () => {
 
   return (
     <div
-      className="relative box-border h-full overflow-hidden scroll-smooth whitespace-normal border-none bg-black p-0 font-sans leading-6"
+      className="relative box-border h-full overflow-hidden scroll-smooth whitespace-normal border-none bg-dark-background p-0 font-sans leading-6"
       id="teamPageTop"
     >
       <Blobbie
