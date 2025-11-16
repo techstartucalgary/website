@@ -15,6 +15,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export default function App({ Component, pageProps }: AppProps) {
   useEffect(() => {
+    import("../utility/smoothscroll").catch(() => {});
     Aos.init({ duration: 1000 }); // Init AOS. Sets AOS default duration as 1s
   }, []);
 
