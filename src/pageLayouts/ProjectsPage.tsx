@@ -30,8 +30,14 @@ const ProjectsPage = () => {
       <div className="mb-[25%] bg-white py-[5em] text-center text-secondary-grey md:mb-[15%] md:flex">
         <div className="md:shrink-0 md:grow-0 md:basis-1/2 md:self-end">
           <div className="mt-[5%] flex justify-center md:mt-0 md:block">
-            <div className="md:ml-[25%] md:size-[35vw]">
-              <Lottie {...teamProjectLottieOptions} />
+            <div
+              className="aspect-square md:ml-[25%]"
+              style={{ width: "clamp(409.14px, 35vw, 520px)" }}
+            >
+              <Lottie
+                {...teamProjectLottieOptions}
+                style={{ height: "100%", width: "100%" }}
+              />
             </div>
           </div>
         </div>
@@ -76,7 +82,10 @@ const ProjectsPage = () => {
             <div data-aos="flip-left"></div>
             <div className="m-[5%] grid max-w-[1400px] md:grid-cols-2">
               <span className="text-center md:text-left">
-                <h1 className="babyHeading--white">
+                <h1
+                  className="babyHeading babyHeading--white"
+                  style={{ fontSize: "2rem" }}
+                >
                   Congratulations {project.name}!
                 </h1>
                 <p className="regularText regularText--white">
