@@ -38,7 +38,7 @@ const PreviousExecTeam = () => {
           handleClick={handleLeftArrow}
           isDisabled={getSelectedYearIndex() === 0}
         />
-        <div className="mx-1 rounded-lg border border-gray-300 bg-transparent px-8 py-2 text-lg text-gray-800 transition-colors duration-300">
+        <div className="mx-1 px-8 py-2 text-lg text-gray-800">
           <div>{selectedYear}</div>
         </div>
         <ChevronButton
@@ -83,7 +83,7 @@ const PreviousExecTeam = () => {
                       <div className="rounded-lg bg-gray-100 py-4" key={index}>
                         <div style={{ justifyContent: "center" }}>
                           <a
-                            className="mb-2 text-xl font-bold text-black transition-colors duration-200 hover:text-[#4dd6a8] hover:underline"
+                            className="mb-2 text-xl font-bold text-black transition-colors duration-200 hover:text-primary-green hover:underline"
                             href={member.linkedin_url}
                             rel="noopener noreferrer"
                             target="_blank"
