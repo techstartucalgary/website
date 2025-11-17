@@ -24,8 +24,14 @@ import locaLoyalty from "../../../public/projects/LocaLoyalty.png";
 import craftXR from "../../../public/projects/Craftxr.jpg";
 import reThread from "../../../public/projects/Rethread.png";
 import fyr from "../../../public/projects/ForYourResearch.jpg";
+import agrivanna from "../../../public/projects/Agrivanna.png";
+import eventEase from "../../../public/projects/EventEase.png";
+import earthEcho from "../../../public/projects/EarthsEcho.png";
+import callia from "../../../public/projects/Callia.png";
+import connx from "../../../public/projects/CONNX.png";
 import easyMealTeam from "../../../public/showcaseWinners/2023_best_overall.jpg";
 import localoyaltyTeam from "../../../public/showcaseWinners/2024_best_overall.jpg";
+import agrivannaTeam from "../../../public/showcaseWinners/2025_best_overall.jpg";
 
 // Project type definition
 export type Project = {
@@ -47,6 +53,74 @@ const website = new URL("https://tech-start-website.web.app/");
 
 // An array of our projects, which is used in the Projects page
 export const PastProjects: Project[] = [
+  {
+    description:
+      "An event management platform that leverages AI to enhance event planning and check-in processes.",
+    featured: false,
+    github: "https://github.com/techstartucalgary/Event-Ease",
+    image: eventEase.src,
+    name: "Event Ease",
+    pmName: "James Robert",
+    showcaseWinner: false,
+    videoEmbedID: "",
+    website: website,
+    year: "2024-2025",
+  },
+  {
+    description:
+      "A game designed to inspire environmental consciousness through engaging storytelling and gameplay.",
+    featured: false,
+    github: "https://github.com/techstartucalgary/earths-echo",
+    image: earthEcho.src,
+    name: "Earth's Echo",
+    pmName: "Debo Dam",
+    showcaseWinner: false,
+    videoEmbedID: "",
+    website: website,
+    year: "2024-2025",
+  },
+  {
+    description:
+      "An AI-powered virtual assistant designed to streamline veterinary clinic operations and customer support.",
+    featured: false,
+    github: "https://github.com/techstartucalgary/Callia",
+    image: callia.src,
+    name: "Callia",
+    pmName: "Phuong Thao Nguyen",
+    showcaseWinner: false,
+    videoEmbedID: "",
+    website: website,
+    year: "2024-2025",
+  },
+  {
+    description:
+      "A business connection and booking platform designed to streamline interactions between small businesses and customers.",
+    featured: false,
+    github: "https://github.com/techstartucalgary/conn-x",
+    image: connx.src,
+    name: "CONN-X",
+    pmName: "Alvi Zaman",
+    showcaseWinner: false,
+    videoEmbedID: "",
+    website: website,
+    year: "2024-2025",
+  },
+  {
+    description:
+      "Agrivanna is an AI-powered livestock platform combining virtual fencing, weight tracking paired with tailored feed plans, and early health monitoring. Built for real farms, it works offline and helps producers stay compliant.",
+    featured: false,
+    github: "https://github.com/techstartucalgary/",
+    image: agrivanna.src,
+    name: "Agrivanna",
+    pmName: "Amirhossein Foroughi",
+    showcaseWinner: true,
+    teamPic: agrivannaTeam.src,
+    videoEmbedID: "",
+    website: website,
+    winnerPost:
+      "https://www.linkedin.com/posts/tech-start-ucalgary_our-2025-final-showcase-was-an-astounding-activity-7325009531720138755-jLSB/?utm_source=share&utm_medium=member_desktop&rcm=ACoAACtQ6U8BlOCpiQtkOYzoe0ZZQB5Cdvt9hGU",
+    year: "2024-2025",
+  },
   {
     description:
       "A new take on social media where you join goal-focused communities.",
