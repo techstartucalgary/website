@@ -18,7 +18,8 @@ const ScrollableLink = (props: PropsWithChildren<ScrollableLinkProps>) => {
         offset: props.offset,
         smooth: true,
       });
-  }, [props.duration, props.offset, props.to]);
+    if (props.onClick) props.onClick();
+  }, [props.duration, props.offset, props.to, props.onClick]);
 
   return (
     <Link href={props.href} onClick={handleClick}>
