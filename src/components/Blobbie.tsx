@@ -27,8 +27,7 @@ type BlobbieProps = {
 };
 
 const Blobbie = (props: BlobbieProps) => {
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const blobbies = {
+  const blobbies: { [key: string]: any } = {
     blobLottie1: blobLottie1,
     blobLottie2: blobLottie2,
     blobLottie3: blobLottie3,
@@ -49,10 +48,11 @@ const Blobbie = (props: BlobbieProps) => {
   const blobbieClass =
     props.edge === true ? styles["Blobbie--edge"] : styles["Blobbie--middle"];
 
+  const animationData = blobbies[`blobLottie${props.id}`];
+
   return (
     <Lottie
-      // eslint-disable-next-line no-eval
-      animationData={eval(`blobbies.blobLottie${props.id}`)}
+      animationData={animationData}
       className={"Blobbie " + blobbieClass}
       style={{ width: props.width, transform: props.transform }}
     />
