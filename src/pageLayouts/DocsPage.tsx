@@ -114,7 +114,7 @@ function DocsPage() {
   return (
     <div className={`${theme === "dark" ? "dark" : ""}`}>
       <div
-        className={`bg-white text-center font-inter text-docs-page-black transition-colors duration-[0.3s] dark:bg-[#0e1111] dark:text-white`}
+        className={`bg-white text-center text-docs-page-black transition-colors duration-[0.3s] dark:bg-[#0e1111] dark:text-white`}
       >
         <header className="flex min-h-screen flex-col">
           <div className="relative" id="docsPageTop">
@@ -153,7 +153,7 @@ function DocsPage() {
                   to="docsPage__techGuidesSection"
                 >
                   <li className="relative mx-5 list-none pb-[5px] after:absolute after:left-0 after:h-[3px] after:w-0 after:bg-primary-green after:transition-all after:duration-500 after:content-[''] hover:after:w-full">
-                    <div className="py-1 font-inter text-base font-thin uppercase text-docs-page-black no-underline dark:text-white">
+                    <div className="py-1 text-base font-thin uppercase text-docs-page-black no-underline dark:text-white">
                       <Emoji symbol="📚 " />
                       Tech Guides
                     </div>
@@ -167,7 +167,7 @@ function DocsPage() {
                   to="docsPage__brandingSection"
                 >
                   <li className="relative mx-5 list-none pb-[5px] after:absolute after:left-0 after:h-[3px] after:w-0 after:bg-primary-green after:transition-all after:duration-500 after:content-[''] hover:after:w-full">
-                    <div className="py-1 font-inter text-base font-thin uppercase text-docs-page-black no-underline dark:text-white">
+                    <div className="py-1 text-base font-thin uppercase text-docs-page-black no-underline dark:text-white">
                       <Emoji symbol="📓 " />
                       Branding
                     </div>
@@ -181,7 +181,7 @@ function DocsPage() {
                   to="docsPage__reachOutSection"
                 >
                   <li className="relative mx-5 list-none pb-[5px] after:absolute after:left-0 after:h-[3px] after:w-0 after:bg-primary-green after:transition-all after:duration-500 after:content-[''] hover:after:w-full">
-                    <div className="py-1 font-inter text-base font-thin uppercase text-docs-page-black no-underline dark:text-white">
+                    <div className="py-1 text-base font-thin uppercase text-docs-page-black no-underline dark:text-white">
                       <Emoji symbol="📤 " />
                       Reach Out
                     </div>
@@ -199,7 +199,7 @@ function DocsPage() {
             ></motion.img>
           </div>
 
-          <p className="mx-auto mb-[60px] mt-[30px] w-3/4 font-inter text-xl font-bold text-docs-page-black dark:text-white">
+          <p className="mx-auto mb-[60px] mt-[30px] w-3/4 text-xl font-bold text-docs-page-black dark:text-white">
             Information, guides, and resources for Tech Start UCalgary members
           </p>
 

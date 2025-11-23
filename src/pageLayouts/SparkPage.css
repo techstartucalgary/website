@@ -28,7 +28,7 @@
   justify-items: center;
 }
 .sparkBackground {
-  font-family: "Inter", Tahoma, sans-serif;
+
   color: #99e755;
   background-color: #282a36;
   padding: 10px;
@@ -41,13 +41,13 @@
   background: #282a36;
 }
 .sparkTitle {
-  font-family: "Inter", Tahoma, sans-serif;
+
   text-align: center;
   font-size: 3rem;
   font-weight: 700;
 }
 .sparkContentTitle {
-  font-family: "Inter", Tahoma, sans-serif;
+
   text-align: left;
   font-size: 2rem;
   font-weight: 700;
@@ -98,7 +98,7 @@
 
 .techspark_about {
   text-align: center;
-  font-family: "Inter", Tahoma, sans-serif;
+
   padding-bottom: 10px;
 }
 

@@ -31,7 +31,7 @@ const ApplyButton = () => {
               <span>&#62;</span>
               <span>&#62;</span>{" "}
             </div>
-            <div className="ml-[30px] font-console"> theTeam.join()</div>
+            <div className="ml-[30px] font-sans"> theTeam.join()</div>
           </div>
         </Link>
       </motion.div>

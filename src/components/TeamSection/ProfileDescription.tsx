@@ -5,7 +5,7 @@ interface ProfileDescriptionProps {
 
 const ProfileDescription = ({ affiliation, name }: ProfileDescriptionProps) => {
   return (
-    <div className="mt-[10%] text-center font-[Inter,Tahoma,sans-serif]">
+    <div className="mt-[10%] text-center">
       <h3 className="max-[950px]:min-[650px]:text-[1.1rem] max-[350px]:text-[1.2rem] m-0 mx-auto max-w-[350px] text-[1.5rem] font-black text-white md:max-w-full">
         {name}
       </h3>

@@ -23,7 +23,7 @@ const ProjectsPage = () => {
   );
   return (
     <div
-      className="[&>h2]: relative box-border size-full overflow-hidden scroll-smooth whitespace-normal bg-dark-background px-[3wv] py-0 font-sans"
+      className="[&>h2]: relative box-border size-full overflow-hidden scroll-smooth whitespace-normal bg-dark-background px-[3wv] py-0"
       id="projectsPageTop"
     >
       {/* // eslint-disable-next-line prettier/prettier */}

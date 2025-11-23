@@ -11,7 +11,7 @@ interface PhotoProps {
 const GalleryPage = ({ picUrls }: PhotoProps) => {
   return (
     <div
-      className="relative box-border min-h-screen overflow-hidden scroll-smooth whitespace-normal bg-gradient-to-b from-dark-background to-dark-background-end p-0 font-[Inter]"
+      className="relative box-border min-h-screen overflow-hidden scroll-smooth whitespace-normal bg-gradient-to-b from-dark-background to-dark-background-end p-0"
       id="galleryPageTop"
     >
       <Blobbie
@@ -26,7 +26,7 @@ const GalleryPage = ({ picUrls }: PhotoProps) => {
         transform="translate(-10vw, 10vw)"
         width={250}
       />
-      <div className="text-center text-title-size text-white">
+      <div className="text-center text-title-size font-bold text-white">
         <motion.h1
           animate={{ opacity: 1 }}
           initial={{ opacity: 0 }}

@@ -11,7 +11,7 @@ import Footer from "@/components/Footer/Footer";
 import GradientDef from "@/components/icons/GradientDef";
 import "../components/ProjectSection/carousel-with-custom-dots.css"; // used in ProjectSection.tsx
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
 export default function App({ Component, pageProps }: AppProps) {
   useEffect(() => {
@@ -25,7 +25,7 @@ export default function App({ Component, pageProps }: AppProps) {
         <link href="/favicon.png" rel="icon" />
       </Head>
       <ScrollToTop />
-      <div className={inter.className}>
+      <div className={`${inter.variable} font-sans`}>
         <GradientDef />
         <Navbar />
         <Component {...pageProps} />
