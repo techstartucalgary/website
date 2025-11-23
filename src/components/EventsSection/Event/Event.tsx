@@ -21,7 +21,9 @@ const Event = (props: EventProps) => {
     <div
       className="mb-5 rounded-[30px] bg-gradient-to-t from-turquoise-blue to-turquoise-green p-[1.5%] md:p-[3%]"
       data-aos={fadeDirection}
+      data-aos-anchor-placement="top-bottom"
       data-aos-duration="2000"
+      data-aos-once="false"
     >
       <img
         alt={props.title}
