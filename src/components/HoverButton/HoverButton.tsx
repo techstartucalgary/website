@@ -56,9 +56,14 @@ const HoverButton = (props: HoverButtonProps) => {
     );
   }
   return (
-    <div className="transition duration-300 ease-in-out hover:-translate-y-1 md:m-[5px] md:flex md:items-center md:justify-center md:hover:transform-none">
+    <a
+      className="transition duration-300 ease-in-out hover:-translate-y-1 md:m-[5px] md:flex md:items-center md:justify-center md:hover:transform-none"
+      href={props.link}
+      rel="noreferrer"
+      target="_blank"
+    >
       {HoverButtonComponent(props)}
-    </div>
+    </a>
   );
 };
 
