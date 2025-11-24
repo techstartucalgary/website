@@ -295,23 +295,25 @@ const ApplyPage = () => {
           width={200}
         />
 
-        <h1 className="chonkyHeading chonkyHeading--dynamic chonkyHeading--lessMargin">
-          Applications
-        </h1>
-        <Divider />
-        <ul className="md:inline-flex">
-          {applications.map((section, index) => (
-            <ApplySection
-              applicationLink={section.applicationLink}
-              closedStatus={section.closedStatus}
-              deadline={section.deadline}
-              description={section.description}
-              key={index}
-              role={section.role}
-              statusIsOpen={section.statusIsOpen}
-            />
-          ))}
-        </ul>
+        <div className="relative z-10 my-[5%]">
+          <h1 className="chonkyHeading chonkyHeading--dynamic chonkyHeading--lessMargin">
+            Applications
+          </h1>
+          <Divider />
+          <ul className="mx-auto flex w-4/5 max-w-[1200px] flex-col justify-between gap-8 md:flex-row">
+            {applications.map((section, index) => (
+              <ApplySection
+                applicationLink={section.applicationLink}
+                closedStatus={section.closedStatus}
+                deadline={section.deadline}
+                description={section.description}
+                key={index}
+                role={section.role}
+                statusIsOpen={section.statusIsOpen}
+              />
+            ))}
+          </ul>
+        </div>
       </div>
     </div>
   );
