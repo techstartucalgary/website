@@ -32,9 +32,12 @@ const MerchPageContent = () => {
       </div>
 
       {/* Merch Items Grid - Max 3 per row */}
-      <div className="my-6 flex w-full flex-wrap justify-center gap-6 px-4">
+      <div className="my-6 box-border flex w-full flex-wrap justify-center gap-6 px-4">
         {MerchItemsData.map((merchItem) => (
-          <div className="w-full p-2 sm:w-1/2 lg:w-1/3" key={merchItem.id}>
+          <div
+            className="box-border w-full p-2 sm:w-1/2 lg:w-1/3"
+            key={merchItem.id}
+          >
             <MerchItems
               clothingImg={merchItem.clothingImg}
               link={merchItem.link}
