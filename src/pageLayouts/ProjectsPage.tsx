@@ -6,7 +6,6 @@ import ProjectSection from "../components/ProjectSection/ProjectSection";
 import FeaturedProjectSection from "../components/ProjectSection/FeaturedProjectSection";
 import Divider from "../components/Divider";
 import ProjectKeywordsSection from "../components/ProjectSection/ProjectKeywordsSection";
-import { NewlineText } from "../utility/Helpers";
 import HoverButton from "../components/HoverButton/HoverButton";
 import { ButtonMode } from "../components/HoverButton/HoverButton.styles";
 import dynamic from "next/dynamic";
@@ -21,28 +20,33 @@ const ProjectsPage = () => {
   const [bestOverallProjects] = useState(
     PastProjects.filter((project) => project.showcaseWinner === true),
   );
+
   return (
     <div
       className="[&>h2]: relative box-border size-full overflow-hidden scroll-smooth whitespace-normal bg-dark-background px-[3wv] py-0 font-sans"
       id="projectsPageTop"
     >
       {/* // eslint-disable-next-line prettier/prettier */}
-      <div className="mb-[25%] bg-white py-[5em] text-center text-secondary-grey md:mb-[15%] md:flex">
+      <div className="mb-[25%] bg-white py-[5em] text-center text-secondary-grey md:mb-[15%] md:flex md:items-end">
         <div className="md:shrink-0 md:grow-0 md:basis-1/2 md:self-end">
-          <div className="mt-[5%] flex justify-center md:mt-0 md:block">
-            <div className="md:ml-[25%] md:size-[35vw]">
-              <Lottie {...teamProjectLottieOptions} />
+          <div className="mt-[5%] flex justify-center md:ml-[25%] md:mt-0 md:block">
+            <div className="aspect-[1630/1510] w-screen max-w-[430px] md:aspect-square md:size-[35vw] md:max-w-none">
+              <Lottie
+                {...teamProjectLottieOptions}
+                style={{ height: "100%", width: "100%" }}
+              />
             </div>
           </div>
         </div>
-        <div className="md:shrink-0 md:grow-0 md:basis-1/2 md:self-end">
+        <div className="md:flex md:shrink-0 md:grow-0 md:basis-1/2 md:items-end md:justify-start md:self-end">
           <motion.div
             animate={{ opacity: 1 }}
-            className="m-0 whitespace-pre text-center text-[15vw] font-bold md:text-left md:text-[8vw]"
+            className="m-0 flex w-full flex-nowrap items-baseline justify-center gap-[0.35em] text-center text-[15vw] font-bold leading-normal md:block md:w-full md:flex-1 md:text-left md:text-[8vw] md:leading-normal"
             initial={{ opacity: 0 }}
             transition={{ duration: 1 }}
           >
-            {NewlineText("Our \nProjects")}
+            <span className="inline-block md:block">Our</span>
+            <span className="inline-block md:mt-2 md:block">Projects</span>
           </motion.div>
         </div>
       </div>
@@ -74,15 +78,18 @@ const ProjectsPage = () => {
               {project.year}
             </h2>
             <div data-aos="flip-left"></div>
-            <div className="m-[5%] grid max-w-[1400px] md:grid-cols-2">
-              <span className="text-center md:text-left">
-                <h1 className="babyHeading--white">
+            <div className="mx-auto my-[5%] grid w-full max-w-[1100px] place-items-center gap-8 px-4 md:grid-cols-2">
+              <span className="w-full text-left">
+                <h1
+                  className="babyHeading babyHeading--white"
+                  style={{ fontSize: "2rem" }}
+                >
                   Congratulations {project.name}!
                 </h1>
                 <p className="regularText regularText--white">
                   {project.description}
                 </p>
-                <div className="mb-[1%] flex justify-center md:justify-start">
+                <div className="mb-[1%] flex justify-start">
                   <HoverButton
                     link={project.winnerPost as string}
                     linkIsInternal={false}
@@ -91,7 +98,7 @@ const ProjectsPage = () => {
                   />
                 </div>
               </span>
-              <div className="mx-auto mb-[5%] pl-2.5">
+              <div className="mx-auto mb-[5%] flex w-full max-w-[600px] justify-center px-2.5">
                 <div data-aos="flip-left">
                   <Image
                     alt={project.name}
