@@ -19,6 +19,7 @@ const SponsorSection = () => {
               key={sponsor.sponsorLink}
             >
               <SponsorLogo
+                alt={sponsor.alt}
                 sponsorImage={sponsor.sponsorImage}
                 sponsorLink={sponsor.sponsorLink}
               />

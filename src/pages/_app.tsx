@@ -15,7 +15,10 @@ const inter = Inter({ subsets: ["latin"] });
 
 export default function App({ Component, pageProps }: AppProps) {
   useEffect(() => {
-    Aos.init({ duration: 1000 }); // Init AOS. Sets AOS default duration as 1s
+    Aos.init({
+      duration: 1000, // default duration 1s
+      offset: 50, // start animations sooner after entering viewport
+    });
   }, []);
 
   return (
