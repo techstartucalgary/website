@@ -1,25 +1,47 @@
+import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 type SponsorLogoProps = {
   sponsorLink: string;
-  sponsorImage: string;
+  sponsorImage: StaticImageData | string;
+  alt: string;
 };
 
-const SponsorLogo = (props: SponsorLogoProps) => {
+const SponsorLogo = ({ alt, sponsorImage, sponsorLink }: SponsorLogoProps) => {
+  const resolvedSrc =
+    typeof sponsorImage === "string" ? sponsorImage : sponsorImage.src;
+  const isSvg = resolvedSrc?.toLowerCase().endsWith(".svg");
+
+  const sharedProps = {
+    alt,
+    className: "mx-auto h-auto w-full max-w-[260px]",
+    loading: "lazy" as const,
+  };
+
   return (
     <Link
+      aria-label={`Visit ${alt}`}
       className="relative m-5 block opacity-100 transition-opacity duration-300 ease-in-out hover:opacity-100"
-      data-aos="zoom-in-up"
-      href={props.sponsorLink}
-      target="blank"
+      href={sponsorLink}
+      rel="noreferrer"
+      target="_blank"
     >
-      <img
-        alt=""
-        data-aos="zoom-in-up"
-        data-aos-duration="1000"
-        data-aos-easing="ease-in-out"
-        src={props.sponsorImage}
-      />
+      <motion.div
+        className="flex items-center justify-center"
+        initial={{ opacity: 0, scale: 0.92, y: 24 }}
+        transition={{ duration: 0.45, ease: "easeOut" }}
+        viewport={{ amount: 0.2, once: false }}
+        whileInView={{ opacity: 1, scale: 1, y: 0 }}
+      >
+        {isSvg ? (
+          <img {...sharedProps} src={resolvedSrc} />
+        ) : typeof sponsorImage === "string" ? (
+          <img {...sharedProps} src={sponsorImage} />
+        ) : (
+          <Image {...sharedProps} sizes="260px" src={sponsorImage} />
+        )}
+      </motion.div>
     </Link>
   );
 };
