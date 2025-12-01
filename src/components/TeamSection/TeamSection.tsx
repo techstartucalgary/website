@@ -51,7 +51,7 @@ const TeamSection = ({ desktopView }: TeamSectionProps) => {
           className={`relative flex h-[60px] w-[700px] rounded-full p-[5px] transition-colors duration-200 ${bgColor}`}
         >
           <div
-            className={`absolute top-[5px] h-[calc(100%-10px)] w-[calc(33.3%-10px)] rounded-full shadow-md transition-[left,background-color] duration-[800ms,200ms] ease-[ease,ease-in-out] ${bgColor} ${
+            className={`absolute top-[5px] h-[calc(100%-10px)] w-[calc(33.3%-10px)] rounded-full shadow-[3px_3px_3px_3px_rgba(0,0,0,0.2)] transition-[left,background-color] duration-[800ms,200ms] ease-[ease,ease-in-out] ${bgColor} ${
               selectedCategory === "executives"
                 ? "left-[5px]"
                 : selectedCategory === "projectManagers"
